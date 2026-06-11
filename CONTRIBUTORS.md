@@ -17,7 +17,7 @@ LICENSE → "Required attribution").
 
 ## Authors and contributors
 
-- **Wanhong Huang (HUANG Wanhong / 黄万宏)** — founder; author of Papers I–VIII
+- **Wanhong Huang (HUANG Wanhong / 黄万鸿)** — founder; author of Papers I–VIII
   (original conception, writing, and design), 2026.
   Contact: huangwanhong.g.official@gmail.com
 
