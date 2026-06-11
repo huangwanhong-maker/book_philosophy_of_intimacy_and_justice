@@ -78,5 +78,6 @@ order (see [`LICENSE`](LICENSE) → "Reservation of rights").
 
 ## Steward
 
-**Serendip Commons Society** — contact: huangwanhong.g.official@gmail.com
-(see huang-wanhong.com).
+**Serendip Commons Society** 
+   - contact: 
+     1. Wanhong HUANG, huangwanhong@serendip.ngo, huang-wanhong.com, +81-080-8946-0827.

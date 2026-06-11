@@ -1,0 +1,95 @@
+schema_version: 1
+id: philosophy_of_intimacy_and_justice
+
+# ── Classification ───────────────────────────────────────────────────────────
+infrastructure_primary: VII          # Ethical & Care (intimacy, relationships under asymmetry/dependency)
+infrastructure_secondary: [II, IV]   # II relational ontology · IV justice / decision
+program:
+keywords: [philosophy of intimacy, theory of justice, relational being, care ethics, AI-mediated intimacy, gift, recognition, alienation, self-legislation, subject formation, joint attention, epistemic injustice, diplomacy, lyric poetry]
+
+# ── Lifecycle & gating ───────────────────────────────────────────────────────
+status: active                       # ongoing series — eight papers so far
+visibility: public
+featured: true
+
+# ── Display (multilingual) ───────────────────────────────────────────────────
+title:
+  en: "Philosophy of Intimacy and the Theory of Justice"
+  ja: "親密性の哲学と正義論"
+  zh: "亲密关系哲学与正义理论"
+abstract:
+  en: |
+    A philosophical research series examining intimate life through relational
+    being and justice. Across eight papers it develops an integrative theory of
+    justice for intimacy: (I) relational being in intimate life and an ethics of
+    dialectical-positivist practice; (II) the justice and ethics of AI-mediated
+    intimacy — alienation, power, exploitation, and the limits of instrumental
+    imputation; (III) the normativity of self-legislation in intimate
+    relationships — the lover's vow, the rights-order it institutes, and the
+    conditions under which it becomes domination; (IV) the language of the
+    gift — economics, alienation, and generative justice; (V) the formation
+    of the subject in intimate relationships — the Other, joint attention, and the
+    economy of attention; (VI) epistemic injustice and the marriage proposal as a
+    high-stakes decision; (VII) a prolegomenon extending intimacy outward into a
+    "diplomacy" of the external relational field; and (VIII, an excursus) the
+    intervention of language in intimacy — rhythm, the Real, and why the beloved
+    is addressed in verse. Together the papers ask how love, freedom, and justice
+    can be sustained within asymmetry and dependency, and how intimate relations
+    resist reduction to instrumental or transactional logics.
+  ja: |
+    親密な生を関係的存在と正義の観点から考察する哲学研究シリーズ。八つの論文から
+    なる。(I) 親密な生における関係的存在と弁証法的・実証主義的実践の倫理、(II) AI
+    に媒介された親密性の正義と倫理――疎外・権力・搾取と道具的帰責の限界、(III) 親密
+    な関係における自己立法の規範性――恋人の誓い、それが打ち立てる権利秩序、そして
+    それが支配へと転じる条件、(IV) 贈与の言語――経済・疎外・生成的正義、(V) 親密な
+    関係における主体の形成――他者・共同注意・注意の経済、(VI) 認識的不正義と高リスク
+    の決定としての結婚のプロポーズ、(VII) 親密性を外部の関係場（「外交」）へと展開
+    する序説、(VIII)〔補論〕親密性への言語の介入――韻律・現実界、そしてなぜ愛する
+    者は韻文で呼びかけられるのか。愛・自由・正義が非対称性と依存のなかでいかに維持
+    されうるか、親密な関係が道具的・取引的論理への還元にいかに抗うかを問う。
+  zh: |
+    一个从关系性存在与正义视角考察亲密生活的哲学研究系列，包含八篇论文：（I）亲密
+    生活中的关系性存在与辩证—实证主义实践的伦理；（II）AI 中介之亲密关系的正义与
+    伦理——异化、权力、剥削及工具性归责的限度；（III）亲密关系中自我立法的规范性
+    ——恋人的誓言、其所确立的权利秩序，以及它转为支配的条件；（IV）馈赠的语言——
+    经济、异化与生成性正义；（V）亲密关系中主体的形成——他者、共同注意与注意的经济；
+    （VI）认识论不正义与作为高风险决定的求婚；（VII）将亲密关系向外部关系场（「外交」）
+    展开的序论；（VIII，补论）语言对亲密关系的介入——韵律、实在界，以及为何以诗向
+    所爱者倾诉。诸篇共同追问：爱、自由与正义如何在非对称与依赖中得以维系，亲密关系
+    如何抵抗被还原为工具性或交易性逻辑。
+cover:
+
+# ── Timeline ─────────────────────────────────────────────────────────────────
+period:
+  start: 2026-06-04                  # Paper I
+  end:                               # ongoing series
+
+# ── Documents & reports ──────────────────────────────────────────────────────
+documents:
+  - { type: publication, label: "I — Toward Relational Being in Intimate Life",                  path: papers/paper-1-relational-being-intimate-life_SSRN_260604.pdf, format: pdf, date: 2026-06-04, visibility: public }
+  - { type: publication, label: "II — The Justice and Ethics of AI-Mediated Intimacy",           path: papers/paper-2-AI-mediated-intimacy.pdf,                       format: pdf, visibility: public }
+  - { type: publication, label: "III — The Normativity of Self-Legislation in Intimate Relationships", path: papers/paper-3.pdf,                                     format: pdf, visibility: public }
+  - { type: publication, label: "IV — The Language of the Gift in Intimate Relationships",        path: papers/paper-4.pdf,                                           format: pdf, visibility: public }
+  - { type: publication, label: "V — The Formation of the Subject in Intimate Relationships",      path: papers/paper5-subject-formation.pdf,                          format: pdf, visibility: public }
+  - { type: publication, label: "VI — Toward a Just Proposal",                                     path: papers/paper-6.pdf,                                           format: pdf, visibility: public }
+  - { type: publication, label: "VII — Prolegomena to a Diplomacy of Intimate Relationships",      path: papers/paper-7.pdf,                                           format: pdf, visibility: public }
+  - { type: publication, label: "VIII — The Intervention of Language in Intimacy (Excursus)",      path: papers/paper-8.pdf,                                           format: pdf, visibility: public }
+
+custom_page:
+
+# ── Finance ──────────────────────────────────────────────────────────────────
+funding: []
+
+# ── People & organizations ───────────────────────────────────────────────────
+partners: []
+participants:
+  - { name: "Wanhong Huang (黄万鴻)", role: { en: "Author", ja: "著者", zh: "作者" }, affiliation: "Serendip Commons Society" }
+lead: WH
+
+# ── Outputs & links ──────────────────────────────────────────────────────────
+license:
+links: []
+
+# ── Provenance ───────────────────────────────────────────────────────────────
+date_created: 2026-06-03
+date_updated: 2026-06-10
