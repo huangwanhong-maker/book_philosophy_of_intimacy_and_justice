@@ -1,0 +1,695 @@
+% !TEX program = xelatex
+\documentclass[11pt,a4paper]{article}
+
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper IV
+%  The Gift in Intimate Relationships
+%  Compile with XeLaTeX (CJK + fontspec). Series styling:
+%  pale-pink page, pink §/§§ headings, bright-gold §§§/paragraph.
+% ============================================================
+
+\PassOptionsToPackage{table}{xcolor}
+\usepackage{natbib}              % natbib before serendip-paper (hyperref loads inside it)
+\usepackage{serendip-paper}
+\usepackage{amsthm}
+
+\newcommand{\zh}[1]{{\cjkfont #1}}
+
+% colours used on the title page (headings now come from serendip-paper)
+\definecolor{sectionpink}{RGB}{206,84,118}
+\definecolor{brightgold}{RGB}{218,158,16}
+
+% paragraph heading (not part of the shared style)
+\titleformat{\paragraph}[runin]{\bfseries\color{brightgold}}{}{0em}{}
+\titlespacing*{\paragraph}{0pt}{1.0ex plus .5ex}{0.8em}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\newcommand{\LE}{\mathcal{L}_{\mathrm{E}}}
+\newcommand{\LX}{\mathcal{L}_{\mathrm{X}}}
+\newcommand{\SE}{\Sigma_{\mathrm{E}}}
+\newcommand{\SX}{\Sigma_{\mathrm{X}}}
+
+\begin{document}
+
+% ============================================================
+%  Title page
+% ============================================================
+\begin{titlepage}
+\centering
+\vspace*{3.2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper IV\par}
+\vspace{0.7cm}
+\coverrule\par
+\vspace{1.2cm}
+{\color{warnred}\LARGE The Language of the Gift in Intimate Relationships: Economics, Alienation, and Generative Justice\par}
+\vspace{0.9cm}
+{\color{warnred}\large\itshape On the Gift as Love's Language, the Ledger It Is Read Into,\\
+and the Conditions under Which the Reading Becomes Alienation\par}
+\vspace{1.7cm}
+\coverrule[0.25]\par
+\vspace{1.0cm}
+{\large Wanhong Huang\par}
+\vspace{0.2cm}
+{\normalsize\texttt{huangwanhong.g.official@gmail.com}\par}
+\vspace{1.0cm}
+{\normalsize \today\par}
+\vfill
+\coverfootnote
+\end{titlepage}
+
+% ============================================================
+%  Epigraph / dedication page
+% ============================================================
+\thispagestyle{empty}
+\null\vspace{3.5cm}
+\begin{center}
+\itshape
+To the woman I love most deeply,\\
+my ``forest girl'':\\[4pt]
+to have met her is the finest gift ever given me,\\
+and the whole of my life is the gift I return.
+\end{center}
+\vspace{2.2cm}
+\begin{center}
+\zh{投我以木桃，报之以琼瑶。}\\
+\zh{匪报也，永以为好也。}\\[6pt]
+{\itshape You threw me a quince; I return a fine jade.\\
+Not as repayment---but that our bond may last forever.}\\[4pt]
+{\small from the \zh{诗经·卫风·木瓜} (Book of Songs, ``Quince'')}
+\end{center}
+\vspace{1.6cm}
+\begin{center}
+\zh{太上贵德，其次务施报。礼尚往来。}\\[6pt]
+{\itshape The highest age prized virtue itself; the next attended to giving and
+requiting.\\ Ritual values reciprocity.}\\[4pt]
+{\small from the \zh{礼记·曲礼} (Book of Rites)}
+\end{center}
+\vfill
+\clearpage
+
+% ============================================================
+%  Abstract
+% ============================================================
+\setcounter{page}{3}
+\begin{abstract}
+\noindent
+The gift is the native language of love: an expressive act whose meaning is
+constituted by the relation it enacts. Economics possesses a rich literature
+on gift-giving---altruism in the family, gift exchange in labor markets,
+gifts as costly signals, the deadweight loss of in-kind transfer, and the
+crowding-out of intrinsic motivation---yet each of these theories, I argue,
+shares a common move: the gift is made tractable by \emph{interpreting} it
+into a transfer language whose semantics is a ledger. This paper makes that
+move itself the object of analysis. A semiotic and psychoanalytic layer
+first explains the gift's surplus over the thing: following Saussure and
+Baudrillard, the gift is a signifier whose value is positional---generated
+by its place in a differential system that is the relation's own history---
+and following Lacan, what it signifies is desire rather than need, so that
+its functional excess (the economist's ``deadweight loss'') is the mechanism
+of its signifying work, not waste. Using elementary tools from formal
+language theory, I then model the expressive practice of intimate giving as a
+context-sensitive language whose semantics depends on relational history,
+and the economic-institutional reading as a non-injective, context-forgetting
+interpretation map into a finite-state ledger language. \emph{Alienation} is
+then given a precise structural characterization: it is the contraction of
+generative practice onto the preimage of the ledger language---agents come
+to produce only what the interpretation can see. Two further harms follow:
+\emph{epistemic injustice} \citep{fricker2007}, since contributions outside
+the map's range are illegible as contributions; and \emph{distributive
+misdescription}, since ledger balance is the wrong functional for value that
+circulates generatively. Building on Eglash's generative justice and a
+relational ontology of the gift, I propose recirculation depth, rather than
+bilateral balance, as the appropriate justice functional, and draw
+implications for the evidence-informed use of intimate-relationship data.
+\end{abstract}
+
+\medskip
+\noindent\textbf{Keywords}\quad gift; economics of gift-giving; semiotics;
+sign-value; signifier; desire; psychoanalysis; formal
+language theory; interpretation; alienation; crowding out; relational work;
+epistemic injustice; generative justice; recirculation; social reproduction;
+intimate-relationship data.
+
+\tableofcontents
+\clearpage
+
+% ------------------------------------------------------------
+\section{Introduction}
+\label{sec:intro}
+
+Within intimate relationships, gifts are utterances before they are
+transfers. A gift says something---attention, recognition, commitment---whose
+content is not carried by the object but by the act-in-relation. Yet whenever
+giving must be made legible to institutions, or simply auditable to the
+partners' own retrospective accounting, it is read through a different
+system: a language of transfers, valuations, and balances. The thesis of this
+paper is that the resulting harm, which I call the \emph{alienation of the
+gift}, is best understood not as a vague cultural lament but as a structural
+property of the \emph{interpretation} between two formal systems of unequal
+expressive power---and that this analysis unifies three literatures that
+rarely meet: the economics of gift-giving, the epistemology of injustice, and
+the theory of generative justice.
+
+This paper is the fourth in a series on the philosophy of intimacy and the
+theory of justice. Paper III \citep{huang2026vow} analyzed the unilateral
+\emph{vow} as the institution of a rights-order and located its injustice in
+the monopolization of second-order constituent power; the present paper turns
+from the legislation of a shared life to its \emph{circulation}---from the
+law of love to the language of love---and finds a structurally parallel
+diagnosis: just as a vow can institute domination while remaining sincere,
+an accounting of gifts can institute alienation while remaining accurate.
+
+The argument proceeds in four steps.
+
+\begin{enumerate}[label=(\roman*)]
+  \item Section~\ref{sec:econ} reviews the principal economic theories of the
+  gift and identifies their shared formal move: tractability is purchased by
+  interpreting expressive acts into a transfer calculus.
+  \item Section~\ref{sec:semiotic} opens the black box of expressive content.
+  Drawing on structural semiotics and psychoanalysis, it locates the gift's
+  surplus over the thing in \emph{sign-value}---value generated by the gift's
+  position in a differential system that is the relation's own history---and
+  identifies what the gift signifies: desire rather than need, so that the
+  gift's functional excess (the economist's ``deadweight loss'') is
+  constitutive rather than wasteful.
+  \item Section~\ref{sec:formal} formalizes the move with formal-language
+  tools: an expressive language $\LE$ with context-dependent semantics, a
+  ledger language $\LX$ with balance semantics, and a context-forgetting
+  interpretation map $h:\LE\to\LX$. Alienation is characterized as the
+  contraction of practice onto $h^{-1}(\LX)$ under legibility pressure.
+  \item Section~\ref{sec:epistemic} shows that the kernel of $h$---the
+  expressive distinctions the map collapses---is exactly where
+  \citet{fricker2007}'s testimonial and hermeneutical injustices arise in the
+  intimate sphere.
+  \item Sections~\ref{sec:generative}--\ref{sec:data} replace the balance
+  functional with a generative one (recirculation within the value-creating
+  relation, after \citealp{eglash2016}) and draw design implications for
+  relational data systems.
+\end{enumerate}
+
+% ------------------------------------------------------------
+\section{Economic theories of the gift}
+\label{sec:econ}
+
+The economics of the gift is not a blind spot but a developed field. The
+point of this section is not that economists ignore gifts; it is that each
+theory renders the gift tractable through a characteristic \emph{reduction},
+and that the reductions, though different in content, are identical in form.
+
+\subsection{Altruism and the family: the gift as interdependent utility}
+\citet{becker1981} models intra-family transfers through interdependent
+utility: the giver's utility takes the recipient's consumption or utility as
+an argument, so a gift is an allocation chosen by a (possibly altruistic)
+head maximizing a household objective. The Rotten Kid theorem and its
+descendants show how transfers discipline behavior inside the family. The
+reduction: the gift's content is exhausted by its effect on the
+\emph{allocation}; the act of giving has no semantic remainder beyond the
+resources moved and the preferences revealed.
+
+\subsection{Gift exchange: the gift as implicit contract}
+\citet{akerlof1982} famously reads above-market wages and above-minimum
+effort as a \emph{partial gift exchange} between firm and worker: each side
+gives more than required, sustained by norms of reciprocity. Subsequent
+experimental work \citep{fehr1993} confirmed reciprocity as a robust
+behavioral force. The reduction: the gift is one leg of a deferred bilateral
+exchange; its meaning is its position in a reciprocity schedule. What makes
+gift exchange ``work'' is precisely that the gift creates an obligation---
+which is to say, an entry in an implicit ledger.
+
+\subsection{Signaling: the gift as costly information transmission}
+\citet{camerer1988} models gifts as economic signals of the giver's type or
+of commitment to the relationship: inefficient, hard-to-resell gifts are
+\emph{good} signals exactly because they are costly and relationship-specific.
+\citet{prendergast2001} develop the non-monetary character of gifts as an
+information problem: cash would be efficient but uninformative about how well
+the giver knows the recipient. The reduction: expressive content survives,
+but only as \emph{information about a hidden parameter}---the gift means
+something solely insofar as it separates types in equilibrium.
+
+\subsection{Efficiency: the deadweight loss of giving}
+\citet{waldfogel1993} estimates that in-kind gifts destroy between a tenth
+and a third of their purchase value, since recipients value the goods below
+cost---the ``deadweight loss of Christmas.'' The reduction is here at its
+purest: the gift is evaluated as a resource transfer and found wanting, the
+expressive remainder appearing, if at all, as an unmodeled ``sentimental
+value'' residual. Section~\ref{sec:lacan} will return to this finding and
+invert it.
+
+\subsection{Crowding out: the gift destroyed by the price}
+A fourth strand shows what happens when the two registers collide.
+\citet{titmuss1970} argued that paying for blood donation degrades both the
+supply and the meaning of the donated blood; \citet{gneezy2000} showed that
+introducing a fine for late pickup at daycare \emph{increased} lateness,
+because the fine re-coded a moral relation as a priced service; and
+\citet{benabou2006} provide the canonical model in which extrinsic incentives
+crowd out intrinsic and reputational motivation. This literature is the
+closest economics comes to the present thesis: it demonstrates empirically
+that \emph{re-description in the transfer language changes the practice
+described}. But it lacks a general account of why; Section~\ref{sec:formal}
+supplies one.
+
+\subsection{Relational earmarking: the boundary case}
+Finally, economic sociology---especially \citet{zelizer2005}---documents how
+intimates actively \emph{mark} money and goods to keep relational meanings
+distinct: allowances, treats, support payments are differentiated precisely
+to prevent the collapse of relation into transaction. Zelizer's ``relational
+work'' can be read, in the terms of this paper, as agents' defensive
+maintenance of an expressive grammar against an encroaching interpretation
+map.
+
+\subsection{The shared move}
+\label{sec:sharedmove}
+Across these theories, the gift becomes tractable when its content is
+re-expressed in a language of transfers: an allocation
+(\S2.1), a ledger entry in a reciprocity schedule (\S2.2), a signal
+about a parameter (\S2.3), a resource flow with a welfare loss (\S2.4),
+a priced incentive (\S2.5). Each reduction is legitimate for its purpose, and
+several are empirically powerful. The claim defended below is not that the
+reductions are false but that they are \emph{interpretations}: structure-
+forgetting maps from a richer system into a poorer one---and that when the
+interpretation becomes the operative description inside the relationship
+itself, the forgetting becomes a harm.
+
+% ------------------------------------------------------------
+\section{The semiotics of the gift: the surplus over the thing}
+\label{sec:semiotic}
+
+Section~\ref{sec:sharedmove} concluded that the economic theories are
+interpretations---structure-forgetting maps from a richer system into a
+poorer one. Before formalizing the map (Section~\ref{sec:formal}), we must
+say what, positively, the richer system contains: \emph{where} the gift's
+value-beyond-the-thing comes from, and \emph{what} the gift signifies. Two
+traditions answer, and their answers slot precisely into the gap the
+economic theories leave open.
+
+\subsection{Sign-value: the gift as a position in a system of differences}
+\label{sec:signvalue}
+Saussure's two founding theses are the arbitrariness of the sign---the link
+between signifier and signified is fixed by the system, not by nature---and
+the differential theory of value: the value of a term is purely positional,
+constituted by its relations of difference to the other terms of the system
+\citep{saussure1916}. Transposed to the gift: a gift signifies not by the
+intrinsic properties of the object but by its position in a relational
+code---\emph{these} flowers rather than those, flowers rather than jewelry, a
+gift rather than none, on this day rather than another, from this giver
+after that history. \citet{baudrillard1981} drew the economic consequence:
+beyond use-value and exchange-value there is \emph{sign-value}, the worth an
+object bears as a marker of position in a code; and distinct from all three
+there is \emph{symbolic exchange}, the register of the gift proper, in which
+the object is not autonomous but inseparable from the concrete relation of
+giver and receiver and from the moment of its giving. The ``more than the
+thing'' that the gift carries is therefore neither sentimental residue nor
+measurement error. It is value of a different kind, generated by the gift's
+place in a differential system---and the system in question is nothing other
+than the history of the relation itself.
+
+\subsection{The signified is desire: the psychoanalytic deepening}
+\label{sec:lacan}
+If the gift is a signifier, what does it signify? Lacan's triad of need,
+demand, and desire supplies the answer \citep{lacan2006}. A \emph{need} can
+be satisfied by an object. A \emph{demand}, because it is addressed to
+another, is always also a demand for love---for the other's desire---over and
+above whatever object it asks for. \emph{Desire} is the remainder when need
+is subtracted from demand, and no object satisfies it. The gift addresses
+itself to this remainder: what it gives is not, finally, the object but the
+giving---the attestation that the giver's desire is engaged with this
+particular other. Hence Lacan's formula that love is giving \emph{what one
+does not have}: the true gift transmits something the giver does not possess
+as a good among goods---their lack, their desire---and no inventory of
+transferred objects can contain it.
+
+Two consequences follow. The first is the \emph{constitutive excess}. If the
+gift's work is to signify desire rather than to satisfy need, then a degree
+of functional uselessness is not a defect of the gift but its signifying
+mechanism: a gift wholly absorbed by need---cash, the exact item on the
+list---risks signifying nothing beyond the need it meets. This inverts the
+efficiency finding of \S2.4. Waldfogel's deadweight loss, the measured gap
+between the cost of the gift and the recipient's use-valuation of it, is, on
+the semiotic reading, in part the \emph{footprint of sign-value}: the
+portion of the act that was never addressed to use in the first place, and
+that was doing the signifying. To keep the claim honest: not all measured
+loss is sign-value---mismatch and giver ignorance are real, and the
+signaling literature (\S2.3) captures the informational part---but a nonzero
+excess is constitutive, so that a gift regime engineered to zero loss would
+be one in which the gift had ceased to signify.
+
+The second is the \emph{metonymic presence of the giver}. Mauss's informants
+said the gift carries the \emph{hau}, the spirit of the giver
+\citep{mauss1925}. In semiotic terms the gift is a metonym: contiguous with
+the giver, a detached part standing for the person. This is why the
+destruction or careless regifting of a gift wounds in a way that no
+equivalent-value substitution explains, and why the gift-object resists
+fungibility: its \emph{identity}, not its value, does the work.
+
+\subsection{What a ledger can record: referent without signifier}
+\label{sec:referent}
+A ledger records referents: which object moved, between whom, at what
+imputed value. The signifier's position in the differential system---
+everything established in \S\ref{sec:signvalue}--\ref{sec:lacan}---is not a
+property of the object and is not recordable record-by-record.
+Baudrillard's thesis that political economy is \emph{founded} on the
+reduction of symbolic exchange to economic exchange
+\citep{baudrillard1981} is, in the terms of this paper, the historical-scale
+version of the claim the next section defends formally: the accounting
+interpretation flattens the signifier into its referent and sign-value into
+exchange-value. What the formalization adds is the demonstration that the
+flattening is \emph{architectural}---located in the per-symbol form of the
+interpretation map---and therefore cannot be repaired by more generous
+imputation.
+
+% ------------------------------------------------------------
+\section{A formal-linguistic account of alienation}
+\label{sec:formal}
+
+This section makes the ``shared move'' of Section~\ref{sec:sharedmove}
+precise using elementary formal language theory. The formalism is deliberately
+minimal; its purpose is to locate \emph{where} in the interpretive pipeline
+the alienation occurs, not to claim that intimate life is literally a formal
+language. (Remark~\ref{rem:scope} states the scope limits explicitly.)
+
+\subsection{The expressive language}
+\begin{definition}[Expressive practice]
+\label{def:expressive}
+Let $\SE$ be an alphabet of \emph{expressive act types} (giving an object,
+performing care, withholding, anticipating a need, marking an occasion,
+\ldots). An intimate relationship determines a set of well-formed
+\emph{histories} $\LE \subseteq \SE^{*}$ together with a meaning function
+\[
+\mu : \LE \longrightarrow M,
+\]
+where $M$ is a space of relational meanings, and $\mu$ is
+\emph{history-dependent}: in general the meaning of a history $wa$ (the
+history $w$ extended by act $a$) is not determined by the meaning of $a$
+taken alone, i.e.\ $\mu$ does not factor through a per-symbol valuation
+$\nu:\SE \to M$ with $\mu(a_1\cdots a_n) = \bigoplus_i \nu(a_i)$ for any
+associative $\oplus$.
+\end{definition}
+
+The non-factorization clause is the formal content of the everyday
+observation that the \emph{same} act---a bouquet, a silence, a repayment---
+means different things depending on what came before, on what was foregone,
+on anniversaries and apologies and inside references. Meaning in $\LE$
+exhibits \emph{long-distance dependencies}: an act may take its sense from an
+event arbitrarily far back in the history. In grammar-theoretic terms, any
+generative description of $(\LE,\mu)$ adequate to such dependencies must
+exceed the finite-state, and in general the context-free, level: the
+semantics is context-sensitive in the strict sense that the contribution of a
+symbol depends on its (unboundedly distant) context.\footnote{The point is
+the semantic analogue of the classical expressiveness arguments from
+cross-serial dependencies in natural language \citep{shieber1985}. Nothing
+below depends on the exact rung of the hierarchy, only on the strict
+inclusion: ledger semantics is per-symbol compositional in a way relational
+semantics is not.} Section~\ref{sec:semiotic} supplied this clause's ground:
+the value of the gift-signifier is positional (\S\ref{sec:signvalue}), and
+position in a system is precisely what no per-symbol valuation $\nu$ can
+carry.
+
+\subsection{The ledger language}
+\begin{definition}[Ledger]
+\label{def:ledger}
+Let $\SX = \{(i \to j, v) : i,j \in N,\, v \in \mathbb{R}_{\ge 0}\}$ be an
+alphabet of \emph{transfer records} over a set of parties $N$, and let
+$\LX = \SX^{*}$ with the \emph{balance semantics}
+\[
+\beta : \LX \to \mathbb{R}^{N}, \qquad
+\beta(x)_k \;=\; \sum_{(i\to k,\,v)\in x} v \;-\; \sum_{(k\to j,\,v)\in x} v .
+\]
+\end{definition}
+
+Two properties of $\beta$ matter. It is \emph{per-symbol compositional}
+(each record contributes independently; order is irrelevant up to the
+running balance), hence recognizable by finite means---this is what makes
+ledgers auditable. And it is \emph{total}: every string of records has a
+balance. The ledger never says ``meaningless''; it always returns a number.
+
+\subsection{The interpretation map and its kernel}
+\begin{definition}[Accounting interpretation]
+\label{def:interp}
+An \emph{accounting interpretation} is a monoid homomorphism
+$h:\SE^{*}\to\SX^{*}$ induced by a per-symbol assignment
+$h:\SE\to\SX\cup\{\varepsilon\}$: each expressive act type is mapped to a
+transfer record (its ``imputed value'') or erased.
+\end{definition}
+
+Every theory in Section~\ref{sec:econ} implements some $h$: Becker's
+allocations, Akerlof's implicit reciprocity entries, Camerer's signal costs,
+Waldfogel's purchase prices. Three structural facts about any such $h$ do the
+philosophical work:
+
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{Context-forgetting.} Because $h$ is per-symbol, it cannot be
+sensitive to history: $h(wa)=h(w)h(a)$. Whatever part of $\mu$ depends on
+long-distance context is invisible to $\beta\circ h$ \emph{by construction},
+not by accident of calibration. No re-weighting of imputed values repairs
+this, since the failure is architectural (Definition~\ref{def:expressive}'s
+non-factorization clause).
+\item \textbf{Non-injectivity with structured kernel.} Distinct histories
+$w \neq w'$ with $h(w)=h(w')$ abound, and the collapsed distinctions are
+precisely the expressive ones: an act of care and a strategic appeasement of
+equal imputed value are identified. Write
+$\ker h = \{(w,w') : h(w)=h(w')\}$; the harm analyzed below lives in
+$\ker h$.
+\item \textbf{Erasure.} Acts assigned $\varepsilon$---typically sustained,
+unpriceable, anticipatory care---do not merely lose nuance; they vanish from
+the record altogether. Erasure is the limiting case of (b) and the formal
+hook for Section~\ref{sec:epistemic}.
+\end{enumerate}
+
+\subsection{Alienation as contraction onto the preimage}
+\label{sec:contraction}
+So far, $h$ is only a description, and a lossy description harms no one. The
+harm begins when the description acquires \emph{normative force}: when
+institutions (courts, tax authorities, platforms) and eventually the partners
+themselves audit the relationship through $\beta \circ h$. Call this
+\emph{legibility pressure}: histories are rewarded, defended, or even merely
+\emph{rememberable} to the extent that their images under $h$ are
+well-formed and balanced.
+
+\begin{definition}[Alienation]
+\label{def:alienation}
+Let $G$ be the generative process by which partners produce expressive
+histories (their practice). \emph{Alienation} is the dynamic contraction of
+$G$ under legibility pressure: the practiced language
+$L(G) \subseteq \LE$ converges toward a sublanguage on which $\mu$ factors
+through $h$---i.e.\ the partners come to produce only meanings that survive
+the interpretation, so that, in the limit, $(L(G),\mu)$ is isomorphic to a
+fragment of $(\LX,\beta)$.
+\end{definition}
+
+\begin{proposition}[Informal]
+Under legibility pressure, the fixed point of the practice dynamics is a
+ledger: expressive capacity strictly greater than finite-state is not merely
+unrecorded but \emph{unexercised}.
+\end{proposition}
+
+This is the precise sense in which ``love's language is re-coded as
+transaction.'' The crowding-out findings of \S2.5 are the empirical
+signature of the contraction: \citeauthor{gneezy2000}'s parents did not
+misunderstand the fine; their practice re-formed around the language the fine
+made operative. Alienation, so characterized, is not commodification (an
+object entering market circulation) but a \emph{grammar replacement}: the
+generative system of the relation is substituted by the image system of its
+own accounting. And Zelizer's relational earmarking (\S2.6) is its
+countermeasure: the deliberate maintenance of distinctions that $h$ would
+collapse---in our terms, agents acting to keep $\ker h$ semantically alive.
+
+\begin{remark}[Scope]
+\label{rem:scope}
+The formalism claims (i) that ledger semantics is per-symbol compositional
+while relational semantics is not, and (ii) that this gap, combined with
+legibility pressure, predicts contraction of practice. It does not claim that
+$\SE$, $\mu$, or $G$ are empirically identifiable objects, nor that a unique
+$h$ exists. The model is an explanatory skeleton---a statement of \emph{which
+structural features} produce the alienation---and should be held to that
+standard, no more.
+\end{remark}
+
+% ------------------------------------------------------------
+\section{Epistemic injustice: the kernel made flesh}
+\label{sec:epistemic}
+
+\citet{fricker2007} distinguishes \emph{testimonial} injustice (a deflated
+credibility judgment owing to prejudice) from \emph{hermeneutical} injustice
+(a structural gap in shared interpretive resources that leaves some
+experiences unintelligible even to those who undergo them). The formal
+apparatus of Section~\ref{sec:formal} locates both.
+
+\paragraph{Testimonial injustice as erasure.}
+A partner asserts that sustained anticipatory care \emph{is} a contribution.
+Under an operative interpretation $h$ that assigns such acts $\varepsilon$
+(\S\ref{def:interp}(c)), the assertion has no truth-maker in the record:
+there is literally nothing in $\beta\circ h$ for the claim to be \emph{about}.
+The credibility deficit then attaches not to the speaker's sincerity but to
+the ontological standing of the asserted category. Empirically, this is the
+familiar pattern in which unpaid affective and household labor---
+disproportionately performed by women---is discounted in both private
+negotiation and legal settlement \citep{folbre2001}.
+
+\paragraph{Hermeneutical injustice as kernel-blindness.}
+More deeply: if the community's shared interpretive resources just \emph{are}
+the operative $h$ (because the exchange grammar is the institutionally
+supported one), then distinctions in $\ker h$ are not merely unrecorded but
+\emph{unnameable}. The giver experiences a difference---between care and
+appeasement, between a gift and a payment---for which the available
+vocabulary has one word. This is hermeneutical injustice in the intimate
+sphere, and it is mechanically coupled to alienation: the same
+context-forgetting map that contracts practice (\S\ref{sec:contraction}) also
+impoverishes the concepts available for contesting the contraction. The
+injustice is self-sealing.
+
+% ------------------------------------------------------------
+\section{From balance to recirculation: generative justice}
+\label{sec:generative}
+
+\subsection{Eglash's generative justice}
+Distributive justice asks how an already-produced surplus should be divided;
+\citet{eglash2016} asks instead whether value is allowed to \emph{circulate
+back to, and remain within, the network of relations that generated it},
+rather than being extracted from it. Eglash's examples---from commons-based
+production to indigenous and DIY economies---share a topology: value flows in
+\emph{cycles of recursive depth}, re-entering and compounding within the
+generating loop, instead of exiting along an extraction path.\footnote{Paper
+III of this series \citep{huang2026vow} arrived at a cognate notion from the
+normative side: generative justice as the maintenance of the conditions under
+which each party's ongoing self-formation in the relation remains open and
+uncaptured. The two senses converge in the present framework: the
+recirculation of relational value (Eglash's sense) is the material condition
+of ongoing co-formation (Paper III's sense), and the standing to contest the
+terms is what keeps the recirculation from being unilaterally redirected.}
+
+\subsection{The relation as the generative unit}
+On a relational ontology, the unit of analysis in intimate giving is not the
+individual party but the relation as a value-generating system: gifts are
+moments in the relation's self-production, not transfers between pre-formed
+endpoints. This re-founds the justice question. The ledger functional
+$\beta$ evaluates \emph{node balance}---did each party's inflows match
+outflows?---which presupposes exactly the per-symbol transfer reading whose
+inadequacy Section~\ref{sec:formal} established. The generative alternative
+evaluates whether what the relation produces (material, affective,
+\emph{and recognitional} value) recirculates.
+
+\begin{definition}[Recirculation depth; sketch]
+\label{def:recirc}
+Model a relation as a directed multigraph whose nodes include the parties
+and the relation-level stock itself, with value-flow edges labeled by type
+(material, affective, recognitional). For a flow history $F$, let $R(F)$ be
+the proportion of generated value that lies on cycles returning to the
+generating subgraph within the history, weighted by cycle depth
+(number of re-entries). \emph{Generative justice} in the intimate sphere is
+the requirement that $R$ be sustained across value types---in particular,
+that recognitional flows not be systematically acyclic (recognition flowing
+out of, but never back to, a contributor).
+\end{definition}
+
+\begin{remark}
+$R$ deliberately treats \emph{recognition} as a first-class flow rather than
+a residual. This is the formal repair of Section~\ref{sec:epistemic}: an
+act erased by $h$ ($\varepsilon$-mapped) cannot enter $\beta$, but it can
+enter $R$, because $R$'s edge set is defined over the expressive practice,
+not over its accounting image. A full treatment---axioms for $R$,
+its relation to network-flow and to Eglash's recursive depth, and estimable
+proxies---is deferred to a companion paper.
+\end{remark}
+
+\subsection{What the reframing dissolves}
+The three harms now align as three faces of one error---applying $\beta$
+where $R$ is the appropriate functional:
+expressive alienation is the contraction of practice onto $\beta$'s domain
+(\S\ref{sec:contraction}); epistemic injustice is the unnameability of
+$\ker h$ (\S\ref{sec:epistemic}); distributive misdescription is the
+evaluation of a cyclic generative system by an acyclic balance metric.
+
+% ------------------------------------------------------------
+\section{Implications: relational data and evidence-informed decisions}
+\label{sec:data}
+
+The analysis bears directly on the utilization of intimate-relationship data
+and on evidence-informed decision-making about relationships---an agenda this
+author pursues in parallel empirical work.
+
+\paragraph{Instrumentation imports a grammar.}
+To measure is, by default, to implement an $h$: a relational data system that
+counts gifts, chores, or messages as balanced inputs operationalizes the
+ledger and thereby \emph{accelerates} the contraction of
+\S\ref{sec:contraction}---a relational instance of Goodhart's law. The
+crowding-out literature (\S2.5) predicts, and Definition~\ref{def:alienation}
+explains, that such systems do not neutrally record the practice; they
+re-form it.
+
+\paragraph{Designing for the generative grammar.}
+The constructive program is to encode $R$ rather than $\beta$:
+(i) treat recognition as a logged, first-class flow, so that erased
+contributions acquire truth-makers (repairing the testimonial deficit);
+(ii) supply shared vocabulary for affective labor, expanding the
+hermeneutical resources beyond the operative $h$;
+(iii) evaluate the relationship by recirculation indicators (are
+contributions of every type eventually re-entered, acknowledged,
+reciprocated-in-kind-or-otherwise within the cycle?) rather than by balance;
+(iv) preserve, in the data model itself, the context-dependence of meaning---
+e.g.\ event records that link to history rather than free-standing valued
+entries. Whether intimate-relationship data systems help or harm is therefore
+not a question about data per se, but about \emph{which grammar the system
+makes operative}.
+
+% ------------------------------------------------------------
+\section{Conclusion}
+\label{sec:conclusion}
+
+Economics has not ignored the gift; it has interpreted it---as allocation,
+implicit contract, signal, inefficient transfer, or priced incentive---and
+each interpretation is a context-forgetting homomorphism into a ledger
+language of strictly weaker expressive power. The semiotic and
+psychoanalytic analysis identified what the interpretation loses---the
+positional value of the signifier and the desire it attests---and the formal
+analysis showed the loss to be architectural. Alienation is what happens when
+the interpretation acquires normative force and practice contracts onto its
+preimage; epistemic injustice is the unnameability of the distinctions the
+map collapses; and distributive misdescription is the use of a balance
+functional on a generative cycle. The repair is not to abandon formalization
+but to formalize the \emph{right} object: the recirculation of generated
+value---material, affective, recognitional---within the relation that
+produces it.
+
+Read alongside Paper III, the series' two diagnoses are one structure seen
+from two sides. There, a law of love legislated unilaterally institutes
+domination even when sincere; here, a language of love interpreted
+unilaterally institutes alienation even when accurate. In both, the remedy is
+not purer intention but shared authority over the terms---there, the
+co-authorship of the vow; here, the keeping-alive of the expressive grammar
+in which the gift can still say what it means. Future work will axiomatize
+the recirculation functional, connect it rigorously to Eglash's recursive
+depth, and test the design program of Section~\ref{sec:data} against field
+data from a deployed relational infrastructure.
+
+% ------------------------------------------------------------
+\section*{Acknowledgements}
+\addcontentsline{toc}{section}{Acknowledgements}
+This paper is the fourth in a series on the philosophy of intimacy and the
+theory of justice. I thank Ron Eglash for correspondence on generative
+justice and recursive depth, on which Section~\ref{sec:generative} builds.
+
+This series, and this paper above all, are dedicated to the one I love most
+deeply---the ``forest girl'' to whom the first paper of the series was already
+devoted. We were born of the same hometown, yet it was in Japan that we met.
+To have met her is the finest gift the universe has ever given me; and what I
+give in return is the whole of my life itself, offered as a gift. It is from
+her, and not from any theory, that the thesis of this paper was first
+learned.
+
+In the interest of transparency, I note that an AI assistant was used in
+preparing this manuscript, as a tool for drafting, structuring, and refining
+the argument and its prose; the ideas, commitments, and final judgements are
+my own, and I take full responsibility for the content.
+
+\begin{center}
+\zh{愿天下有情人，赠不为偿，受不为债，情意长流而不竭。}
+\end{center}
+
+% ------------------------------------------------------------
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

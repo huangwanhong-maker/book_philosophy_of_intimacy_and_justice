@@ -1,0 +1,85 @@
+# Philosophy of Intimacy and the Theory of Justice — sources
+
+Each paper of the series is a **standalone document in its own folder** under
+[`papers/`](papers/), sharing one visual style file,
+[`serendip-paper.sty`](serendip-paper.sty).
+
+```
+book_src/
+├── serendip-paper.sty     ← unified series style (single source of truth)
+├── Makefile               ← build all / one / clean
+├── preface.tex            ← book-level front matter
+├── assets/                ← book covers (front/spine/back)
+└── papers/
+    ├── paper_01_toward_relational_being/
+    │   ├── paper_01_toward_relational_being.tex
+    │   ├── latexmkrc       ← lets the folder build on its own
+    │   └── refs.bib        ← the paper's bibliography
+    ├── paper_02_ai_mediated_intimacy/
+    ├── paper_03_self_legislation/
+    ├── paper_04_language_of_the_gift/
+    ├── paper_05_subject_formation/
+    ├── paper_06_just_proposal/
+    ├── paper_07_diplomacy_of_intimacy/
+    └── paper_08_intervention_of_language/   ← excursus; also carries sections.tex
+```
+
+| ID | Title |
+|----|-------|
+| I  | Toward Relational Being in Intimate Life |
+| II | The Justice and Ethics of AI-Mediated Intimacy |
+| III| The Normativity of Self-Legislation in Intimate Relationships |
+| IV | The Language of the Gift in Intimate Relationships |
+| V  | The Formation of the Subject in Intimate Relationships |
+| VI | Toward a Just Proposal |
+| VII| Prolegomena to a Diplomacy of Intimate Relationships |
+| VIII| The Intervention of Language in Intimacy (excursus) |
+
+## Build (XeLaTeX + latexmk, under WSL/TeX Live)
+
+One paper, from its own folder:
+
+```sh
+cd papers/paper_03_self_legislation
+latexmk                 # → paper_03_self_legislation.pdf
+```
+
+All papers, from here:
+
+```sh
+make            # build every paper
+make paper_03_self_legislation   # build one
+make clean      # remove aux files (keep PDFs)
+```
+
+`latexmkrc` in each folder adds `../../` to `TEXINPUTS` so the paper finds the
+shared `serendip-paper.sty`, selects XeLaTeX, and runs biber/bibtex as needed.
+
+## Bibliographies
+
+Every paper now carries its own `refs.bib` in its folder, and all eight build
+with citations fully resolved (no "??").
+
+- Papers I, II, III, VI, VIII use **biblatex/biber** (`\addbibresource{refs.bib}`).
+- Papers IV, V, VII use **natbib/bibtex** (`\bibliographystyle{plainnat}` +
+  `\bibliography{refs}`). Paper IV's references, formerly inline, were moved into
+  `refs.bib` and wired up the same way.
+
+Note for the bibtex (natbib) papers: classic BibTeX treats every `@` as the start
+of an entry, even inside a `%` comment, so keep the literal `@` out of comment
+lines in those `refs.bib` files.
+
+## The shared style
+
+`serendip-paper.sty` was extracted from Paper III (the reference design): blush
+page, dusty-rose section headings, rose/gold accents, pink emphasis, and CJK via
+Noto Serif CJK SC. Citations/references are **pink** (`rosedeep`, `#c56683`), as
+are the `\textit`/`\textbf`/`\emph` emphasis. Each paper's title page carries a
+pink small-caps series line (`Philosophy of Intimacy and the Theory of Justice ·
+Paper N`) above a deep-red (`warnred`) title and subtitle, a pink divider rule
+(`\coverrule`) under the series line and a narrower one (`\coverrule[0.25]`) above
+the author, and a pink contact footnote (`\coverfootnote`) pinned to the foot. The
+contact address lives in one place — `\coveraddrA`/`\coveraddrB` in
+`serendip-paper.sty` — so editing it there updates every cover. To retune the
+citation colour, edit the single `citecolor=` in the `hyperref` line; the series
+line and title colours live in each paper's title block.

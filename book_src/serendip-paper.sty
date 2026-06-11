@@ -1,0 +1,89 @@
+% =========================================================================
+%  serendip-paper.sty — shared style for the paper series
+%  "Philosophy of Intimacy and the Theory of Justice" (Papers I–VII).
+%
+%  Extracted from Paper III (the reference design). Each paper does:
+%       \documentclass[11pt,a4paper]{article}
+%       \usepackage{serendip-paper}
+%       % …paper-specific macros + bibliography backend…
+%       \begin{document} … \end{document}
+%
+%  Bibliography is left to each paper (biblatex / bibtex / manual) so the
+%  style stays compatible with all of them; this file only loads hyperref,
+%  which biblatex requires to come *before* it (so load biblatex AFTER this).
+%
+%  Compile with XeLaTeX (fontspec + Noto Serif CJK).
+% =========================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{serendip-paper}[2026/06/08 Serendip Philosophy-of-Intimacy paper-series style]
+
+\RequirePackage{fontspec}
+\RequirePackage[english]{babel}
+\newfontfamily\cjkfont{Noto Serif CJK SC}
+
+\RequirePackage[margin=2.6cm]{geometry}
+\RequirePackage{setspace}
+\onehalfspacing
+\RequirePackage{parskip}
+\RequirePackage[protrusion=true,expansion=false]{microtype}
+\RequirePackage{array}
+\RequirePackage{booktabs}
+\RequirePackage{longtable}
+\RequirePackage{amsmath,amssymb}
+
+% ── Series palette ───────────────────────────────────────────────────────────
+\RequirePackage{xcolor}
+\definecolor{rose}{HTML}{b07a8e}
+\definecolor{sage}{HTML}{8aa07e}        % retained for back-compat (no longer used for references)
+\definecolor{gold}{HTML}{c79a4a}
+\definecolor{lightgold}{HTML}{d9b35f}   % references / citations — replaces the former green
+\definecolor{ink}{HTML}{6e5560}
+\definecolor{rosedeep}{HTML}{c56683}
+\definecolor{brightgold}{HTML}{e8b94a}  % bright gold for the series line
+\definecolor{pageblush}{HTML}{fdf8f9}
+\definecolor{pinkitalic}{HTML}{c56683}
+\definecolor{pinkbold}{HTML}{a83b5c}
+\definecolor{warnred}{HTML}{a01c2e}
+\RequirePackage{pagecolor}
+\pagecolor{pageblush}
+
+% ── Headings (Paper III style) ───────────────────────────────────────────────
+\RequirePackage{titlesec}
+\titleformat{\section}{\Large\mdseries\color{rosedeep}}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\mdseries\color{rose}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\itshape\color{gold}}{\thesubsubsection}{0.5em}{}
+
+% ── Cover divider (pink rule used on every paper's title page) ───────────────
+% \coverrule       -> wide rule (0.4\linewidth), placed under the series line
+% \coverrule[0.25] -> narrow rule, placed above the author block
+\newcommand{\coverrule}[1][0.4]{{\color{rosedeep}\rule{#1\linewidth}{0.4pt}}}
+
+% ── Cover contact footnote (pink small print, pinned to the page foot) ───────
+% One source of truth for the contact block; edit here and every cover follows.
+\newcommand{\coveraddrA}{[TEMPORARY ADDR.] LAZO GINZA HIGASHI 402, 2-6-4 MINATO, CHUO KU, TOKYO 104-0043}
+\newcommand{\coveraddrB}{+81-080-8946-0827}
+\newcommand{\coveraddrC}{(Confirm huang-wanhong.com for update)}
+% Marker-less real footnote (anchors to the bottom of whatever page it sits on).
+\newcommand{\blfootnote}[1]{\begingroup\renewcommand{\thefootnote}{}\footnotetext{#1}\endgroup}
+% Drop this once anywhere on a title page; it lands at the page foot.
+\newcommand{\coverfootnote}{\blfootnote{\footnotesize\color{rosedeep}\coveraddrA\\[0.15em]\coveraddrB\\[0.15em]\coveraddrC}}
+% Pink footnote separator (the rule above footnotes), matching the series.
+\renewcommand{\footnoterule}{\kern-3pt{\color{rosedeep}\hrule width 0.4\columnwidth height 0.4pt}\kern 2.6pt}
+
+% ── Emphasis recolouring (series signature) ──────────────────────────────────
+\let\oldtextit\textit
+\renewcommand{\textit}[1]{{\color{pinkitalic}\oldtextit{#1}}}
+\let\oldemph\emph
+\renewcommand{\emph}[1]{{\color{pinkitalic}\oldemph{#1}}}
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{{\color{pinkbold}\oldtextbf{#1}}}
+
+% ── Links & references ───────────────────────────────────────────────────────
+% Load hyperref here so any biblatex loaded by the paper comes after it.
+% citecolor: pink (rosedeep) so author-year / reference numbers read in the series' rose.
+\RequirePackage[colorlinks=true, linkcolor=rose, citecolor=rosedeep, urlcolor=gold]{hyperref}
+
+\RequirePackage{enumitem}
+\setlist{itemsep=2pt, topsep=4pt}
+
+\endinput

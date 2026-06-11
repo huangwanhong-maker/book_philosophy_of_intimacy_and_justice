@@ -1,0 +1,7 @@
+# Build this paper independently (it finds ../../serendip-paper.sty).
+#   latexmk        build PDF (xelatex + biber/bibtex as needed)
+#   latexmk -c     clean aux files   |   latexmk -C   also remove the PDF
+$ENV{'TEXINPUTS'} = '../../:' . ($ENV{'TEXINPUTS'} // '');
+$pdf_mode   = 5;     # xelatex
+$bibtex_use = 2;     # run biber/bibtex when a bibliography is present
+@default_files = ('paper_03_self_legislation.tex');
