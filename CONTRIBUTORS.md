@@ -19,7 +19,7 @@ LICENSE → "Required attribution").
 
 - **Wanhong Huang (HUANG Wanhong / 黄万鸿)** — founder; author of Papers I–VIII
   (original conception, writing, and design), 2026.
-  Contact: huangwanhong.g.official@gmail.com
+  Contact: huangwanhong@serendip.ngo
 
 <!-- New contributors: append one line below, with your name, date, and a short
      note on what you changed. Keep this file with your distribution. -->

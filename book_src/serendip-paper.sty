@@ -60,13 +60,12 @@
 
 % ── Cover contact footnote (pink small print, pinned to the page foot) ───────
 % One source of truth for the contact block; edit here and every cover follows.
-\newcommand{\coveraddrA}{[TEMPORARY ADDR.] LAZO GINZA HIGASHI 402, 2-6-4 MINATO, CHUO KU, TOKYO 104-0043}
-\newcommand{\coveraddrB}{+81-080-8946-0827}
-\newcommand{\coveraddrC}{(Confirm huang-wanhong.com for update)}
+\newcommand{\coveraddrA}{huangwanhong@serendip.ngo \quad huang-wanhong.com \quad +81-080-8946-0827}
+\newcommand{\coveraddrB}{LAZO GINZA HIGASHI 402, MINATO 2-6-4, CHUO KU, TOKYO, JAPAN 104-0043 (temporary contact address)}
 % Marker-less real footnote (anchors to the bottom of whatever page it sits on).
 \newcommand{\blfootnote}[1]{\begingroup\renewcommand{\thefootnote}{}\footnotetext{#1}\endgroup}
 % Drop this once anywhere on a title page; it lands at the page foot.
-\newcommand{\coverfootnote}{\blfootnote{\footnotesize\color{rosedeep}\coveraddrA\\[0.15em]\coveraddrB\\[0.15em]\coveraddrC}}
+\newcommand{\coverfootnote}{\blfootnote{\footnotesize\color{rosedeep}\coveraddrA\\[0.15em]\coveraddrB}}
 % Pink footnote separator (the rule above footnotes), matching the series.
 \renewcommand{\footnoterule}{\kern-3pt{\color{rosedeep}\hrule width 0.4\columnwidth height 0.4pt}\kern 2.6pt}
 

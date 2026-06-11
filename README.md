@@ -39,7 +39,29 @@ The binding terms and the required attribution are in [`LICENSE`](LICENSE).
 
 ## Contributing
 
-Extensions, corrections, and translations are welcome. The approach:
+This is an open and unfinished inquiry, and we welcome contribution in every
+form — fresh insight, counter-argument, discussion, correction, revision, and
+extension. Dissent is as welcome as agreement: a careful objection advances the
+work as much as a new chapter does.
+
+The series thinks about intimate life from a deliberately wide theoretical
+range — the gift and its giving, the language of poetry, the practice of a
+"diplomacy" of the external relational field, ritual and etiquette, the ethics
+of technological mediation, the structure of rights, and more. We draw on, and
+invite work from, many traditions without privileging any: political economy,
+ethics, the theory of justice, normative theory, relational ontology,
+psychology, philosophy, psychoanalysis, quantitative social science,
+linguistics, feminist theory, and the formal sciences — theoretical physics and
+field theory, algebraic topology, and algebraic geometry among them. The list is
+open, not a boundary; if your field is not named here, take that as an
+invitation, not an exclusion.
+
+Our working conviction is that no single discipline commands the whole of the
+reason these questions require. Each illuminates part of the matter and is
+silent on the rest; the aim of gathering them is not to crown one but to let
+them correct and extend one another — to develop understanding together.
+
+**How to take part** — the approach:
 
 1. **What you may do freely.** Read, copy, and make **non-commercial**
    derivatives ("extensions"), as long as you keep the attribution and license
