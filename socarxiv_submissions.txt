@@ -1,0 +1,169 @@
+================================================================
+SocArXiv submission text — Philosophy of Intimacy and the Theory of Justice
+Plaintext title / subtitle / abstract / keywords for each paper.
+(LaTeX markup stripped; UTF-8. Paper VII has no formal abstract — see note.)
+================================================================
+
+
+================================================================
+PAPER I
+================================================================
+
+TITLE:
+Toward Relational Being in Intimate Life: Integrative Justice and an Ethics of Dialectical-Positivist Practice
+
+SUBTITLE (optional):
+A Family-and-Relationship Management Application as a Case Study
+
+ABSTRACT:
+Positivist, evidence-based technologies increasingly mediate intimate life: couples coordinate, record, and remember through software whose default logic is measurement and optimization. This paper asks how such technologies ought instead to be governed if their aim is the flourishing of a relationship, the sustaining of what it calls relational being in intimate partnership.
+
+It makes four kinds of claim. (1) Normative: an integrative-justice framework, resting on a relational ontology, draws on a dozen ethical and epistemic traditions and assigns each the questions it is competent to answer, in a defended ordering rather than a numerical average. (2) Practical: an ethics of dialectical-positivist practice warrants measurement differentially, site by site, according to whether a phenomenon is constituted partly by remaining unmeasured. (3) Engineering: a working application, designed by the author, instantiates the framework in software, with event-driven household coordination, a witness-only AI layer, co-creative exploration, and the deliberate absence of AI where it would intrude. (4) Diagnostic: it names wrongs specific to intimate computing, among them proxy epistemic injustice, the misattribution of an act of knowing, and the opposition between structural efficiency and relational development.
+
+The limits are explicit. (i) Mediation's deepest harms, relational alienation and epistemic distortion, can be reduced but never wholly removed, so the framework offers harm-reduction and a discipline of restraint. (ii) Its dialectical adjudication is a practice of judgement for which no algorithm is given. (iii) The evidence is a single, author-designed case, offered as illustration and existence proof. The framework is meant, finally, to bear on adjacent settings as well: the ethics of the societal use of data, and the design of mechanisms linking the family to public institutions.
+
+KEYWORDS:
+relational being; intimate computing; integrative justice; the ethics of dialectical-positivist practice; generative presence; data ethics; the ethics of flourishing
+
+
+================================================================
+PAPER II
+================================================================
+
+TITLE:
+The Justice and Ethics of AI-Mediated Intimacy
+
+SUBTITLE (optional):
+Alienation, Power, Exploitation, and the Limits of Instrumental Imputation
+
+ABSTRACT:
+Suppose an AI system, drawing on the history of an intimate relationship, suggests to one partner a small tender gesture; the suggestion works, the relationship genuinely improves, and no one is deceived at delivery. Is anything wrong? A predecessor paper withheld a clean acquittal and suspended the question of why; this paper takes that question as its object and proceeds dialectically. From Hegel it takes that mediation as such is innocent: love exists only through externalization. From Marx it takes the antithesis: alienation names a process separated from its agent, and the tender tip enacts an estrangement of person from person in the very name of closeness. From modern law it takes the strongest thesis: instruments do not break causation, and agency law exists precisely to let imputation pass through intermediaries. From Buddhist dependent origination it takes a deeper version, that no unmediated act ever existed, alongside Buddhism's non-delegable core of practice and attention.
+
+The synthesis is doctrinal: imputation through instruments holds as the default rule, but there is a criterion-governed exception domain, modeled on the legal category of strictly personal acts (höchstpersönliche Handlungen), within which the fiction of imputation fails, not because the tool interrupts causation but because such acts admit no substitutable links. Intimate acts are analyzed as layered: an allocative face, on which attention is scarce and budgetable, and a constitutive face, on which what matters is who expends the attention. The danger of AI mediation is distributive reduction: optimizing the allocative face while silently substituting the constitutive one, a Taylorism of love that deflates the gesture's value as a credible signal of personal attending. An eliminative experiment removes capital from the scene and shows the wrong to be insensitive to ownership; the theory of generative justice supplies the constructive remedy, recognizing the recipient as the uncredited co-generator of the gestures directed at her. The paper distinguishes two wrongs with two remedies: misattribution, curable by transparency, and process alienation, not curable by consent.
+
+KEYWORDS:
+AI-mediated communication; alienation; dependent origination; imputation; strictly personal acts; causation; intimacy; epistemic injustice
+
+
+================================================================
+PAPER III
+================================================================
+
+TITLE:
+The Normativity of Self-Legislation in Intimate Relationships: Freedom, Morality, and Justice
+
+SUBTITLE (optional):
+On a Lover's Vow, the Rights-Order It Institutes, and the Conditions under Which It Becomes Domination
+
+ABSTRACT:
+Consider a lover who legislates for himself an unconditional law: whatever happens, however the beloved feels, I will keep loving her. This paper subjects such a vow to a three-layered normative analysis, and uses it as a lens on a general structure: the conditions under which the self-legislation of a shared life is free, the conditions under which it is just, and the conditions under which it silently becomes domination or exploitation.
+
+The argument is integrative. (1) On freedom: the vow is exemplary Kantian autonomy, but Kant's own apparatus, the fact of reason and the noumenal self, cannot tell us when a self-legislation is free; a compatibilist, reasons-responsive criterion can, and on it the vow's freedom turns out to be conditional on its remaining responsive to the beloved as a source of reasons. (2) On morality: the vow is admirable as constancy, yet its content, what loving her means, is left to the lover alone to fix, in tension with the responsiveness that the philosophy of love takes to be constitutive of love. (3) On justice: drawing on republican non-domination and a Hohfeldian analysis of the rights-order a vow institutes, the paper argues that a unilaterally legislated law over a two-person life cannot be just, because justice between two agents is modally, not merely actually, a matter of each retaining the standing to contest the terms.
+
+A dedicated section on the constitution of the legislating subject (structuralist and feminist) shows why the injustice is not idiosyncratic but structurally produced: the "self" that legislates is itself constituted by a historically gendered order, so that a sincere, universalizable vow can reproduce that order's subordinations. Integrating Marxian and social-reproduction theory, the paper distinguishes the conditions under which the vow institutes a legitimate rights-order from those under which it institutes exploitation, the appropriation of another's unrecognized relational and reproductive labour under an ideology that presents the appropriation as love. Against the objection that turning to relationality merely relocates the problem, since recognition can itself be ideological, it argues that the operative criterion is the live contestability of the terms, not their de facto endorsement. The conclusion is an isomorphism: the micro-order of a vow and the macro-order of a political economy share a structure, and in both the standing of the legislation rests not on the purity of the legislator but on the irreducible, modally robust standing of the other to answer.
+
+KEYWORDS:
+self-legislation; autonomy; reasons-responsiveness; non-domination; recognition; ideological recognition; Hohfeldian rights; social reproduction; exploitation; relational autonomy; justice in intimate relationships
+
+
+================================================================
+PAPER IV
+================================================================
+
+TITLE:
+The Language of the Gift in Intimate Relationships: Economics, Alienation, and Generative Justice
+
+SUBTITLE (optional):
+On the Gift as Love's Language, the Ledger It Is Read Into, and the Conditions under Which the Reading Becomes Alienation
+
+ABSTRACT:
+The gift is the native language of love: an expressive act whose meaning is constituted by the relation it enacts. Economics possesses a rich literature on gift-giving — altruism in the family, gift exchange in labor markets, gifts as costly signals, the deadweight loss of in-kind transfer, and the crowding-out of intrinsic motivation — yet each of these theories, I argue, shares a common move: the gift is made tractable by interpreting it into a transfer language whose semantics is a ledger. This paper makes that move itself the object of analysis. A semiotic and psychoanalytic layer first explains the gift's surplus over the thing: following Saussure and Baudrillard, the gift is a signifier whose value is positional — generated by its place in a differential system that is the relation's own history — and following Lacan, what it signifies is desire rather than need, so that its functional excess (the economist's "deadweight loss") is the mechanism of its signifying work, not waste. Using elementary tools from formal language theory, I then model the expressive practice of intimate giving as a context-sensitive language whose semantics depends on relational history, and the economic-institutional reading as a non-injective, context-forgetting interpretation map into a finite-state ledger language. Alienation is then given a precise structural characterization: it is the contraction of generative practice onto the preimage of the ledger language — agents come to produce only what the interpretation can see. Two further harms follow: epistemic injustice (Fricker 2007), since contributions outside the map's range are illegible as contributions; and distributive misdescription, since ledger balance is the wrong functional for value that circulates generatively. Building on Eglash's generative justice and a relational ontology of the gift, I propose recirculation depth, rather than bilateral balance, as the appropriate justice functional, and draw implications for the evidence-informed use of intimate-relationship data.
+
+KEYWORDS:
+gift; economics of gift-giving; semiotics; sign-value; signifier; desire; psychoanalysis; formal language theory; interpretation; alienation; crowding out; relational work; generative justice
+
+
+================================================================
+PAPER V
+================================================================
+
+TITLE:
+The Formation of the Subject in Intimate Relationships
+
+SUBTITLE (optional):
+The Other, Joint Attention, and the Economy of Attention
+
+ABSTRACT:
+This paper, the fifth in a series on the philosophy of intimacy and the theory of justice, defends a single thesis with three consequences. The thesis: the subject of an intimate relationship is not a pre-given entity that subsequently enters relation, but is formed and continuously sustained through a specific mechanism, the presence of the other and the practice of joint attention. Part One assembles the theoretical ground, organizing accounts of the relational subject not by school but by the type of constitutive mechanism each proposes: mirror mechanisms (Cooley, Mead, Winnicott, Lacan), triadic mechanisms (joint attention in developmental psychology; Davidson's triangulation), and symbolic mechanisms (Vygotsky, Saussure, Althusser, Butler), with the enactivist correction of theory-of-mind orthodoxy. Part Two argues that the triadic mechanism is the missing middle term between mirror and symbol, offers a layered reconciliation of Lacan and Tomasello, and answers a Levinasian difficulty: in the dyad, the first third party is the shared object itself. Part Three transfers the mechanism to adult intimacy under an explicit no-overclaim discipline, proposing the reflexive triangle: the mature form of intimate joint attention takes the relation itself as its shared object; its limit form is care, where one party holds the triangle open for an other whom incapacity has silenced. Part Four develops the consequences. A critique of the attention economy as a parasite on the triadic structure (the algorithmic feed as a pseudo-shared object) is extended by an analysis of attentional competition across three arenas, showing the contest between the human triangle and its industrial counterfeit to be structurally rigged, and by a regenerative criterion of relational sustainability built on interaction-ritual theory. A further section argues that the symbolic order is the standing distributor of attention, the virtual fourth vertex of every adult triangle, grounding the concepts of attentional alienation (attending executed under a script one cannot appropriate) and attentional autonomy (the couple's joint re-authorship of its law of salience, self-legislation continued by attentional means). A Hohfeldian analysis then shows why there can be no claim-right to attention, and what should stand in its place: an imperfect duty in Kant's register, a virtue of just attention in Murdoch's, and a structural criterion of attentional justice with a distributional clause for the gendered labor of triangle maintenance, argued to be constitutively upstream of epistemic injustice. Finally, carried from fact to norm by twin transcendental and fiduciary bridges, the paper proposes a new category for the theory of justice, constitutive injustice, the systematic degradation not of a subject's holdings or rights but of the conditions of its formation.
+
+KEYWORDS:
+subject formation; relational subject; joint attention; the Other; recognition; attention economy; attentional alienation; attentional autonomy; constitutive injustice; care
+
+
+================================================================
+PAPER VI
+================================================================
+
+TITLE:
+Toward a Just Proposal: Epistemic Injustice Theory and the Practice of Intimate-Relationship Proposals
+
+SUBTITLE (optional):
+On the Marriage Proposal as a High-Stakes Decision, and the Conditions under Which Its Staging Wrongs the One It Asks
+
+ABSTRACT:
+A marriage proposal is, beneath its romance, a request that one person make a high-stakes, contract-like, life-structuring decision, and one that is, in L. A. Paul's sense, transformative (Paul 2014): its acceptance reshapes the values and self by whose lights it would be assessed. This paper argues that the conventional staging of the proposal, the engineered emotional peak, the social script that demands an immediate answer, and the asymmetry of information and preparation between the two parties, can, even in the complete absence of ill will and of any identity-based prejudice, compromise the epistemic agency of the person asked.
+
+I do not claim to have discovered a new kind of epistemic injustice. The wrong is better understood with a framework already in hand. I read the proposal through Catala (2025), The Dynamics of Epistemic Injustice: Situating Epistemic Power and Agency, whose pluralist account of epistemic agency and analysis of hermeneutical domination and epistemic empowerment supply exactly the apparatus the case requires. On Catala's account, epistemic agency is not exhausted by the propositional exchange of testimony; it includes a non-propositional, non-verbal, self-interpretive dimension, the agent's capacity to make sense of her own experience to herself (self-to-self intelligibility) before and apart from conveying it to others (self-to-others intelligibility). The proposal, I argue, is a site where this self-interpretive agency, at the very threshold of a transformative choice, is placed under conditions, temporal, affective, informational, that impede its exercise.
+
+This installment does not yet write the body. Following the principle that the conceptual core should be secured before the argument is built upon it, it does two things. First, it verifies, against the literature current to 2025, the post-Fricker development of the field, Fricker's two originals, Dotson on testimonial smothering, Pohlhaus Jr. on willful hermeneutical ignorance, Medina on resistance, and the philosophical work on gaslighting, and then expounds Catala's framework in detail, since it is the framework the paper will use. Second, it shows precisely how the proposal situation maps onto Catala's categories: which dimension of epistemic agency is at stake, why the wrong is a form of hermeneutical rather than testimonial difficulty, and why locating it within an existing account is more defensible than minting a new term. The constructive half of the full paper will then derive the normativity of an epistemically just proposal: separation of the affective moment from the decision, full disclosure before the asking, removal of immediate-answer pressure, the ring re-grounded from "seal of a concluded bargain" to "token and waiting," and a deferred-commitment mechanism, each reconstrued as a condition of epistemic empowerment in Catala's sense.
+
+KEYWORDS:
+epistemic injustice; epistemic agency; pluralist account; hermeneutical domination; epistemic empowerment; self-interpretation; transformative experience; marriage proposal; intimate justice; relational autonomy
+
+
+================================================================
+PAPER VII
+================================================================
+
+TITLE:
+Prolegomena to a Diplomacy of Intimate Relationships
+
+SUBTITLE (optional):
+A First Step toward Generalized Generative Relational Being
+(descriptive line on cover: Value Generation, Justice, and the Gaze of the Other in the External Relational Field)
+
+ABSTRACT:
+[NOTE: This paper carries NO formal abstract in its source — it is a long programmatic
+survey. You will need to supply an abstract on submission. A faithful one-paragraph
+summary you can adapt, drawn from the paper's own framing (Sections 1 and 7), is below
+— review/edit before using.]
+
+This paper is a prolegomenon that extends the series' relational ontology outward from the intimate dyad into the external relational field, the network of kin, community, and institutions a couple is embedded in, and names that field "diplomacy." Rather than settle a single question, it lays out a domain so that others can work it: it gathers the relevant traditions (phenomenology of the Other, the gift and its political economy, semiotics and hermeneutics, the theory of value, and a geometric-phase formalism for value and alienation), traces how they couple, maps the resulting program of sub-papers, and grounds the abstractions in thick, anonymized case descriptions. Its organizing thesis is that being-in-isolation is an abstraction: subjects are constituted in and through relation, and a couple, having generated itself in second-order coupling, now generates and is generated by the field beyond it. The gaze of the Other is shown to be neither purely objectifying (Sartre) nor purely an ethical summons (Levinas), but to take the moral character of the unequal field within which it falls; and justice in the diplomatic field is treated by integrating, rather than abstracting from, its distributive, recognitive, and hermeneutical registers, tightest where the field is most unequal.
+
+KEYWORDS:
+relational sociology; diplomacy of intimacy; the gift; the gaze of the Other; recognition; generative justice; political economy of kinship; second-order coupling; external relational field
+
+
+================================================================
+PAPER VIII  (Excursus)
+================================================================
+
+TITLE:
+The Intervention of Language in Intimacy: A Linguistic and Psychoanalytic Study of Lyric Poetry
+
+SUBTITLE (optional):
+On Rhythm, the Real, and Why the Beloved Is Addressed in Verse
+
+ABSTRACT:
+Why, in the most intimate moments of a shared life, does the subject reach not for plain speech but for verse, for the borrowed, rhythmic, citational language of the lyric? This excursus to the series takes that question as its guiding thread and refuses to answer it in advance. Rather than proceeding from a thesis, it passes through the theories of desire, language, rhythm, and the Real that bear on the question, and allows a claim to emerge only at the end, as an arrival rather than a premise.
+
+The path is as follows. We first survey the genealogy of desire and affect across psychoanalytic, Hegelian, political-economic, and Spinozan–Deleuzian registers, isolating a tension, desire as lack versus desire as production, that becomes the paper's hidden spine. We then locate the difference between language, poetry, and music along a teleological scale of receding reference, and take up rhythm as the crux: functionalist, structuralist, psychoanalytic, and existential accounts are set against one another, and a reading of rhythm through Deleuze's difference and repetition is offered as the paper's theoretical centre of gravity. The dialectic of desire and the two rhetorical mechanisms of poetic failure, metaphor and metonymy, aligned with Freudian condensation and displacement and Lacanian symptom and desire, are then developed, leading to an account of the lyric as a movement toward the Real that, by structural necessity, never arrives.
+
+A case study of classical Chinese love poetry, classified by literary form and illocutionary function rather than by period or author, tests the conceptual architecture against the material: longing, vow, avowal, and the wish for shared being are shown to map onto the four mechanisms developed in the body. The conclusion lets the claim surface and declines to dissolve the spine's central tension: the lyric is irreplaceable in intimate coupling because it is at once the mourning of a lack and the production of a surplus, a movement toward the Real, staged within the symbolic, that is destined to fail, and whose very failure is what allows love to be spoken without end.
+
+KEYWORDS:
+lyric poetry; rhythm; the Real; desire (lack and production); metaphor and metonymy
+
+================================================================
+END
+================================================================

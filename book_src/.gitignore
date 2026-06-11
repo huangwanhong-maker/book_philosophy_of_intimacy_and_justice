@@ -13,3 +13,6 @@
 
 # Compiled papers (rebuilt from source; cover PDFs under assets/ are kept)
 papers/**/*.pdf
+
+# Collected copies of the compiled papers (rebuilt via `make pdfs`)
+pdfs/*.pdf
