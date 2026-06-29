@@ -1,0 +1,161 @@
+% !TEX program = xelatex
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper XI
+%  A Just Eudaimonia:
+%  The Everyday Fabric of a Shared Life and the Praxis of Flourishing
+%
+%  Uses the shared series style (serendip-paper.sty). XeLaTeX +
+%  Noto Serif CJK SC for occasional Chinese terms.
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+\PassOptionsToPackage{table}{xcolor}
+
+% ---------- Fonts (CJK fallback for occasional Chinese terms) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk #1}}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 0.1pt
+
+% natbib (numbered) before serendip-paper (hyperref loads inside it)
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{serendip-paper}
+
+% colour used on the title page (headings/links come from serendip-paper)
+\definecolor{inksoft}{HTML}{342E37}
+
+% ---------- Math ----------
+\newcommand{\holo}{\operatorname{hol}}
+
+% ---------- Tables (beyond the shared style) ----------
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}p{3.1cm}}
+
+% ---------- Figures (lifecycle diagram) ----------
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathmorphing}
+
+% ---------- Paper-specific emphasis & helpers ----------
+\newcommand{\emc}[1]{\textcolor{rose}{\oldtextit{#1}}}
+\newcommand{\emb}[1]{\textcolor{rose}{\oldtextbf{#1}}}
+\newcommand{\goldrule}{\noindent\textcolor{gold}{\rule{\linewidth}{0.6pt}}\par\vspace{0.4em}}
+\newcommand{\todo}[1]{\textcolor{gray}{\small[TODO: #1]}}
+\newcommand{\xref}[1]{\textcolor{rose}{\S\ref{#1}}}
+\newcommand{\pinkref}[1]{\textcolor{rose}{#1}}
+
+% A claim set off from the prose: a thin gold rule above and below.
+\newenvironment{claim}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.4em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.6em}}
+
+% Inline prose case: a run-in italic label.
+\newenvironment{casebox}[1]{%
+  \par\vspace{0.4em}\noindent\textit{\textcolor{rose}{An illustrative case: #1.}}\hspace{0.4em}\ignorespaces}{%
+  \par\vspace{0.4em}}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title page ----------
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper XI}\\[0.3cm]
+\coverrule\\[1.2cm]
+{\LARGE\bfseries\color{warnred} A Just Eudaimonia}\\[0.8cm]
+{\large\itshape\color{warnred} The Everyday Fabric of a Shared Life and the Praxis of Flourishing}\\[0.8cm]
+{\small\color{gold} [\,Working Draft\,]}\\[0.8cm]
+{\normalsize\color{inksoft} On the Cultivation of Habit and Household, the Unfolding of Each Within a Common Field, and a Flourishing That Justice Constitutes}\\[2cm]
+\coverrule[0.25]\\[0.6cm]
+{\normalsize\color{inksoft} Wanhong}\\
+\vfill
+{\footnotesize\color{gold} Working draft, not for citation or circulation}
+\coverfootnote
+\end{center}
+\newpage
+
+% ---------- Epigraph ----------
+\thispagestyle{empty}
+\vspace*{2.4cm}
+\begin{center}
+\begin{minipage}{0.76\linewidth}
+\centering\itshape\color{rose}
+{\cjk 君子之道，造端乎夫婦；及其至也，察乎天地。}\\[0.3em]
+The way of the noble person takes its rise in the relation of husband and wife;\\in its furthest reach, it is discerned in heaven and earth.\\[0.8em]
+{\cjk 君子素其位而行。}\\[0.3em]
+The noble person acts from the place where he is.\\[0.8em]
+\upshape A good life is not secured and then lived;\\it is the unfolding, of each and of both, of a life tended in common.\\[0.6em]
+{\upshape\footnotesize\color{gold} {\cjk《中庸》}\ \emph{Zhongyong} (The Doctrine of the Mean), ch.~12 and ch.~14\,;\ and a remark of the author's own.}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Dedication ----------
+\thispagestyle{empty}
+\vspace*{4.5cm}
+\begin{center}
+\begin{minipage}{0.7\linewidth}
+\centering\itshape\color{rose}
+For her,\\[0.7em]
+\upshape with whom the first name was made\\[0.3em]
+that no one else could read,\\[0.7em]
+\itshape and in whose eyes I first saw\\that I had been seen seeing.\\[1.2em]
+{\upshape\zh{结发为夫妻，恩爱两不疑。}}\\[1.2em]
+{\upshape\footnotesize\color{gold} To the one I love most.}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Abstract ----------
+\thispagestyle{empty}
+\vspace*{1cm}
+\noindent\textbf{\large\color{rosedeep} Abstract}\\[0.6em]
+\input{sections/abstract.tex}
+\vfill
+\newpage
+
+% ---------- Contents ----------
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+
+% ---------- Body ----------
+\input{sections/intro.tex}
+\input{sections/fig_lifecycle.tex}
+\input{sections/background.tex}
+\input{sections/philosophy.tex}
+\input{sections/dynsys.tex}
+\input{sections/appraisal.tex}
+\input{sections/cycle.tex}
+\input{sections/matrix.tex}
+\input{sections/cognition.tex}
+\input{sections/practice.tex}
+\input{sections/evaluation.tex}
+\input{sections/reflection.tex}
+\input{sections/recognition.tex}
+\input{sections/regimes.tex}
+\input{sections/case.tex}
+\input{sections/crosscultural.tex}
+\input{sections/foundational.tex}
+\input{sections/objections.tex}
+\input{sections/conclusions.tex}
+\input{sections/envoi.tex}
+
+\bigskip
+\input{sections/acknowledgements.tex}
+
+\newpage
+\appendix
+\input{sections/notation.tex}
+\input{sections/appendix.tex}
+
+% ---------- Back matter ----------
+\newpage
+\small
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

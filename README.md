@@ -13,6 +13,18 @@ being, and justice, stewarded by **Serendip Commons Society**.
 | VI   | Toward a Just Proposal |
 | VII  | Prolegomena to a Diplomacy of Intimate Relationships |
 | VIII | The Intervention of Language in Intimacy (excursus) |
+| IX   | The Sustainability of Intimacy |
+| X    | The Joint Attention of Value and the Creation of Language |
+| XI   | A Just Eudaimonia |
+| XII  | The Sweet Cycle |
+| XIII | The Causality of the Non-Binding Vow |
+| XIV  | Contingency, Existence, and Eudaimonia in Intimate Relations |
+| XV   | The Political Economy of Intimate Relations |
+| XVI  | The Semiotics of Luxury in Intimate Relations |
+| XVII | Generativity Under Power |
+| XVIII| Generative Effacement in the Intimate Relation |
+| XIX  | On the Emergence of Happiness and the Self-Continuation of Generativity |
+| XX   | The Hydraulic Virtue of Intimate Relations |
 
 ## Repository layout
 

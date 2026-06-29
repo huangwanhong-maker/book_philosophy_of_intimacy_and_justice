@@ -1,0 +1,70 @@
+{
+  "papers/paper-18.pdf": {
+    "subtitle": "An Ontological Injustice and the Justice of Non-Determination",
+    "teaser": "Some harm is done not by taking but by giving. This paper names “generative effacement”: when one partner, generating too fast and too far ahead, fills the shared space so completely that the other ceases — within the relation — to be. It arrives through devotion, not domination; and the remedy is not to give less, but to leave room.",
+    "keywords": [
+      "generative effacement",
+      "ontological injustice",
+      "constitutive injustice",
+      "generative reticence",
+      "phase capture",
+      "coupling",
+      "non-determination",
+      "generative justice",
+      "care ethics"
+    ],
+    "background": "Across this series, intimate life is understood as a field of co-generation: value resides in neither party but is generated between them. Justice theory has long named wrongs to what a subject has (distributive), to how she is recognised (recognitive), and to whether she can be heard (constitutive or hermeneutical). This paper, Paper XVIII, isolates a wrong that lies beneath all of these — a harm not to a subject's holdings, recognition, or voice, but to her being as a generative subject who continually constitutes herself. What is at stake is a harm that has hidden in plain sight precisely because it can look like love: the quiet silencing of one partner's capacity to generate by the very devotion of the other.",
+    "approach": "The paper is at once conceptual, formal, and ethical. It first isolates and demarcates generative effacement as an ontological injustice, irreducible to the distributive, recognitive, or constitutive wrongs with which it might be confused. It then gives the harm an exact formal criterion: modelling two intimate subjects as coupled phase oscillators, it shows effacement to be a genuine phase transition, separating the threshold at which the weaker pole loses its rhythm (fixed by the difference of intrinsic frequencies and the coupling strength) from the depth of effacement (set by the asymmetry of force) — two independent structures. From this it derives a counter-intuitive justice (decouple rather than decelerate), develops it as the obligation of generative reticence, specifies that obligation as the relinquishment of three determining channels, grounds it in care- and ends-based ethics, and tests it against objections before a concluding envoi.",
+    "questions": [
+      "Is there a form of injustice that wrongs not what a subject has, nor how she is recognised, nor whether she can be heard, but her very being as a generative subject?",
+      "Can such a harm arrive through devotion rather than domination?",
+      "When intimacy is co-generation, what happens if one party occupies the shared generative space so completely that the other can no longer generate?",
+      "Can the harm be given an exact, formal criterion?",
+      "Does equal power between the two protect the weaker party?",
+      "If the threshold depends on the coupling and not on the stronger subject's speed, is the remedy to generate less — or to decouple?",
+      "What does justice between two generative beings actually require?"
+    ],
+    "key_concepts": [
+      { "term": "Generative effacement", "gloss": "An ontological injustice in which one subject, generating too fast and too far ahead, comes to occupy the shared generative space so completely that the other loses the capacity to generate and ceases, within the relation, to be." },
+      { "term": "Ontological injustice", "gloss": "A wrong to a subject's standing as a generative being who continually constitutes herself — irreducible to distributive, recognitive, or constitutive (hermeneutical) wrongs." },
+      { "term": "Harm through devotion", "gloss": "Effacement's most troubling feature: it arrives with no appropriation, no coercion, and no failure to hear, and the effaced party may sincerely endorse and even cherish the one who effaces her." },
+      { "term": "Phase capture (coupled oscillators)", "gloss": "The formal model: two intimate subjects as coupled phase oscillators, where effacement is a genuine phase transition — the weaker pole loses its own rhythm once coupling strength exceeds a threshold set by the difference of intrinsic frequencies." },
+      { "term": "Threshold vs. depth (independence)", "gloss": "When effacement begins is fixed by frequency difference and coupling; how deep it goes is set by the asymmetry of force. The two are independent — so even under perfectly equal force the weaker pole is effaced by half once the threshold is crossed." },
+      { "term": "Generative reticence", "gloss": "A negative, structural obligation to refrain from determining the domain in which the other generates — practised as relinquishing three determining channels: the shared goal, meaning, and the very problems on which the relation works." },
+      { "term": "Decouple, not decelerate", "gloss": "Because the threshold depends on the coupling and not on the stronger subject's speed, slowing down only re-imposes its pace; the remedy is to release the traction by which it overwrites the other's rhythm." },
+      { "term": "Justice of non-determination", "gloss": "Justice between two generative beings requires not the transfer of value but the non-foreclosure of the other's capacity to generate." }
+    ],
+    "claims": [
+      "There is an ontological injustice — generative effacement — that wrongs a subject's being as a generative subject, irreducible to distributive, recognitive, or constitutive wrongs.",
+      "Its defining and most troubling feature is that it arrives through devotion, not domination: no appropriation, no coercion, no failure to hear, and the effaced party may sincerely cherish the one who effaces her.",
+      "Modelled as coupled phase oscillators, effacement is a genuine phase transition: the weaker pole loses its rhythm exactly when coupling strength exceeds a threshold fixed by the difference of the two intrinsic frequencies.",
+      "Threshold and depth are independent structures, and their separation yields the central result: even under perfectly equal force, the weaker pole is effaced by half once the threshold is crossed.",
+      "Equal power does not protect the weaker party; strong coupling between unlike rhythms is sufficient to silence the slower.",
+      "The good of intimacy lies not in the strength of coupling but in whether it leaves each subject turning at its own frequency.",
+      "Because the threshold depends on the coupling and not on the stronger subject's speed, the remedy is not to generate less (deceleration only re-imposes its pace) but to decouple.",
+      "Generative reticence is a negative, structural obligation to refrain from determining the other's generative domain, practised as relinquishing three channels: the shared goal, meaning, and the problems the relation works on.",
+      "The obligation is grounded by extending the duty to treat another as an end from rational to generative agency — while forbidding the ethic its own paternalistic application.",
+      "Justice between two generative beings requires not the transfer of value but the non-foreclosure of the other's capacity to generate."
+    ],
+    "conclusion": "Generative effacement names a harm that has hidden in plain sight because it looks like love: the silencing of one partner's generative being by another's overwhelming generativity. Formalised as a phase transition between coupled oscillators, the account shows that equal power is no protection — strong coupling between unlike rhythms is enough to efface the slower by half. The remedy is therefore structural rather than quantitative: not to generate less but to decouple, leaving the other room to turn at her own frequency. The paper develops this as generative reticence — the relinquishment of the determination of the shared goal, of meaning, and of the problems the relation works on — grounds it in a duty to treat the other as a generative end (barring any paternalistic self-application), and concludes that justice between generative beings is the non-foreclosure of the other's capacity to generate.",
+    "contributions": [
+      "Names and demarcates a new category — generative effacement as an ontological injustice — distinct from distributive, recognitive, and constitutive wrongs.",
+      "Gives the harm an exact formal criterion via coupled phase oscillators, separating the threshold (frequency difference and coupling) from the depth (asymmetry of force) as two independent structures.",
+      "Establishes the result that even under equal force the weaker pole is effaced by half once the threshold is crossed — equal power does not protect.",
+      "Derives the counter-intuitive remedy: decouple rather than decelerate.",
+      "Develops the concept of generative reticence — a negative, structural obligation relinquishing three determining channels (goal, meaning, problems).",
+      "Grounds the obligation ethically by extending “treat another as an end” from rational to generative agency, with a built-in bar on paternalistic application.",
+      "Advances the thesis that justice between generative beings is the non-foreclosure of the other's capacity to generate."
+    ],
+    "outline": [
+      { "section": "1. Introduction: the phenomenon and the paradox", "gist": "Presents the lived phenomenon — a partner effaced not by neglect but by another's devoted, overwhelming generativity — and the paradox that a harm can be done by giving." },
+      { "section": "2. Justice typology and descent to ontology", "gist": "Surveys distributive, recognitive, and constitutive wrongs and shows that none captures this harm, motivating a descent to an ontological level of injustice." },
+      { "section": "3. Definition and demarcation", "gist": "Defines generative effacement and demarcates it from the distributive, recognitive, and constitutive wrongs with which it might be confused." },
+      { "section": "4. The formal criterion (phase capture)", "gist": "Models the two subjects as coupled phase oscillators, derives effacement as a phase transition, and separates threshold from depth — yielding the equal-force-effaces-by-half result (with the phase diagram)." },
+      { "section": "5. Reservation of generative space", "gist": "Develops the remedy: decouple rather than decelerate, and the obligation of generative reticence as relinquishing the determination of goal, meaning, and problems." },
+      { "section": "6. The ethics of reticence", "gist": "Grounds the obligation by extending the duty to treat another as an end from rational to generative agency, while barring the ethic's own paternalistic application." },
+      { "section": "7. Objections and limits", "gist": "Tests the account against objections and marks the limits of the criterion and the obligation." },
+      { "section": "8. Conclusions and Envoi", "gist": "Gathers the argument — justice as non-foreclosure of the other's capacity to generate — and closes with a literary envoi." }
+    ]
+  }
+}

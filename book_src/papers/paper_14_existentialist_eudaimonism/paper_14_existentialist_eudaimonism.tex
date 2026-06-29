@@ -1,0 +1,149 @@
+% !TEX program = xelatex
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper XIV
+%  Contingency, Existence, and Eudaimonia in Intimate Relations:
+%  Toward a Generative-Relational Existentialist Eudaimonism
+%
+%  Series visual identity: blush page, deep-rose headings,
+%  rose emphasis, gold rules, ink body. XeLaTeX + TeX Gyre Pagella,
+%  with Noto Serif CJK SC fallback for Chinese/Japanese terms.
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+\PassOptionsToPackage{table}{xcolor}
+
+% ---------- Fonts (CJK fallback for occasional Chinese terms) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk #1}}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 0.1pt
+
+\newcommand{\holo}{\operatorname{hol}}
+
+% natbib (numbered) before serendip-paper (hyperref loads inside it)
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{serendip-paper}
+
+% colour used on the title page (headings/links/palette come from serendip-paper)
+\definecolor{inksoft}{HTML}{342E37}
+
+% ---------- Tables (beyond the shared style) ----------
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}p{3.1cm}}
+
+% ---------- Paper-specific emphasis & helpers ----------
+\newcommand{\emc}[1]{\textcolor{rose}{\oldtextit{#1}}}
+\newcommand{\emb}[1]{\textcolor{rose}{\oldtextbf{#1}}}
+\newcommand{\goldrule}{\noindent\textcolor{gold}{\rule{\linewidth}{0.6pt}}\par\vspace{0.4em}}
+\newcommand{\todo}[1]{\textcolor{gray}{\small[TODO: #1]}}
+\newcommand{\xref}[1]{\textcolor{rose}{\S\ref{#1}}}
+\newcommand{\pinkref}[1]{\textcolor{rose}{#1}}
+
+\newenvironment{claim}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.4em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.6em}}
+
+\newenvironment{casebox}[1]{%
+  \par\vspace{0.4em}\noindent\textit{\textcolor{rose}{An illustrative case --- #1.}}\hspace{0.4em}\ignorespaces}{%
+  \par\vspace{0.4em}}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title page ----------
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper XIV}\\[0.3cm]
+\coverrule\\[1.2cm]
+{\LARGE\bfseries\color{warnred} Contingency, Existence, and Eudaimonia in Intimate Relations}\\[0.8cm]
+{\large\itshape\color{warnred} Toward a Generative-Relational Existentialist Eudaimonism}\\[0.8cm]
+{\small\color{gold} [\,Working Draft\,]}\\[0.8cm]
+{\normalsize\color{inksoft} On Shared Contingency, Relational Co-evolution, and the Eudaimonics of the Generative Relational Field}\\[2cm]
+\coverrule[0.25]\\[0.6cm]
+{\normalsize\color{inksoft} Wanhong}\\
+\vfill
+{\footnotesize\color{gold} Working draft --- not for citation or circulation}
+\coverfootnote
+\end{center}
+\newpage
+
+% ---------- Epigraph ----------
+\thispagestyle{empty}
+\vspace*{2.4cm}
+\begin{center}
+\begin{minipage}{0.74\linewidth}
+\centering\itshape\color{rose}
+{\cjk 昨夜星辰昨夜风，画楼西畔桂堂东。}\\[0.3em]
+Last night---those stars, that wind; the painted tower, the cassia hall.\\[0.8em]
+{\cjk 身无彩凤双飞翼，心有灵犀一点通。}\\[0.3em]
+Without the phoenix wings to fly together,\\
+our hearts are joined by the unicorn's single horn of light.\\[0.6em]
+{\upshape\footnotesize\color{gold} ---{\cjk 李商隐}\ Li Shangyin,\ \emph{Untitled} (\zh{无题})}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Dedication ----------
+\thispagestyle{empty}
+\vspace*{4.5cm}
+\begin{center}
+\begin{minipage}{0.72\linewidth}
+\centering\itshape\color{rose}
+{\cjk 献给自己深爱的那位}\\[0.4em]
+{\cjk 喜欢文化、旅行与大自然的同乡女孩}\\[0.8em]
+\upshape\normalsize For her---\\[0.3em]
+\itshape the girl from home,\\[0.2em]
+who loves culture, travel, and the living world.\\[1.0em]
+\upshape {\cjk 与她在故乡的千里之外的相遇，}\\[0.2em]
+{\cjk 是自己此生最大的幸运。}\\[0.6em]
+\itshape To have found her, a thousand \emph{li} from home---\\[0.2em]
+this is the greatest fortune of my life.\\[1.2em]
+\upshape {\cjk 也献给天下所有有情人。}\\[0.3em]
+\itshape And for all lovers, everywhere,\\[0.2em]
+who have ever shared a flower on a path.\\[1.0em]
+{\upshape\footnotesize\color{gold} {\cjk 此刻与你分享，感受到了幸福。}}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Abstract ----------
+\thispagestyle{empty}
+\noindent\textbf{\large\color{rosedeep} Abstract}\\[0.6em]
+\input{sections/abstract.tex}
+
+\vspace{1.2em}
+\noindent{\color{rosedeep}\textbf{Keywords:}}\, \textcolor{inksoft}{contingency; existentialism; eudaimonia; relational being; co-evolution; generative justice; shared happiness; inter-brain synchrony; relational flow.}
+\newpage
+
+\tableofcontents
+\newpage
+
+% ============================================================
+%  Body
+% ============================================================
+\input{sections/s0_prelude.tex}         % §1  Prelude: a flower on the path
+\input{sections/s1_existentialism.tex}  % §2  The legacy and limits of existentialism
+\input{sections/s2_eudaimonia.tex}      % §3  The presuppositions of traditional eudaimonism
+\input{sections/s3_turn.tex}            % §4  The relational turn: whose contingency?
+\input{sections/s4_event.tex}           % §5  The descent of the contingent event
+\input{sections/s5_coevolution.tex}     % §6  Co-evolution as relational dynamics
+\input{sections/s6_dynamics.tex}        % §7  Developmental dynamics under relational coupling
+\input{sections/s7_empirical.tex}       % §8  Empirical methodology
+\input{sections/s8_phenomenology.tex}   % §9  Phenomenology of relational happiness
+\input{sections/s9_reconstruction.tex}  % §10 Eudaimonistic reconstruction
+\input{sections/s10_hermeneutics.tex}   % §11 Hermeneutics of classical happiness theories under GRB
+\input{sections/s11_culture.tex}        % §12 Cross-cultural dimensions of relational happiness
+\input{sections/s12_praxis.tex}         % §13 Praxis: practising relational happiness
+\input{sections/s13_conclusions.tex}    % §14 Conclusions
+\input{sections/s14_envoi.tex}          % Envoi: back to the flower
+\input{sections/s15_ack.tex}            % Acknowledgements
+
+% ============================================================
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

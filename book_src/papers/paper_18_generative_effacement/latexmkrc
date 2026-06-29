@@ -1,0 +1,4 @@
+$ENV{'TEXINPUTS'} = '../../:' . ($ENV{'TEXINPUTS'} // '');
+$pdf_mode   = 5;
+$bibtex_use = 2;
+@default_files = ('paper_18_generative_effacement.tex');

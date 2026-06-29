@@ -1,0 +1,154 @@
+% !TEX program = xelatex
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper XIII
+%  The Causality of the Non-Binding Vow:
+%  On Trust, Promise, and the Generation of Expectation
+%  in the Absence of the Other's Sword
+%
+%  Uses the shared series style (serendip-paper.sty). XeLaTeX +
+%  Noto Serif CJK SC for occasional Chinese terms.
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+\PassOptionsToPackage{table}{xcolor}
+
+% ---------- Fonts (CJK fallback for occasional Chinese terms) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk #1}}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 0.1pt
+
+% natbib (numbered) before serendip-paper (hyperref loads inside it)
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{serendip-paper}
+
+% colour used on the title page (headings/links come from serendip-paper)
+\definecolor{inksoft}{HTML}{342E37}
+
+% ---------- Math ----------
+\newcommand{\holo}{\operatorname{hol}}
+
+% ---------- Tables (beyond the shared style) ----------
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}p{3.1cm}}
+
+% ---------- Figures (TikZ diagrams) ----------
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathmorphing}
+
+% ---------- Paper-specific emphasis & helpers ----------
+\newcommand{\emc}[1]{\textcolor{rose}{\oldtextit{#1}}}
+\newcommand{\emb}[1]{\textcolor{rose}{\oldtextbf{#1}}}
+\newcommand{\goldrule}{\noindent\textcolor{gold}{\rule{\linewidth}{0.6pt}}\par\vspace{0.4em}}
+\newcommand{\todo}[1]{\textcolor{gray}{\small[TODO: #1]}}
+\newcommand{\xref}[1]{\textcolor{rose}{\S\ref{#1}}}
+\newcommand{\pinkref}[1]{\textcolor{rose}{#1}}
+
+% A claim set off from the prose: a thin gold rule above and below.
+\newenvironment{claim}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.4em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.6em}}
+
+% Inline prose case: a run-in italic label.
+\newenvironment{casebox}[1]{%
+  \par\vspace{0.4em}\noindent\textit{\textcolor{rose}{An illustrative case: #1.}}\hspace{0.4em}\ignorespaces}{%
+  \par\vspace{0.4em}}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title page ----------
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper XIII}\\[0.3cm]
+\coverrule\\[1.2cm]
+{\LARGE\bfseries\color{warnred} The Causality of the Non-Binding Vow}\\[0.8cm]
+{\large\itshape\color{warnred} On Trust, Promise, and the Generation of Expectation in the Absence of the Other's Sword}\\[0.8cm]
+{\small\color{gold} [\,Working Draft\,]}\\[0.8cm]
+{\normalsize\color{inksoft} On the Mechanism by which a Promise without Force Generates Trust, the Translation of Sincerity across the Borders of Epistemology, and the Descent of a Relational Divinity}\\[2cm]
+\coverrule[0.25]\\[0.6cm]
+{\normalsize\color{inksoft} Wanhong}\\
+\vfill
+{\footnotesize\color{gold} Working draft, not for citation or circulation}
+\coverfootnote
+\end{center}
+\newpage
+
+% ---------- Epigraph ----------
+\thispagestyle{empty}
+\vspace*{2.4cm}
+\begin{center}
+\begin{minipage}{0.76\linewidth}
+\centering\itshape\color{rose}
+{\cjk 死生契阔，与子成说。}\\[0.3em]
+Through death and life, through parting and reunion,\\with you I made my word.\\[0.8em]
+{\cjk 匪报也，永以为好也。}\\[0.3em]
+Not as requital---but to be, with you,\\in good faith for ever.\\[0.8em]
+\upshape Where nothing binds two hearts, they hold each other still;\\and a vow is believed, if at all, in the very place where nothing binds it.\\[0.6em]
+{\upshape\footnotesize\color{gold} {\cjk《诗经》}\ \emph{Shijing} (The Book of Songs), {\cjk 邶风·击鼓} and {\cjk 卫风·木瓜}\,;\ and a remark of the author's own.}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Dedication ----------
+\thispagestyle{empty}
+\vspace*{4.5cm}
+\begin{center}
+\begin{minipage}{0.7\linewidth}
+\centering\itshape\color{rose}
+For the forest girl,\\[0.7em]
+\upshape to whom a promise was made\\[0.3em]
+that no sword stands behind,\\[0.7em]
+\itshape and which is, for that very reason,\\the more wholly given.\\[1.2em]
+{\upshape\zh{本乎此心，自成永恒。}}\\[1.2em]
+{\upshape\footnotesize\color{gold} To the one I love most.}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Abstract ----------
+\thispagestyle{empty}
+\vspace*{1cm}
+\noindent\textbf{\large\color{rosedeep} Abstract}\\[0.6em]
+\input{sections/abstract.tex}
+\vfill
+\newpage
+
+% ---------- Contents ----------
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+
+% ---------- Front matter: the Prelude (literary entry) ----------
+\input{sections/prelude.tex}
+
+% ---------- Body ----------
+\input{sections/intro.tex}
+\input{sections/symptomatology.tex}
+\input{sections/diagnosis.tex}
+\input{sections/jurisprudence.tex}
+\input{sections/freedom.tex}
+\input{sections/mechanism.tex}
+\input{sections/holonomy.tex}
+\input{sections/justice.tex}
+\input{sections/relational.tex}
+\input{sections/translation.tex}
+\input{sections/judicial.tex}
+\input{sections/praxis.tex}
+\input{sections/conclusions.tex}
+\input{sections/envoi.tex}
+
+\bigskip
+\input{sections/acknowledgements.tex}
+
+% ---------- Back matter ----------
+\newpage
+\small
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

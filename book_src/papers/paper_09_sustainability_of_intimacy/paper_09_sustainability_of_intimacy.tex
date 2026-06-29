@@ -1,0 +1,149 @@
+% !TEX program = xelatex
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper IX
+%  The Sustainability of Intimacy:
+%  Poetic Generativity and Generative Justice
+%
+%  Uses the shared series style (serendip-paper.sty). XeLaTeX +
+%  Noto Serif CJK SC for occasional Chinese terms.
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+\PassOptionsToPackage{table}{xcolor}
+
+% ---------- Fonts (CJK fallback for occasional Chinese terms) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk #1}}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 0.1pt
+
+% natbib (numbered) before serendip-paper (hyperref loads inside it)
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{serendip-paper}
+
+% colour used on the title page (headings/links come from serendip-paper)
+\definecolor{inksoft}{HTML}{342E37}
+
+% ---------- Math ----------
+\newcommand{\holo}{\operatorname{hol}}
+
+% ---------- Tables (beyond the shared style) ----------
+\usepackage{tabularx}
+\usepackage{pdflscape}
+\usepackage{ragged2e}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}p{3.1cm}}
+
+% ---------- Paper-specific emphasis & helpers ----------
+\newcommand{\emc}[1]{\textcolor{rose}{\oldtextit{#1}}}
+\newcommand{\emb}[1]{\textcolor{rose}{\oldtextbf{#1}}}
+\newcommand{\goldrule}{\noindent\textcolor{gold}{\rule{\linewidth}{0.6pt}}\par\vspace{0.4em}}
+\newcommand{\todo}[1]{\textcolor{gray}{\small[TODO: #1]}}
+\newcommand{\xref}[1]{\textcolor{rose}{\S\ref{#1}}}
+\newcommand{\pinkref}[1]{\textcolor{rose}{#1}}
+
+% A claim set off from the prose: a thin gold rule above and below,
+% used sparingly for the load-bearing propositions of the paper.
+\newenvironment{claim}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.4em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.6em}}
+
+% Inline prose case: a run-in italic label.
+\newenvironment{casebox}[1]{%
+  \par\vspace{0.4em}\noindent\textit{\textcolor{rose}{An illustrative case --- #1.}}\hspace{0.4em}\ignorespaces}{%
+  \par\vspace{0.4em}}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title page ----------
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper IX}\\[0.3cm]
+\coverrule\\[1.2cm]
+{\LARGE\bfseries\color{warnred} The Sustainability of Intimacy}\\[0.7cm]
+{\large\color{warnred} Poetic Generativity and Generative Justice}\\[0.8cm]
+{\small\color{gold} [\,Working Draft\,]}\\[0.8cm]
+{\normalsize\color{inksoft} On the Good and the Vicious Circle, the Geometry of Sublimation, and a Eudaimonics of the Relational Field}\\[2cm]
+\coverrule[0.25]\\[0.6cm]
+{\normalsize\color{inksoft} Wanhong}\\
+\vfill
+{\footnotesize\color{gold} Working draft --- not for citation or circulation}
+\coverfootnote
+\end{center}
+\newpage
+
+% ---------- Epigraph ----------
+\thispagestyle{empty}
+\vspace*{2.4cm}
+\begin{center}
+\begin{minipage}{0.74\linewidth}
+\centering\itshape\color{rose}
+{\cjk 但愿人长久，千里共婵娟。}\\[0.3em]
+So let us wish each other long life, and share, though a thousand\\miles apart, the same fair moon.\\[0.8em]
+{\cjk 夫物芸芸，各复归其根。}\\[0.3em]
+The myriad things in their teeming each return to their root.\\[0.8em]
+{\cjk 生而不有，为而不恃，长而不宰，是谓玄德。}\\[0.3em]
+To generate without possessing, to act without presuming,\\to foster without ruling: this is called the dark virtue.\\[0.6em]
+{\upshape\footnotesize\color{gold} ---{\cjk 苏轼}\ Su Shi\,;\ {\cjk《道德经》}\ \emph{Daodejing}, ch.~16 \& 51}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Dedication ----------
+\thispagestyle{empty}
+\vspace*{4.5cm}
+\begin{center}
+\begin{minipage}{0.7\linewidth}
+\centering\itshape\color{rose}
+For her---\\[0.7em]
+\upshape the girl of the forest,\\[0.3em]
+who loves the woods and the long road of travelling;\\[0.7em]
+\itshape pure, and kind, and touched with the divine.\\[1.0em]
+{\upshape\footnotesize\color{gold} To the one I love most.}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Abstract ----------
+\thispagestyle{empty}
+\noindent\textbf{\large\color{rosedeep} Abstract}\\[0.6em]
+\input{sections/abstract.tex}
+
+\vspace{1.2em}
+\noindent{\color{rosedeep}\textbf{Keywords:}}\, \textcolor{inksoft}{sustainability of intimacy; generative justice; geometric phase; the good and the vicious circle; non-possession; poetic generativity.}
+\newpage
+
+\tableofcontents
+\newpage
+
+% ============================================================
+%  Body
+% ============================================================
+\input{sections/s0_prelude.tex}      % §1 Prelude: the rose in the garden
+\input{sections/s1_thesis.tex}       % §2 Thesis: generativity takes its own continuation as its end
+\input{sections/s2_antithesis.tex}   % §3 Antithesis: self-continuation is morally indifferent
+\input{sections/s3_synthesis.tex}    % §4 Synthesis: the axiom of sustainability, geometric phase
+\input{sections/s4_epistemology.tex} % §5 Epistemology: the diagnosis of curvature
+\input{sections/s5_praxis.tex}       % §6 Praxis: the strategy of no-strategy
+\input{sections/s6_semiotics.tex}    % §7 Semiotics: the poem as paradigm
+\input{sections/s7_turn.tex}         % §8 Poeticity does not guarantee the good
+\input{sections/s8_core.tex}         % §9 The non-possessive poem
+\input{sections/s8b_contract.tex}    % §10 Legislation as a flow: contract, morality, self-legislation
+\input{sections/s9_eudaimonia.tex}   % §11 Eudaimonics: the field
+\input{sections/s11_perception.tex}  % §12 The perception of relational value
+\input{sections/s12_cocreation.tex}  % §13 The cultivation of the field and the co-creation of value
+\input{sections/s13_return.tex}      % §14 Securing the return: legislative practice under asymmetry
+\input{sections/s14_gift.tex}        % §15 The gift: a threshold phenomenon across the three registers
+\input{sections/s10_conclusions.tex} % §16 Conclusions: at the boundaries of the frameworks
+\input{sections/s15_envoi.tex}       % Envoi: how to think of that rose
+\input{sections/s16_ack.tex}         % Acknowledgements
+\input{sections/appendixA.tex}       % Appendix A: geometric phase, technical sketch
+
+% ============================================================
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

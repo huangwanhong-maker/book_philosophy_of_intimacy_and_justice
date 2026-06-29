@@ -1,0 +1,159 @@
+% !TEX program = xelatex
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper XV
+%  The Political Economy of Intimate Relations:
+%  Toward a Theory of Generative Relational Wealth
+%
+%  Series visual identity: blush page, deep-rose headings,
+%  rose emphasis, gold rules, ink body. XeLaTeX + TeX Gyre Pagella,
+%  with Noto Serif CJK SC fallback for Chinese/Japanese terms.
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+\PassOptionsToPackage{table}{xcolor}
+
+% ---------- Fonts (CJK fallback for occasional Chinese terms) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk #1}}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 0.1pt
+
+\newcommand{\holo}{\operatorname{hol}}
+\newcommand{\GRW}{\mathcal{W}_{\mathrm{rel}}}
+\newcommand{\Lag}{\mathcal{L}}
+
+% natbib (numbered) before serendip-paper (hyperref loads inside it)
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{serendip-paper}
+
+% colour used on the title page (headings/links/palette come from serendip-paper)
+\definecolor{inksoft}{HTML}{342E37}
+
+% ---------- Tables (beyond the shared style) ----------
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}p{3.1cm}}
+
+% ---------- Paper-specific emphasis & helpers ----------
+\newcommand{\emc}[1]{\textcolor{rose}{\oldtextit{#1}}}
+\newcommand{\emb}[1]{\textcolor{rose}{\oldtextbf{#1}}}
+\newcommand{\goldrule}{\noindent\textcolor{gold}{\rule{\linewidth}{0.6pt}}\par\vspace{0.4em}}
+\newcommand{\todo}[1]{\textcolor{gray}{\small[TODO: #1]}}
+\newcommand{\xref}[1]{\textcolor{rose}{\S\ref{#1}}}
+\newcommand{\pinkref}[1]{\textcolor{rose}{#1}}
+
+\usepackage{tikz}
+
+\newenvironment{claim}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.4em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.6em}}
+
+\newenvironment{openquestion}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.3pt}}\par\vspace{0.3em}
+  \noindent\textit{\textcolor{gold}{Open question.}}\hspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.3em}\noindent\textcolor{gold}{\rule{\linewidth}{0.3pt}}\par\vspace{0.6em}}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title page ----------
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper XV}\\[0.3cm]
+\coverrule\\[1.2cm]
+{\LARGE\bfseries\color{warnred} The Political Economy of Intimate Relations}\\[0.8cm]
+{\large\itshape\color{warnred} Toward a Theory of Generative Relational Wealth}\\[0.8cm]
+{\small\color{gold} [\,Working Draft\,]}\\[0.8cm]
+{\normalsize\color{inksoft} On Wealth, Power, and the Generation of Value in Intimate Relational Fields}\\[2cm]
+\coverrule[0.25]\\[0.6cm]
+{\normalsize\color{inksoft} Wanhong}\\
+\vfill
+{\footnotesize\color{gold} Working draft --- not for citation or circulation}
+\coverfootnote
+\end{center}
+\newpage
+
+% ---------- Epigraph ----------
+\thispagestyle{empty}
+\vspace*{2.4cm}
+\begin{center}
+\begin{minipage}{0.74\linewidth}
+\centering\itshape\color{rose}
+{\cjk 生而不有，为而不恃，长而不宰。}\\[0.4em]
+To generate without possessing,\\
+to act without presuming,\\
+to foster without ruling.\\[0.8em]
+{\upshape\footnotesize\color{gold} ---{\cjk 老子}\ Laozi,\ \emph{Tao Te Ching}\ Ch.~10}\\[1.2em]
+{\cjk 取之不尽，用之不竭。}\\[0.4em]
+Inexhaustible in the taking,\\
+inexhaustible in the using.\\[0.6em]
+{\upshape\footnotesize\color{gold} --- On the nature of generative relational wealth}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Dedication ----------
+\thispagestyle{empty}
+\vspace*{4.5cm}
+\begin{center}
+\begin{minipage}{0.72\linewidth}
+\centering\itshape\color{rose}
+{\cjk 献给自己深爱的那位}\\[0.4em]
+{\cjk 喜欢文化、旅行与大自然的同乡女孩}\\[0.8em]
+For her---\\[0.3em]
+the girl from home,\\[0.2em]
+who loves culture, travel, and the living world.\\[0.8em]
+{\cjk 与她在故乡的千里之外的相遇，}\\[0.2em]
+{\cjk 是自己此生最大的幸运。}\\[0.6em]
+To have found her, a thousand \emph{li} from home---\\[0.2em]
+this is the greatest fortune of my life.\\[1.2em]
+{\cjk 也献给天下所有有情人。}\\[0.3em]
+And for all lovers, everywhere,\\[0.2em]
+who have ever wondered what they truly possess.\\[1.0em]
+{\upshape\footnotesize\color{gold} {\cjk 取之不尽，用之不竭，因为爱本身就是生成性的。}}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Abstract ----------
+\thispagestyle{empty}
+\noindent\textbf{\large\color{rosedeep} Abstract}\\[0.6em]
+\input{sections/abstract.tex}
+
+\vspace{1.2em}
+\noindent{\color{rosedeep}\textbf{Keywords:}}\, \textcolor{inksoft}{generative relational wealth; political economy; intimate relations; wealth theory; generative justice; epistemic justice; care ethics; dialectics; holonomy; spiking neural networks.}
+\newpage
+
+\tableofcontents
+\newpage
+
+% ============================================================
+%  Body
+% ============================================================
+\input{sections/s0_prelude.tex}         % §1  Prelude
+\input{sections/s1_wealth_theories.tex} % §2  Wealth theories
+\input{sections/s2_power.tex}           % §3  Power structures
+\input{sections/s3_dialectic.tex}       % §4  Freedom and wealth
+\input{sections/s4_grw.tex}             % §5  GRW theory
+\input{sections/s5_semiotics.tex}       % §6  Semiotics of the jar
+\input{sections/s6_isomorphism.tex}     % §7  Relational isomorphism
+\input{sections/s7_psychoanalysis.tex}  % §8  Psychoanalytic perspective
+\input{sections/s8_feminism.tex}        % §9  Feminist perspective
+\input{sections/s9_epistemology.tex}    % §10 Epistemic dialectic
+\input{sections/s10_hegel_marx.tex}     % §11 Hegelian-Marxist dialectic
+\input{sections/s11_ethics.tex}         % §12 Ethics
+\input{sections/s12_empirical.tex}      % §13 Empirical and cross-cultural
+\input{sections/s13_praxis.tex}         % §14 Praxis
+\input{sections/s14_conclusions.tex}    % §15 Conclusions
+\input{sections/s15_envoi.tex}          % Envoi
+\input{sections/s16_ack.tex}            % Acknowledgements
+
+% ============================================================
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,148 @@
+% !TEX program = xelatex
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper XVIII
+%  Generative Effacement:
+%  Ontological Injustice and the Reservation of Generative Space
+%  in Intimate Relations
+%
+%  Series visual identity: blush page, deep-rose headings,
+%  rose emphasis, gold rules, ink body. XeLaTeX + TeX Gyre Pagella,
+%  with Noto Serif CJK SC fallback for Chinese/Japanese terms.
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+\PassOptionsToPackage{table}{xcolor}
+
+% ---------- Fonts (CJK fallback for occasional Chinese terms) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk #1}}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 0.1pt
+
+\newcommand{\holo}{\operatorname{hol}}
+
+% natbib (numbered) before serendip-paper (hyperref loads inside it)
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{serendip-paper}
+
+% colour used on the title page (headings/links/palette come from serendip-paper)
+\definecolor{inksoft}{HTML}{342E37}
+
+% ---------- Graphics ----------
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{font=small,labelfont={bf,color=rosedeep}}
+
+% ---------- Tables (beyond the shared style) ----------
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}p{3.1cm}}
+
+% ---------- Paper-specific emphasis & helpers ----------
+\newcommand{\emc}[1]{\textcolor{rose}{\oldtextit{#1}}}
+\newcommand{\emb}[1]{\textcolor{rose}{\oldtextbf{#1}}}
+\newcommand{\goldrule}{\noindent\textcolor{gold}{\rule{\linewidth}{0.6pt}}\par\vspace{0.4em}}
+\newcommand{\todo}[1]{\textcolor{gray}{\small[TODO: #1]}}
+\newcommand{\xref}[1]{\textcolor{rose}{\S\ref{#1}}}
+\newcommand{\pinkref}[1]{\textcolor{rose}{#1}}
+
+\newenvironment{claim}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.4em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.6em}}
+
+\newenvironment{casebox}[1]{%
+  \par\vspace{0.4em}\noindent\textit{\textcolor{rose}{An illustrative case --- #1.}}\hspace{0.4em}\ignorespaces}{%
+  \par\vspace{0.4em}}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title page ----------
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper XVIII}\\[0.3cm]
+\coverrule\\[1.2cm]
+{\LARGE\bfseries\color{warnred} Generative Effacement in the Intimate Relation}\\[0.8cm]
+{\large\itshape\color{warnred} An Ontological Injustice and the Justice of Non-Determination}\\[0.8cm]
+{\small\color{gold} [\,Working Draft\,]}\\[0.8cm]
+{\normalsize\color{inksoft} On a Harm That Gives Rather Than Takes, and the Room One Must Leave for the Other to Generate}\\[2cm]
+\coverrule[0.25]\\[0.6cm]
+{\normalsize\color{inksoft} Wanhong}\\
+\vfill
+{\footnotesize\color{gold} Working draft --- not for citation or circulation}
+\coverfootnote
+\end{center}
+\newpage
+
+% ---------- Epigraph ----------
+\thispagestyle{empty}
+\vspace*{2.4cm}
+\begin{center}
+\begin{minipage}{0.74\linewidth}
+\centering\itshape\color{rose}
+{\cjk 生而不有，为而不恃，长而不宰。}\\[0.3em]
+To give life yet not possess; to act yet not presume;\\[0.15em]
+to nurture growth yet not rule over it.\\[0.6em]
+{\upshape\footnotesize\color{gold} --- Laozi, \emph{Daodejing}, ch.~51}\\[1.2em]
+\itshape
+{\cjk 万物并作，吾以观复。}\\[0.3em]
+The ten thousand things rise together;\\[0.15em]
+I watch only their return.\\[0.6em]
+{\upshape\footnotesize\color{gold} --- Laozi, \emph{Daodejing}, ch.~16}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Dedication ----------
+\thispagestyle{empty}
+\vspace*{4.5cm}
+\begin{center}
+\begin{minipage}{0.74\linewidth}
+\centering\itshape\color{rose}
+{\cjk 致她——}\\[0.3em]
+For her---\\[0.7em]
+\upshape {\cjk 那个属于森林的女孩，}\\[0.2em]
+the girl who belongs to the forest,\\[0.5em]
+{\cjk 我永不愿覆盖她自己的节奏；}\\[0.2em]
+whose own rhythm I would never overwrite;\\[0.7em]
+\itshape {\cjk 为了她，我正慢慢学会，}\\[0.2em]
+for whom I am learning, slowly,\\[0.5em]
+{\cjk 留出她得以生长的空地。}\\[0.2em]
+to leave the open ground in which she grows.\\[1.0em]
+{\upshape\footnotesize\color{gold} {\cjk 致我最爱的人。}\,\;To the one I love most.}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Abstract ----------
+\thispagestyle{empty}
+\noindent\textbf{\large\color{rosedeep} Abstract}\\[0.6em]
+\input{sections/abstract.tex}
+
+\vspace{1.2em}
+\noindent{\color{rosedeep}\textbf{Keywords:}}\, \textcolor{inksoft}{generative effacement; ontological injustice; constitutive injustice; generative reticence; phase capture; coupling; non-determination; generative justice; care ethics.}
+\newpage
+
+\tableofcontents
+\newpage
+
+% ============================================================
+%  Body
+% ============================================================
+\input{sections/s01_introduction.tex}    % §1  The phenomenon and the paradox
+\input{sections/s02_typology.tex}         % §2  Justice typology and descent to ontology
+\input{sections/s03_definition.tex}       % §3  Definition and demarcation
+\input{sections/s04_criterion.tex}        % §4  The formal criterion (phase capture)
+\input{sections/s05_reticence.tex}        % §5  Reservation of generative space
+\input{sections/s06_ethics.tex}           % §6  The ethics of reticence
+\input{sections/s07_objections.tex}       % §7  Objections and limits
+\input{sections/s08_conclusions.tex}      % §8  Conclusions and Envoi
+
+% ============================================================
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

@@ -21,7 +21,19 @@ book_src/
     ├── paper_05_subject_formation/
     ├── paper_06_just_proposal/
     ├── paper_07_diplomacy_of_intimacy/
-    └── paper_08_intervention_of_language/   ← excursus; also carries sections.tex
+    ├── paper_08_intervention_of_language/   ← excursus; also carries sections.tex
+    ├── paper_09_sustainability_of_intimacy/ ← multi-file (sections/); converted to serendip-paper
+    ├── paper_10_joint_attention_of_value/   ← multi-file (sections/); antecedent to IX
+    ├── paper_11_just_eudaimonia/            ← multi-file (sections/); needs TikZ (lifecycle figure)
+    ├── paper_12_the_sweet_cycle/            ← single-file; plain bibtex (\nocite{*}); \cn{} for CJK
+    ├── paper_13_non_binding_vow/            ← multi-file (sections/); needs TikZ; literary prelude
+    ├── paper_14_existentialist_eudaimonism/ ← multi-file (sections/); converted to serendip-paper; GRB eudaimonia
+    ├── paper_15_generative_relational_wealth/ ← multi-file (sections/); converted to serendip-paper; needs TikZ; political economy of intimacy
+    ├── paper_16_semiotics_of_luxury/         ← multi-file (sections/); converted to serendip-paper; semiotics of luxury + justice of choice
+    ├── paper_17_generativity_under_power/    ← multi-file (sections/); converted to serendip-paper; love under power (no TikZ)
+    ├── paper_18_generative_effacement/       ← multi-file (sections/); converted to serendip-paper; ontological injustice + phase-diagram figure
+    ├── paper_19_emergence_of_happiness/      ← multi-file (sections/); converted to serendip-paper; van der Pol limit-cycle figure (no TikZ)
+    └── paper_20_hydraulic_virtue/            ← multi-file (sections/); converted to serendip-paper; ethics of water (no figure); ethical layer of "From Fluid to Braid"
 ```
 
 | ID | Title |
@@ -34,6 +46,18 @@ book_src/
 | VI | Toward a Just Proposal |
 | VII| Prolegomena to a Diplomacy of Intimate Relationships |
 | VIII| The Intervention of Language in Intimacy (excursus) |
+| IX | The Sustainability of Intimacy |
+| X  | The Joint Attention of Value and the Creation of Language |
+| XI | A Just Eudaimonia |
+| XII| The Sweet Cycle |
+| XIII| The Causality of the Non-Binding Vow |
+| XIV| Contingency, Existence, and Eudaimonia in Intimate Relations |
+| XV | The Political Economy of Intimate Relations |
+| XVI| The Semiotics of Luxury in Intimate Relations |
+| XVII| Generativity Under Power |
+| XVIII| Generative Effacement in the Intimate Relation |
+| XIX | On the Emergence of Happiness and the Self-Continuation of Generativity |
+| XX | The Hydraulic Virtue of Intimate Relations |
 
 ## Build (XeLaTeX + latexmk, under WSL/TeX Live)
 
@@ -57,11 +81,12 @@ shared `serendip-paper.sty`, selects XeLaTeX, and runs biber/bibtex as needed.
 
 ## Bibliographies
 
-Every paper now carries its own `refs.bib` in its folder, and all eight build
+Every paper now carries its own `refs.bib` in its folder, and all twenty build
 with citations fully resolved (no "??").
 
 - Papers I, II, III, VI, VIII use **biblatex/biber** (`\addbibresource{refs.bib}`).
-- Papers IV, V, VII use **natbib/bibtex** (`\bibliographystyle{plainnat}` +
+- Paper XII uses **plain bibtex** (`\bibliographystyle{plain}` + `\nocite{*}`).
+- Papers IV, V, VII, IX, X, XI, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX use **natbib/bibtex** (`\bibliographystyle{plainnat}` +
   `\bibliography{refs}`). Paper IV's references, formerly inline, were moved into
   `refs.bib` and wired up the same way.
 

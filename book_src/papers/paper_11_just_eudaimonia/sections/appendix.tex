@@ -1,0 +1,98 @@
+\section{Formal Sketches}
+\label{sec:appendix}
+
+\noindent
+This appendix records, in compressed form, the formal apparatus to which the main text points. The sketches are not validated models, and they are offered under the operational concession that governs the paper: each is a structured proxy whose use is operational, and none reaches the unsymbolised value it proxies. Three cautions, stated at the close, apply to all of them.
+
+\subsection{Appraisal as inference on a partially observable process}
+\label{sec:app-pomdp}
+
+The basal appraisal of \xref{sec:appraisal} is formalised as a partially observable Markov decision process whose reward function is non-stationary, and the non-stationarity is shown to be the decision-theoretic form of the absence of a fixed meta-value-grammar.
+
+\paragraph{The process.}
+Let $s \in S$ be the hidden state of the relation, not directly observable; let $o \in O$ be the observation, the lived sensory and habitual fabric, related to the state by an observation model $P(o \mid s)$; let $a \in A$ be the action, the practice. The state evolves by a transition model $P(s' \mid s, a)$. The agent does not access $s$ but maintains a belief $b \in \Delta(S)$, a distribution over states, and updates it on each observation by the Bayes filter
+\[
+b'(s') \;=\; \frac{P(o \mid s') \sum_{s} P(s' \mid s, a)\, b(s)}{\sum_{s'} P(o \mid s') \sum_{s} P(s' \mid s, a)\, b(s)} ,
+\]
+choosing actions on the belief $b$ rather than on the inaccessible $s$. The belief is the formal correlate of the parties' superposed, non-definite sense of the relation's state (\xref{sec:ap-pomdp}), and its updating is the basal evaluation that runs through every moment of the cycle (\xref{sec:cyc-moments}).
+
+\paragraph{The non-stationary reward, and the absence of a meta-grammar.}
+A standard process maximises the expected discounted sum of a fixed reward $R(s,a)$, representing the good to be secured. The relational process has no fixed reward: what the parties are to secure, the good of the relation, is itself reconceived at the moment of re-cognition (\xref{sec:recognition}). Formally, the reward is indexed by the turn $t$ of the cycle, $R_t(s,a)$, and the re-cognition that closes turn $t$ produces the reward $R_{t+1}$ of the next turn as a functional of the turn's trajectory,
+\[
+R_{t+1} \;=\; \Phi\big(R_t, \, \tau_t\big),
+\]
+where $\tau_t$ is the trajectory of beliefs, actions, and observations over turn $t$ and $\Phi$ is the re-cognition operator. The process thus optimises an objective that its own running rewrites. There is no fixed terminal reward toward which the whole converges, and no meta-reward $R^*$ governing the sequence $\{R_t\}$ from outside, since $\Phi$ is itself reconfigured by the trajectories it processes; this is the decision-theoretic form of the thesis that there is no fixed meta-value-grammar (\xref{sec:ap-pomdp}), the value function occupying the place that the prior paper kept empty.
+
+\paragraph{Active inference and the imperative to keep inferring.}
+On the free-energy formalisation (\xref{sec:ap-active}), the agent does not maximise reward but minimises variational free energy, an upper bound on the surprise of its observations. Writing $q(s)$ for the agent's recognition density over states and $p(o,s)$ for its generative model, the free energy is
+\[
+F \;=\; \mathbb{E}_{q(s)}\big[\log q(s) - \log p(o, s)\big] \;=\; \underbrace{D_{\mathrm{KL}}\big(q(s)\,\|\,p(s\mid o)\big)}_{\text{inference gap}} - \log p(o),
+\]
+minimised over $q$ by perception, which closes the inference gap, and over $a$, through $p(o)$, by action, which makes observations conform to expectation. The agent maintains itself, holds itself away from the dispersed states that would dissolve it, exactly by continuing to minimise $F$, that is, by continuing to infer and to act. The cessation of this activity is, formally, the agent's ceasing to resist the growth of free energy, equivalently the dispersion of its states toward the high-entropy distribution that is its dissolution. Transposed to the relation, the continued minimisation of free energy is the continued appraisal and practice by which the relation maintains itself (\xref{sec:cyc-persistence}), and its cessation is the decay toward the terminal rest the paper names extinction (\xref{sec:reg-extinction}). The imperative to keep inferring is, on this formalisation, the imperative to keep the relation in existence, written as the minimisation of a free-energy functional.
+
+\subsection{The justice of the value cycle: a spectral formalisation}
+\label{sec:app-justice}
+
+The assessment of justice in \xref{sec:ev-justice} is formalised here through the propagation of value on the relational network and the spectral analysis of the propagation operator, in a manner that connects the present account to the branching-process formalisation of generative recursion developed elsewhere in the author's work.
+
+\paragraph{The network and the propagation operator.}
+Let the relation be represented by a finite directed weighted graph on the set of generators $N = \{1, \dots, n\}$, the parties and the coupled others. The coupling is encoded in a non-negative matrix $W = (w_{ij})_{i,j \in N}$, where $w_{ij} \geq 0$ is the fraction of value present at node $j$ that propagates, in one step of circulation, to node $i$. The column sums satisfy $\sum_{i} w_{ij} \leq 1$ for every $j$, the deficit $1 - \sum_i w_{ij}$ being the fraction of value at $j$ that leaves the network at that step, lost to neither party. A unit of value generated at node $j$ and circulating for one step yields the vector $W e_j$, where $e_j$ is the $j$th standard basis vector; circulating for $k$ steps yields $W^k e_j$. Because $W$ is sub-stochastic and non-negative, its spectral radius satisfies $\rho(W) \leq 1$, and when value leaves the network at some node the inequality is strict, $\rho(W) < 1$, which guarantees that the Neumann series below converges.
+
+\paragraph{Total return and recyclability.}
+The total value that returns to each generator, accumulated over all steps of circulation, is given by the resolvent
+\[
+R \;=\; \sum_{k=1}^{\infty} W^{k} \;=\; (I - W)^{-1} - I ,
+\]
+which converges precisely when $\rho(W) < 1$. The entry $R_{ij}$ is the total value returning to $i$ from a unit generated at $j$, and the diagonal entry $R_{ii}$ is the total value returning to the generator $i$ itself, the quantity \xref{sec:ev-recyc} called recyclability. The spectral radius $\rho(W)$ is the formal correlate of the threshold of \xref{sec:ev-recyc}: as $\rho(W) \to 1$, the resolvent diverges and the cycle of value sustains and amplifies itself, while a small $\rho(W)$ corresponds to a cycle in which value is rapidly lost, winding down toward the extinction of \xref{sec:reg-extinction}. The persistence of the cycle is thus governed by the leading eigenvalue of the propagation operator.
+
+\paragraph{The Perron vector and the coupling-based baseline.}
+When $W$ is irreducible, the Perron--Frobenius theorem guarantees a unique positive eigenvalue $\rho(W)$ of largest modulus, with a positive right eigenvector $v$, the Perron vector, satisfying $Wv = \rho(W)\,v$. The Perron vector gives the stationary relative distribution of value across the network under repeated circulation: it is the profile of value-holding the network tends toward, independent of where value is generated. The Perron vector furnishes the coupling-based baseline of \xref{sec:ev-return}: the baseline expected return $\hat{r}_i$ to generator $i$ is the return that the coupling structure alone, through its stationary profile $v_i$, would assign to $i$. A relation whose returns track the Perron vector is one whose distribution of value is governed by the coupling and by nothing else; departures from it are the object of the justice assessment.
+
+\paragraph{Concentration and the spectral signature of domination.}
+The shape of the Perron vector is itself a structural datum. A Perron vector close to uniform describes a network in which value circulates broadly and returns are distributed across the generators; a Perron vector concentrated on one node describes a network in which value accumulates at that node under circulation, the structural form of a relation organised around the enrichment of one party. The concentration of the Perron vector, measured for instance by its participation ratio $\big(\sum_i v_i\big)^2 \big/ \sum_i v_i^2$ normalised by $n$, is accordingly a spectral signature of the network's tendency toward domination, prior to and independent of the actual returns: a relation may be structurally disposed toward the concentration of value by its coupling alone, and the Perron vector reveals this disposition. This is the point of contact with the analysis of background-independence and concentrated control developed in the author's formal work, where the concentration of the Perron vector distinguishes a democratic from a dominated generative structure.
+
+\paragraph{The skew statistic and its test.}
+Let $r_i$ be the actual return to generator $i$ over the period of assessment, estimated from the value circulating in the relation, and let $\hat{r}_i = c\, v_i$ be the coupling-based baseline, $c$ a normalising constant. Define the normalised return $\theta_i = r_i / \hat{r}_i$, so that $\theta_i = 1$ is the return the coupling alone would assign. The justice of the cycle is assessed through the distribution of $\{\theta_i\}_{i \in N}$, and specifically through its sample skewness
+\[
+g \;=\; \frac{\frac{1}{n}\sum_{i}(\theta_i - \bar{\theta})^3}{\Big(\frac{1}{n}\sum_{i}(\theta_i - \bar{\theta})^2\Big)^{3/2}} .
+\]
+The null hypothesis of an unbiased cycle is that the $\theta_i$ are exchangeable about their mean, so that the population skewness is zero and no generator is systematically favoured or disfavoured beyond the coupling. The alternative is a significant negative skew, $g < 0$ with the lower tail occupied by a distinguished generator, characteristically the bearer of the sustaining labour. Under the null, the sampling distribution of $g$ may be obtained by permutation, since exchangeability makes all assignments of the observed returns to the generators equally likely; the test rejects when the observed $g$ falls below the permutation quantile. The power of the test increases with $n$, with the magnitude of the under-return, and with the precision of the estimated returns, and is limited in the intimate case by the smallness of $n$, which is why the measure is most informative when the coupled network, including family and the wider sustaining chain, is taken into account rather than the dyad alone.
+
+\paragraph{Standing of the formalisation.}
+The formalisation requires assumptions not discharged here: that the propagation is adequately linear and one-step Markov, so that $W$ and its powers capture the circulation; that $W$ is estimable, which requires the assignment of value to acts and its tracing through the network, the substantial empirical problem of \xref{sec:ev-model}; and that $W$ is approximately stationary over the period of assessment. Under these assumptions the justice of a relation's value cycle is, in principle, a testable hypothesis about the skewness of normalised return against a Perron-vector baseline, and the persistence of the cycle is governed by the spectral radius of the propagation operator. The formalisation is offered as the form such an assessment would take, under the operational concession, and not as a validated instrument.
+
+\subsection{The three regimes: a minimal dynamical model}
+\label{sec:app-regimes}
+
+The regimes of \xref{sec:regimes} are formalised here in a minimal dynamical model, offered as a structural analogy under the standing qualification (\xref{sec:dynsys}) that the law of a relation is itself reconfigured by what it generates, so that no fixed system captures it in full.
+
+\paragraph{State variables and dynamics.}
+Let the state of the relation be summarised by a scalar $x \geq 0$, the intensity of the relation's living activity, the rate at which value is generated, circulated, and returned. Let the dynamics be
+\[
+\dot{x} \;=\; x\big(\,r(x) - \mu\,\big),
+\]
+where $r(x)$ is the per-unit regeneration of activity, the recyclability of \xref{sec:ev-recyc} expressed as a rate, and $\mu > 0$ is the rate of loss, the attrition the relation suffers absent regeneration. The factor $x$ encodes that activity regenerates only where activity is present, so that $x = 0$, the cessation of all relational activity, is always a fixed point.
+
+\paragraph{Fixed points and the existence of the living regimes.}
+The fixed points are $x = 0$ and any $x^* > 0$ with $r(x^*) = \mu$. Suppose $r$ is increasing then saturating, $r(0) = r_0$ and $r(x) \to r_\infty$ as $x \to \infty$, with $r_0 < r_\infty$, capturing that a relation with more living activity regenerates value more readily, up to saturation. Then:
+\begin{itemize}
+\item if $r_\infty < \mu$, the only fixed point is $x = 0$, which is stable: every relation decays to extinction, since loss exceeds regeneration at every level of activity;
+\item if $r_0 < \mu < r_\infty$, there is an interior fixed point $x^* > 0$; the linearisation $\partial_x[\,x(r(x)-\mu)\,]\big|_{x^*} = x^* r'(x^*) > 0$ shows $x^*$ is unstable and $x=0$ stable when $r$ is increasing through $\mu$ from below, giving a threshold (an Allee-type effect): relations beginning above $x^*$ sustain themselves and those below it decay to extinction;
+\item if $r_0 > \mu$, the fixed point $x=0$ is unstable and an interior stable $x^*$ exists at the saturating branch: the relation sustains a living regime from any positive start.
+\end{itemize}
+The persistence of the cycle (\xref{sec:cyc-persistence}) is thus the condition $r_0 > \mu$ or a start above the threshold $x^*$; its failure is the decay to the fixed point $x=0$, which is extinction (\xref{sec:reg-extinction}).
+
+\paragraph{Phase, and the flourishing versus catastrophic regimes.}
+Persistence fixes whether the relation lives; a second variable fixes the phase it accumulates. Let $\varphi$ be the per-turn holonomy, reckoned per party, and in the two-party case let $\varphi_A, \varphi_B$ be the phases accruing to $A$ and $B$. These are governed by the distribution of return: writing $\sigma$ for the skew of the return distribution (\xref{sec:ev-skew}), with $\sigma = 0$ symmetric and $\sigma < 0$ skewed against $B$,
+\[
+\varphi_A \;=\; \alpha\,(x^* )\,(1 + \kappa\sigma), \qquad \varphi_B \;=\; \alpha\,(x^*)\,(1 - \kappa\sigma),
+\]
+for positive constants $\alpha, \kappa$, so that a symmetric return ($\sigma = 0$) gives both parties the same positive phase, while a skew against $B$ ($\sigma < 0$) raises $\varphi_A$ and lowers $\varphi_B$. The flourishing spiral (\xref{sec:reg-flourishing}) is the persisting regime with $\varphi_A, \varphi_B > 0$; the catastrophic cycle (\xref{sec:reg-catastrophic}) is the persisting regime with some $\varphi_i < 0$, which by the above occurs when the skew is severe enough that $\kappa|\sigma| > 1$, driving $\varphi_B$ negative while the relation persists and $\varphi_A$, and hence a satisfaction aggregate weighted toward $A$, remains positive. This is the formal form of the central claim (\xref{sec:reg-justice}): a positive phase for all parties requires $\kappa|\sigma| < 1$, that is, a return not severely skewed, so that justice (small $\sigma$) is the internal condition of the flourishing spiral.
+
+\paragraph{Bifurcation.}
+The passage between regimes is a bifurcation in the parameters $(\mu, \sigma)$. As $\mu$ rises past $r_\infty$, or as a relation near the threshold $x^*$ is perturbed below it, the living regime loses stability and the relation decays to extinction: this is a saddle-node bifurcation in $x$, the interior fixed point and the basin of the living regime annihilating as the parameter crosses its critical value, which is the dynamical form of the punctuated collapse the main text describes (\xref{sec:reg-bifurcation}). As $\sigma$ falls past the critical skew $\sigma_c = -1/\kappa$, the phase $\varphi_B$ crosses zero and the relation passes, while persisting, from the flourishing to the catastrophic regime: this is a transcritical crossing in the phase variable, the relation's regime changing in kind at a threshold of skew reached, often, by the gradual compounding of a slight initial asymmetry, exactly as in the longitudinal case of \xref{sec:case}. The two bifurcations, in $\mu$ and in $\sigma$, are the two ways a relation changes regime: the failure of persistence and the reversal of phase, the first governing the passage to extinction and the second the passage between the flourishing and the catastrophic cycle.
+
+\subsection{Three cautions}
+\label{sec:app-cautions}
+
+Three cautions apply to all of the foregoing. First, the structured quantities, the belief, the return distribution, the holonomy, are proxies for a value that is unsymbolised and that they do not reach; their use is operational, and their results are evidence and not measurement. Second, each model depends on assumptions not discharged here, the observation and transition models of the decision process, the propagation probabilities of the branching process, the parameters of the dynamical system; the sketches indicate the form a model would take and do not supply a validated one. Third, the unfolding of each party's own dynamics, which lies nearest the unsymbolised value, is the quantity these models least adequately capture, and its proxies, the rates of accomplished and foreclosed undertaking, are the most provisional of the structured quantities the paper employs. The formal apparatus is offered for what it makes visible, under these cautions, and not as a representation of the value it serves.

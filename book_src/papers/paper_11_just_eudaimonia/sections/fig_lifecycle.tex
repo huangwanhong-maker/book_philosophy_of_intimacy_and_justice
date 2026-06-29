@@ -1,0 +1,54 @@
+% ===== Lifecycle overview diagram =====
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  >={Stealth[length=2.4mm]},
+  font=\small,
+  moment/.style={draw=rosedeep, line width=0.6pt, rounded corners=2pt,
+                 fill=pageblush, text=inksoft, align=center,
+                 inner sep=4pt, minimum width=2.2cm, minimum height=0.85cm},
+  cyc/.style={->, rosedeep, line width=0.9pt},
+  reg/.style={->, line width=0.8pt},
+]
+
+% --- five moments around a ring ---
+\def\R{3.05cm}
+\node[moment] (cog) at (90:\R)  {Cognition\\\scriptsize what flourishing is};
+\node[moment] (pra) at (18:\R)  {Practice\\\scriptsize habit, household};
+\node[moment] (eva) at (-54:\R) {Evaluation\\\scriptsize appraisal, measure};
+\node[moment] (ref) at (-126:\R){Reflection\\\scriptsize re-examining};
+\node[moment] (rec) at (162:\R) {Re-cognition\\\scriptsize revised sense};
+
+% --- the cyclic arrows (curved, one direction) ---
+\draw[cyc] (cog) to[bend left=18] (pra);
+\draw[cyc] (pra) to[bend left=18] (eva);
+\draw[cyc] (eva) to[bend left=18] (ref);
+\draw[cyc] (ref) to[bend left=18] (rec);
+\draw[cyc] (rec) to[bend left=18] (cog);
+
+% --- evaluation as undercurrent: faint dashed spokes to centre ---
+\node[circle, draw=gold, fill=pageblush, text=gold, line width=0.5pt,
+      inner sep=1.5pt, align=center, font=\scriptsize] (hub) at (0,0) {appraisal\\(belief\\update)};
+\foreach \n in {cog,pra,eva,ref,rec}{
+  \draw[gold!70, dashed, line width=0.4pt] (hub) -- (\n);
+}
+
+% --- three regimes: outward arrows from the ring ---
+\draw[reg, rosedeep] ($(cog)+(0.1,0.55)$) -- ++(0.0,0.9)
+   node[above, text=rosedeep, align=center, font=\scriptsize] {flourishing spiral\\\scriptsize(positive phase)};
+\draw[reg, gold] ($(pra)+(0.75,0.0)$) -- ++(1.0,0.0)
+   node[right, text=gold, align=center, font=\scriptsize] {catastrophic\\cycle\\\scriptsize(negative phase)};
+\draw[reg, inksoft!55] ($(eva)+(0.0,-0.55)$) -- ++(0.0,-0.9)
+   node[below, text=inksoft!70, align=center, font=\scriptsize] {extinction\\\scriptsize(cycle halts)};
+
+\end{tikzpicture}
+\caption{\small The lifecycle of a shared flourishing as a cycle. The five moments
+(cognition, practice, evaluation, reflection, re-cognition) interpenetrate and feed
+back rather than forming a linear sequence. Evaluation, as the continuous and largely
+unconscious updating of a belief about the state of the relation, runs through every
+moment (the inner spokes) before it is ever an explicit measurement. The persistence
+of the cycle is the condition of the relation's survival; the sign of the phase it
+accumulates over a turn distinguishes the flourishing spiral from the catastrophic
+cycle, and the halting of the cycle is extinction.}
+\label{fig:lifecycle}
+\end{figure}

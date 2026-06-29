@@ -1,0 +1,146 @@
+% !TEX program = xelatex
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper X
+%  The Joint Attention of Value and the Creation of Language:
+%  A Relational Dynamical Grammar
+%
+%  Uses the shared series style (serendip-paper.sty). XeLaTeX +
+%  Noto Serif CJK SC for occasional Chinese terms.
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+\PassOptionsToPackage{table}{xcolor}
+
+% ---------- Fonts (CJK fallback for occasional Chinese terms) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk #1}}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 0.1pt
+
+% natbib (numbered) before serendip-paper (hyperref loads inside it)
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{serendip-paper}
+
+% colour used on the title page (headings/links come from serendip-paper)
+\definecolor{inksoft}{HTML}{342E37}
+
+% ---------- Math ----------
+\newcommand{\holo}{\operatorname{hol}}
+
+% ---------- Tables (beyond the shared style) ----------
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}p{3.1cm}}
+
+% ---------- Paper-specific emphasis & helpers ----------
+\newcommand{\emc}[1]{\textcolor{rose}{\oldtextit{#1}}}
+\newcommand{\emb}[1]{\textcolor{rose}{\oldtextbf{#1}}}
+\newcommand{\goldrule}{\noindent\textcolor{gold}{\rule{\linewidth}{0.6pt}}\par\vspace{0.4em}}
+\newcommand{\todo}[1]{\textcolor{gray}{\small[TODO: #1]}}
+\newcommand{\xref}[1]{\textcolor{rose}{\S\ref{#1}}}
+\newcommand{\pinkref}[1]{\textcolor{rose}{#1}}
+
+% A claim set off from the prose: a thin gold rule above and below.
+\newenvironment{claim}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.4em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.6em}}
+
+% Inline prose case: a run-in italic label.
+\newenvironment{casebox}[1]{%
+  \par\vspace{0.4em}\noindent\textit{\textcolor{rose}{An illustrative case: #1.}}\hspace{0.4em}\ignorespaces}{%
+  \par\vspace{0.4em}}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title page ----------
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper X}\\[0.3cm]
+\coverrule\\[1.2cm]
+{\LARGE\bfseries\color{warnred} The Joint Attention of Value and the Creation of Language}\\[0.8cm]
+{\large\itshape\color{warnred} A Relational Dynamical Grammar}\\[0.8cm]
+{\small\color{gold} [\,Working Draft\,]}\\[0.8cm]
+{\normalsize\color{inksoft} On the Co-Perception of What Has No Name Yet, the Reflexive Generation of the Subject, and the Practice of a Good That Cannot Be Guaranteed}\\[2cm]
+\coverrule[0.25]\\[0.6cm]
+{\normalsize\color{inksoft} Wanhong}\\
+\vfill
+{\footnotesize\color{gold} Working draft, not for citation or circulation}
+\coverfootnote
+\end{center}
+\newpage
+
+% ---------- Epigraph ----------
+\thispagestyle{empty}
+\vspace*{2.4cm}
+\begin{center}
+\begin{minipage}{0.76\linewidth}
+\centering\itshape\color{rose}
+{\cjk 道可道，非常道；名可名，非常名。}\\[0.3em]
+The way that can be spoken is not the constant way;\\the name that can be named is not the constant name.\\[0.8em]
+{\cjk 二人同心，同心之言，其臭如兰。}\\[0.3em]
+When two are of one heart, the words of that one heart\\are fragrant as orchid.\\[0.8em]
+\upshape Of that which one cannot speak, two may yet, together,\\ bear witness.\\[0.6em]
+{\upshape\footnotesize\color{gold} {\cjk《道德经》}\ \emph{Daodejing}, ch.~1\,;\ {\cjk《周易·系辞》}\ \emph{Xici}\,;\ and a remark of the author's own.}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Dedication ----------
+\thispagestyle{empty}
+\vspace*{4.5cm}
+\begin{center}
+\begin{minipage}{0.7\linewidth}
+\centering\itshape\color{rose}
+For her,\\[0.7em]
+\upshape with whom the first name was made\\[0.3em]
+that no one else could read,\\[0.7em]
+\itshape and in whose eyes I first saw\\that I had been seen seeing.\\[1.2em]
+{\upshape\zh{死生契阔，与子成说。}}\\[1.2em]
+{\upshape\footnotesize\color{gold} To the one I love most.}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Abstract ----------
+\thispagestyle{empty}
+\noindent\textbf{\large\color{rosedeep} Abstract}\\[0.6em]
+\input{sections/abstract.tex}
+
+\vspace{1.2em}
+\noindent{\color{rosedeep}\textbf{Keywords:}}\, \textcolor{inksoft}{joint attention; relational ontology; reflexive generation of the subject; alienation and geometric phase; the is--ought gap.}
+\newpage
+
+\tableofcontents
+\newpage
+
+% ============================================================
+%  Body
+% ============================================================
+\input{sections/intro.tex}               % §1 Introduction
+\input{sections/litreview.tex}           % §2 Background and theoretical frameworks
+\input{sections/s0_registers.tex}        % §3 The three registers as coupled systems
+\input{sections/s1_phenomenology.tex}   % §4 Phenomenology of nameless co-generation
+\input{sections/s2_structure.tex}        % §5 The structure of the phenomenon
+\input{sections/s3_ontology.tex}         % §6 Ontology: relation, grammar, value
+\input{sections/s4_grammar.tex}          % §7 Epistemology I: the quantum-structured grammar
+\input{sections/s_modelling.tex}         % §8 The formal-modelling dilemma
+\input{sections/s5_political.tex}        % §5 Epistemology II: value rewrites the subject
+\input{sections/s6_breaking.tex}         % §6 Symmetry-breaking and how we know the mother-structure
+\input{sections/s7_praxis.tex}           % §11 Praxis: cultivating a generative field
+\input{sections/s_field_matter.tex}      % §12 The matter of the field
+\input{sections/s_exploitation.tex}      % §13 Exploitation in symbolic generation
+\input{sections/s8_keystone.tex}         % §14 The good that cannot be guaranteed (Hume)
+\input{sections/s9_conclusions.tex}      % §9 Conclusions: at the boundaries
+\input{sections/s10_envoi.tex}           % Envoi
+\input{sections/s11_ack.tex}             % Acknowledgements
+\input{sections/appendixA.tex}           % Appendix A: geometric phase, technical sketch
+
+% ============================================================
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

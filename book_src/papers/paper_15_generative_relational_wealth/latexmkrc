@@ -1,0 +1,4 @@
+$ENV{'TEXINPUTS'} = '../../:' . ($ENV{'TEXINPUTS'} // '');
+$pdf_mode   = 5;     # xelatex
+$bibtex_use = 2;     # run bibtex when a bibliography is present
+@default_files = ('paper_15_generative_relational_wealth.tex');

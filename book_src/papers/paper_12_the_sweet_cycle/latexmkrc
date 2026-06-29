@@ -1,0 +1,8 @@
+# Build this paper independently (it finds ../../serendip-paper.sty).
+#   latexmk        build PDF (xelatex + biber/bibtex as needed)
+#   latexmk -c     clean aux files   |   latexmk -C   also remove the PDF
+$ENV{'TEXINPUTS'} = '../../:' . ($ENV{'TEXINPUTS'} // '');
+$pdf_mode   = 5;     # xelatex
+$bibtex_use = 2;     # run bibtex (this paper uses plain.bst + \nocite{*})
+$max_repeat = 7;
+@default_files = ('paper_12_the_sweet_cycle.tex');

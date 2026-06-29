@@ -1,0 +1,4 @@
+$ENV{'TEXINPUTS'} = '../../:' . ($ENV{'TEXINPUTS'} // '');
+$pdf_mode   = 5;     # xelatex
+$bibtex_use = 2;     # run bibtex/biber when a bibliography is present
+@default_files = ('paper_14_existentialist_eudaimonism.tex');

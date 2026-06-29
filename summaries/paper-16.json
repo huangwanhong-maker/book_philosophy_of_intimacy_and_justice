@@ -1,0 +1,70 @@
+{
+  "papers/paper-16.pdf": {
+    "subtitle": "A Political Economy of Singularity and Sensibility, with a Justice Theory of Choice",
+    "teaser": "Which is more luxurious — a diamond ring, or a flower found on a path? This paper argues luxury is not economic but relational: what makes an object precious is the degree to which a subject's existence — their presence, intention, and singular choice for this person — is embedded in it. A flower can outshine any diamond.",
+    "keywords": [
+      "relational luxury",
+      "coupling degree",
+      "existence-attestation",
+      "sign exchange value",
+      "subject-embedding",
+      "equivalent agency",
+      "selection justice",
+      "Baudrillard",
+      "justice theory of choice"
+    ],
+    "background": "Luxury pervades intimate life — the diamond ring, the lavish gift, the proof of devotion measured in price. It is usually theorised economically: as conspicuous consumption, or (with Baudrillard) as sign exchange value, a system of social differentiation in the consumer society. But that leaves the central intuition of intimate life unexplained: that a flower found on a path can mean more than a diamond. This paper, Paper XVI of the series, extends the political economy of Paper XV into a semiotics of luxury, asking what actually makes an object luxurious within a relation — and what is at stake when exchangeable symbols (money, status objects) are made to stand for what is singular and inexchangeable: a subject's presence, intention, and choice.",
+    "approach": "The paper is semiotic, political-economic, and justice-theoretic, and polyphonic in method. It organises luxury around three doctrines — the doctrine of nature and art (luxury as the transformation of natural materials through human craft); the doctrine of sign exchange value (Baudrillard's luxury as social differentiation); and the doctrine of relational luxury, its central concept. After an archaeology of luxury it defines relational luxury by the coupling degree between an object and a relational subject's spatiotemporal structure, develops that degree along four dimensions, and produces a fourfold classification in which economic and relational luxury appear as orthogonal axes. It then turns to sensibility and to a justice theory of choice — the problems of subject-embedding misrecognition and equivalent agency (with four necessary-but-not-sufficient conditions for just substitution) and the thesis of selection justice — before cross-cultural and empirical chapters, conclusions, and a literary envoi.",
+    "questions": [
+      "Which is more luxurious: a diamond ring or a flower found on a path?",
+      "Is luxury defined by economic value, or by something else entirely?",
+      "What actually makes an object luxurious within an intimate relation?",
+      "How much of a subject's existence — intentionality, presence, choice made specifically for this other — is embedded in the object they give?",
+      "When a subject cannot provide one form of existential embedding and substitutes another, can the substitution ever be just?",
+      "Is choosing relational over economic luxury a stance of justice?",
+      "What is subject-embedding misrecognition, and why is it a wrong?"
+    ],
+    "key_concepts": [
+      { "term": "Relational luxury", "gloss": "Luxury defined not by economic value but by the degree of coupling between an object and a relational subject's spatiotemporal structure — the extent to which a subject's existence, intentionality, presence, and choice made specifically for this relational other is embedded in the object." },
+      { "term": "Coupling degree (κ)", "gloss": "The measure of relational luxury, developed along four dimensions: temporal depth, intentional intensity, non-substitutability, and existential investment." },
+      { "term": "Doctrine of nature and art", "gloss": "Luxury read as the transformation of natural materials through human craft." },
+      { "term": "Sign exchange value", "gloss": "Following Baudrillard's critique of the consumer society: luxury as a system of social differentiation." },
+      { "term": "Fourfold classification (orthogonal axes)", "gloss": "Economic luxury and relational luxury treated as independent axes — so a flower may be high in one and low in the other, and a proxy-bought diamond the reverse." },
+      { "term": "Subject-embedding misrecognition", "gloss": "The injustice that arises when an object is presented as carrying high subject-embedding but does not." },
+      { "term": "Equivalent agency", "gloss": "When a subject who cannot provide existential embedding A substitutes another form B: structurally heterogeneous, but possibly just in the generative sense if four necessary-but-not-sufficient conditions hold — symmetric generability, real constraint, genuine embedding, and transparency." },
+      { "term": "Selection justice", "gloss": "The thesis that choosing relational over economic luxury is a justice stance: a refusal to use exchangeable symbols to bear what is inexchangeable." }
+    ],
+    "claims": [
+      "The truest luxury in an intimate relation is not economic but relational: it is defined by the coupling degree between an object and a relational subject's spatiotemporal structure.",
+      "A flower found on a path may be more luxurious than any diamond; a diamond purchased by proxy may be relationally impoverished despite its economic magnificence.",
+      "The coupling degree is articulated along four dimensions — temporal depth, intentional intensity, non-substitutability, existential investment — yielding a fourfold classification in which economic and relational luxury are orthogonal axes.",
+      "Subject-embedding misrecognition — presenting an object as carrying high subject-embedding when it does not — is a characteristic injustice of luxury in intimate life.",
+      "Equivalent agency (substituting form B for an unavailable existential embedding A) is structurally heterogeneous, but may be just in the generative sense if and only if symmetric generability, real constraint, genuine embedding, and transparency all hold — conditions that are necessary but not sufficient.",
+      "Selection justice: choosing relational over economic luxury is a justice stance — a refusal to use exchangeable symbols to bear what is inexchangeable."
+    ],
+    "conclusion": "Luxury in intimate life is relational and ontological, not economic: what makes an object precious is the degree to which a subject's existence — presence, intention, and singular choice for this other — is coupled to it and attested by it. Having mapped luxury through the doctrines of nature and art and of sign exchange value, the paper sets the doctrine of relational luxury against them, charts economic and relational luxury as orthogonal axes, and builds a justice theory of choice: it names subject-embedding misrecognition and equivalent agency as the central problems, fixes four necessary conditions under which substitution can be just, and frames selection justice as the refusal to let exchangeable symbols bear the inexchangeable. The account extends the political economy of Paper XV and closes with cross-cultural and empirical reflection and a literary envoi.",
+    "contributions": [
+      "The concept of relational luxury — luxury as the coupling degree between an object and a relational subject's spatiotemporal structure — with its four constitutive dimensions.",
+      "A semiotics of luxury organised around three doctrines (nature and art, sign exchange value, relational luxury).",
+      "A fourfold classification treating economic and relational luxury as orthogonal axes.",
+      "A justice theory of choice: the problems of subject-embedding misrecognition and equivalent agency, the four necessary-but-not-sufficient conditions for just substitution (symmetric generability, real constraint, genuine embedding, transparency), and the thesis of selection justice.",
+      "Cross-cultural and empirical development of the account.",
+      "Extension of the political economy of Paper XV into the semiotics of luxury."
+    ],
+    "outline": [
+      { "section": "1. Prelude", "gist": "Opens with the guiding question — a diamond ring or a flower found on a path? — and frames luxury as a question about relations, not prices." },
+      { "section": "2. An archaeology of luxury", "gist": "Traces the genealogy of luxury as a concept, setting up the doctrines the paper will distinguish." },
+      { "section": "3. The doctrine of nature and art", "gist": "Reads luxury as the transformation of natural materials through human craft." },
+      { "section": "4. Sign exchange value", "gist": "Develops Baudrillard's account of luxury as social differentiation within the consumer society, and its limits for intimate life." },
+      { "section": "5. Relational luxury", "gist": "Introduces the central concept: luxury as the coupling degree between an object and a relational subject's spatiotemporal structure, with its four dimensions." },
+      { "section": "6. Synthesis: the fourfold classification", "gist": "Sets economic and relational luxury as orthogonal axes, yielding a four-quadrant map of intimate objects." },
+      { "section": "7. Sensibility", "gist": "Turns to the sensibility of luxury — how relational luxury is perceived, cultivated, and felt." },
+      { "section": "8. A justice theory of choice", "gist": "Develops subject-embedding misrecognition, equivalent agency and its four necessary conditions, and the thesis of selection justice." },
+      { "section": "9. Cross-cultural dimensions", "gist": "Situates relational luxury across cultural forms of the gift and the precious object." },
+      { "section": "10. Empirical dimensions", "gist": "Considers empirical handles on coupling degree and relational luxury." },
+      { "section": "11. Conclusions", "gist": "Gathers the argument: luxury is relational, misrecognition and equivalent agency are its central justice problems, and selection justice refuses exchangeable symbols for the inexchangeable." },
+      { "section": "Envoi", "gist": "A closing literary return to the flower on the path." },
+      { "section": "Acknowledgements", "gist": "Credits and disclosure, including AI assistance per series convention." }
+    ]
+  }
+}

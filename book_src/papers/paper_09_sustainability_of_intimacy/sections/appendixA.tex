@@ -1,0 +1,48 @@
+% ===== Appendix A: geometric phase, technical sketch =====
+\appendix
+\section{Appendix: A Technical Sketch of the Geometric Phase and the Structured Flow}
+\label{sec:appendix}
+
+\noindent
+This appendix sketches the geometric apparatus on which \xref{sec:synthesis} and \xref{sec:contract} draw. It is offered, candidly, as a \emph{preparation} for formalization and not a completed formalism: it claims no operational protocol of measurement (\xref{sec:no-metric}), and it points forward to the separate Value-Foam study, in which the holonomy of value is to be treated with the rigour the matter demands. The purpose here is only to show that the structural analogies of the main text rest on a genuine geometric skeleton, and to state precisely the two debts the main text incurred. The mathematics of the geometric phase, in its physical settings, is collected in \citet{shapere1989}.
+
+\subsection{The bundle, the connection, and the holonomy}
+\label{sec:app-bundle}
+
+Let $B$ be a base space whose points are relational situations---the ``content'' or ``circumstance'' of a relation at a moment---and suppose $B$ a smooth manifold. Over $B$ let there be a fibre bundle $\pi : E \to B$ whose fibre $F$ carries the \emph{phase of value}: the bearer fixed in \xref{sec:core} as the sublimation of real value. A \emph{connection} on $E$---a rule for parallel transport---assigns to each smooth path $\gamma : [0,1] \to B$ a transport map along $\gamma$ in the fibre. For a closed loop $\gamma$ (one with $\gamma(0)=\gamma(1)$), the composite transport around the loop is an automorphism of the fibre over the base-point: the \emph{holonomy} $\holo(\gamma)$. 
+
+The phenomenon the main text calls ``return to the root, yet not to the origin'' is exactly a non-trivial holonomy: the loop closes in the base ($\gamma(0)=\gamma(1)$, one comes home to the same situation) while the transport in the fibre does not return the phase to its starting value ($\holo(\gamma)\neq \mathrm{id}$, one brings home a remainder). Where the structure group of the fibre is abelian---say $U(1)$, the natural choice if the phase of value is, as the name suggests, genuinely a \emph{phase}---the holonomy is a single angle, and by Stokes' theorem it equals the flux of the connection's curvature $\Omega$ through any surface $\Sigma$ bounded by $\gamma$ \citep{berry1984,aharonov1987}:
+\[
+  \holo(\gamma) \;=\; \exp\!\oint_{\gamma} A \;=\; \exp\!\iint_{\Sigma}\Omega ,
+\]
+with $A$ the connection one-form and $\Omega = \mathrm{d}A$ its curvature. This is the precise content of two claims of the main text. First, that \emph{depth is the area a path encloses} (\xref{sec:failures}): the accrued phase is the integral of the curvature over the enclosed surface, so a loop that encloses no area accrues no phase, and the ``shortcut'' that shrinks the loop toward a point drives the holonomy to zero. Second, that the good circle's phase is \emph{endogenous} (\xref{sec:geom-phase}): the holonomy is fixed by the curvature \emph{internal} to the region the relation traverses, not by anything injected from outside---which is the geometric form of the distinction between the internal and the stolen phase. The sign of the holonomy---the spiral's positive accrual against the circle's zero and the vicious cycle's net loss---is the sign of the integrated curvature.
+
+\subsection{The structured flow on a manifold (SFM)}
+\label{sec:app-sfm}
+
+The contractual apparatus of \xref{sec:contract} admits a complementary formalization. Where the geometric phase concerns the \emph{flow} on a given manifold, the contract concerns the \emph{shaping of the manifold} on which the flow runs. Model the free generativity as a flow on a manifold $M$; unconstrained, the flow's reachable set is all of $M$, including regions that lead to exhaustion or extraction. A contract is then a structuring of $M$ into $M'$ by three kinds of operation, corresponding to the three the main text names. It may \emph{excise} a closed region (the impassable singularities---the absolutely forbidden harms---removed from the reachable set, $M' = M \setminus U$). It may \emph{alter the boundary} (the exit conditions: $M'$ a manifold-with-boundary whose edge marks where the flow may licitly leave). And it may \emph{reshape the metric or the connectivity} (governing toward whom value may flow: a change in the topology or the metric structure that redistributes the geodesics). The constrained flow on $M'$ is the \emph{structured flow on a manifold} (SFM): free within $M'$, but no longer able to reach the excised or sealed regions.
+
+The justice of the contract is then, as \xref{sec:contract-justice} claims, a property of the \emph{geometry} of $M'$ and not of any path upon it: one asks whether the curvature and topology of $M'$ are such that every participant has a reachable region of positive holonomy, or whether some position in $M'$ is a structural sink---a region all of whose outgoing geodesics drain toward a single locus (structural siphoning), or a point from which no positive-holonomy loop is reachable (the structural fuel-position). And the corrective of \xref{sec:legislation-is-flow}---that the shaping of the manifold is itself a flow---is the observation that the map $M \mapsto M'$ is not given once but is itself a time-dependent, generative process: $M$ is re-shaped continually, and this re-shaping (legislation) is a flow subject to the same criteria as the flow upon $M'$ (adjudication). There is no fixed terminal manifold; there is only the ongoing, generative re-legislation of $M_t$.
+
+\subsection{The branching-process interface}
+\label{sec:app-branching}
+
+The recursive regeneration of \xref{sec:thesis} connects the geometric picture to a stochastic one, by way of the spectral radius of a multitype branching process---the formal machinery developed in concert with the Value-Foam programme. Model the cycle of interpretation as a branching process whose ``individuals'' are interpretive acts, each begetting further interpretive acts. Let $\lambda$ be the spectral radius (the Perron root) of the process's mean matrix. Then poeticity, in the sense of \xref{sec:poem}, requires \emph{both} super-criticality \emph{and} a non-trivial phase increment per generation:
+\begin{itemize}
+\item $\lambda > 1$ with a non-trivial per-generation phase: the true poem---interpretations beget interpretations (the cycle endures), and each is a variation accruing fresh holonomy (the spiral);
+\item $\lambda > 1$ with zero phase increment: the slogan, the meme, the jingle---reproduction without sublimation, a super-critical process each of whose generations merely copies the last (the circle that nonetheless propagates);
+\item $\lambda < 1$: the dead poem---the interpretive process is sub-critical and dies out, no one interprets again;
+\item the false poem (\xref{sec:false-poem}): a process that advertises endurance while accruing zero phase---formally a degenerate case in which apparent branching carries no holonomy.
+\end{itemize}
+The conjugation of the two criteria---the spectral radius $\lambda$ governing \emph{whether} the cycle endures, the geometric phase governing \emph{whether} its endurance is a spiral or a circle---is the technical heart of the sequel, and is named here only to mark the road.
+
+\subsection{The two debts, restated formally}
+\label{sec:app-debts}
+
+The main text incurred two debts (\xref{sec:caveats}); they are restated here in their formal shape, as open problems rather than settled results.
+
+\emph{The first debt} is the demand that the fibre $F$ carry a genuine periodic, additive, gauge-invariant structure---an $S^1$, or a more general group---failing which $\holo$ is metaphor and not mathematics. The honest identification of this structure for ``the phase of value'' is the central task of the Value-Foam study: one must exhibit the bearer's circle-structure (in what sense is the sublimation of real value a \emph{phase}, with a well-defined notion of return and increment?), establish its additivity (do phases accrued along concatenated paths add?), and verify gauge-invariance (is the holonomy independent of the arbitrary choice of fibre-coordinate, as a genuine observable must be?). None of this is discharged here; it is incurred openly.
+
+\emph{The second debt} is the demand that ``sublimation $=$ positive phase'' be argued and not stipulated. One must characterize, independently of the geometry, a quantity of sustainability---a \emph{margin of reproduction}: the net regeneration, per cycle, of the conditions of generation, in excess of what is consumed---and then \emph{prove} that, under the bundle formulation above, the sign of this margin corresponds to the sign of $\holo$. To weld the two by definition would be circular (a vicious circle in the most literal sense). The correspondence is, at present, a conjecture with strong motivation and no proof; the main text flags it as such (\xref{sec:turn}), and the sequel must either establish it or revise the identification.
+
+These two debts are not blemishes to be concealed but the precise form of the honesty the paper's epistemology requires (\xref{sec:no-metric}): the geometric framework offers a structural \emph{characterization} of what the good circle is, and the formalization of that characterization is a programme in progress, not a finished edifice. To present it as finished would be to commit, in the appendix, the settling failure the whole paper is written against.

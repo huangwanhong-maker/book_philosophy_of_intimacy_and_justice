@@ -1,0 +1,66 @@
+\section{Notation and Key Concepts}
+\label{sec:notation}
+
+\noindent
+Because the paper introduces a number of constructs and, in its formal appendix, a number of symbols, this section gathers them for reference. The first table lists the principal symbols of the formal appendix; the second gathers the key concepts the paper introduces, with the section in which each is developed.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.25}
+\caption{Principal symbols of the formal appendix.}
+\label{tab:notation}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.2cm} >{\raggedright\arraybackslash}X@{}}
+\toprule
+\rowcolor{pageblush}
+\textbf{\textcolor{rosedeep}{Symbol}} & \textbf{\textcolor{rosedeep}{Meaning}} \\
+\midrule
+$s, S$ & Hidden state of the relation, and its space \\
+$o, O$ & Observation (the lived fabric), and its space \\
+$a, A$ & Action (practice), and its space \\
+$b$ & Belief: a distribution over hidden states \\
+$R_t(s,a)$ & Reward at turn $t$; non-stationary, rewritten at re-cognition \\
+$\Phi$ & Re-cognition operator: $R_{t+1} = \Phi(R_t, \tau_t)$ \\
+$F$ & Variational free energy \\
+$W = (w_{ij})$ & Coupling matrix: fraction of value propagating $j \to i$ \\
+$\rho(W)$ & Spectral radius of $W$; governs persistence \\
+$R = (I-W)^{-1} - I$ & Resolvent: total return matrix; $R_{ii}$ is recyclability \\
+$v$ & Perron vector: stationary value profile; sets the baseline \\
+$r_i, \hat{r}_i$ & Actual and coupling-based-baseline return to generator $i$ \\
+$\theta_i = r_i/\hat{r}_i$ & Normalised return to generator $i$ \\
+$g$ & Sample skewness of $\{\theta_i\}$: the injustice statistic \\
+$x$ & Intensity of the relation's living activity \\
+$r(x), \mu$ & Regeneration rate and loss rate \\
+$x^*$ & Interior fixed point (threshold or living attractor) \\
+$\varphi_A, \varphi_B$ & Per-turn holonomy (phase) accruing to each party \\
+$\sigma$ & Skew of the return distribution; $\sigma_c = -1/\kappa$ is critical \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.25}
+\caption{Key concepts introduced or employed by the paper.}
+\label{tab:concepts}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.5cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{1.7cm}@{}}
+\toprule
+\rowcolor{pageblush}
+\textbf{\textcolor{rosedeep}{Concept}} & \textbf{\textcolor{rosedeep}{Statement}} & \textbf{\textcolor{rosedeep}{Section}} \\
+\midrule
+Lifecycle as a real cycle & The shared life as a self-sustaining cyclic movement whose persistence conditions the relation's existence & \xref{sec:cycle} \\
+Operational concession & The deliberate adoption, where assessment is required, of a structured proxy known not to reach the unsymbolised value & \xref{sec:bg-concession} \\
+Basal vs explicit evaluation & Continuous unconscious appraisal (inference on a hidden state) vs deliberate instrumented measurement & \xref{sec:ap-two} \\
+Expected recyclability & The probability that a contribution is met by a regenerating response; proxies the cycle's life & \xref{sec:ev-recyc} \\
+Coupling-based baseline & The return the coupling structure alone would assign (the Perron-vector profile) & \xref{sec:ev-return} \\
+Skew of return (injustice fingerprint) & The skewness of normalised return: a structured proxy for exploitation, orthogonal to the mean & \xref{sec:ev-skew} \\
+Foreclosure of unfolding & The concentration in one party of undertakings abandoned on account of the relation & \xref{sec:ev-dynamics} \\
+Three regimes & Flourishing spiral, catastrophic cycle, extinction, fixed by persistence and phase & \xref{sec:regimes} \\
+Justice as internal condition & Justice is the internal condition of the flourishing spiral, not a constraint upon it & \xref{sec:reg-justice} \\
+Genuine vs forged spiral & A persisting, high-satisfaction cycle may be catastrophic beneath the aggregate & \xref{sec:ref-blind} \\
+Cultivation vs legislation (\zh{养而不宰}) & Cultivation guides the habit-forming dynamics; legislation possesses it & \xref{sec:prac-constraint} \\
+Preservation of betrayability & A habit is cultivated insofar as its continuance remains a renewed joint choice & \xref{sec:prac-vocabulary} \\
+\bottomrule
+\end{tabularx}
+\end{table}

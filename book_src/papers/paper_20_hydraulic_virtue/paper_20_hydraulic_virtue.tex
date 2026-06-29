@@ -1,0 +1,156 @@
+% !TEX program = xelatex
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper XX
+%  The Hydraulic Virtue of Intimate Relations
+%  On the Ethics of Water
+%
+%  Series visual identity (shared with Papers XVIII--XIX): blush page,
+%  deep-rose headings, rose emphasis, gold rules, ink body.
+%  XeLaTeX + TeX Gyre Pagella, Noto Serif CJK SC for CJK terms.
+%
+%  Formal companion: Huang (2026), "From Fluid to Braid",
+%  Knowledge Commons, DOI 10.17613/j9kjd-vce60  [cite key: wan2026braid]
+%  This paper is the ethical upper layer of that companion: a
+%  translation layer, not a re-derivation of its formalism.
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+\PassOptionsToPackage{table}{xcolor}
+
+% ---------- Fonts (CJK fallback for occasional Chinese/Japanese terms) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk #1}}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 0.1pt
+
+% natbib (numbered) before serendip-paper (hyperref loads inside it)
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{serendip-paper}
+
+% colour used on the title page (headings/links come from serendip-paper)
+\definecolor{inksoft}{HTML}{342E37}
+
+% ---------- Math ----------
+\newcommand{\holo}{\operatorname{hol}}
+\newcommand{\Shan}{\operatorname{\zh{善}}}      % the water-good predicate (interpretive)
+\newcommand{\fpow}{f_{\mathrm{pow}}}
+
+% ---------- Graphics (loaded after serendip-paper so rosedeep is defined) ----------
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{font=small,labelfont={bf,color=rosedeep}}
+
+% ---------- Tables (beyond the shared style) ----------
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}p{3.1cm}}
+
+% ---------- Paper-specific emphasis & helpers ----------
+\newcommand{\emc}[1]{\textcolor{rose}{\oldtextit{#1}}}
+\newcommand{\emb}[1]{\textcolor{rose}{\oldtextbf{#1}}}
+\newcommand{\goldrule}{\noindent\textcolor{gold}{\rule{\linewidth}{0.6pt}}\par\vspace{0.4em}}
+\newcommand{\todo}[1]{\textcolor{gray}{\small[TODO: #1]}}
+\newcommand{\xref}[1]{\textcolor{rose}{\S\ref{#1}}}
+\newcommand{\pinkref}[1]{\textcolor{rose}{#1}}
+
+\newenvironment{claim}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.4em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.6em}}
+
+\newenvironment{casebox}[1]{%
+  \par\vspace{0.4em}\noindent\textit{\textcolor{rose}{An illustrative case --- #1.}}\hspace{0.4em}\ignorespaces}{%
+  \par\vspace{0.4em}}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title page ----------
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper XX}\\[0.3cm]
+\coverrule\\[1.2cm]
+{\LARGE\bfseries\color{warnred} The Hydraulic Virtue of Intimate Relations}\\[0.5cm]
+{\large\itshape\color{warnred} On the Ethics of Water}\\[0.8cm]
+{\small\color{gold} [\,Working Draft\,]}\\[0.8cm]
+{\normalsize\color{inksoft} The highest good is like water: it benefits the ten thousand things and does not contend.}\\[2cm]
+\coverrule[0.25]\\[0.6cm]
+{\normalsize\color{inksoft} Wanhong}\\
+\vfill
+{\footnotesize\color{gold} Working draft --- not for citation or circulation}
+\coverfootnote
+\end{center}
+\newpage
+
+% ---------- Epigraph ----------
+\thispagestyle{empty}
+\vspace*{2.2cm}
+\begin{center}
+\begin{minipage}{0.76\linewidth}
+\centering\itshape\color{rose}
+{\cjk 上善若水。水善利万物而不争，处众人之所恶，故几于道。}\\[0.3em]
+The highest good is like water. Water benefits the ten thousand things\\[0.15em]
+and does not contend; it dwells in the places all others disdain,\\[0.15em]
+and so is close to the Way.\\[0.6em]
+{\upshape\footnotesize\color{gold} --- Laozi, \emph{Daodejing}, ch.~8}\\[1.4em]
+\itshape
+{\cjk 生而不有，为而不恃，长而不宰，是谓玄德。}\\[0.3em]
+Generating yet not possessing, acting yet not presuming,\\[0.15em]
+fostering growth yet not ruling: this is called the dark virtue.\\[0.6em]
+{\upshape\footnotesize\color{gold} --- Laozi, \emph{Daodejing}, ch.~51}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Dedication ----------
+\thispagestyle{empty}
+\vspace*{4.5cm}
+\begin{center}
+\begin{minipage}{0.74\linewidth}
+\centering\itshape\color{rose}
+{\cjk 致她——}\\[0.3em]
+For her---\\[0.7em]
+\upshape {\cjk 那个属于森林的女孩，}\\[0.2em]
+the girl who belongs to the forest,\\[0.5em]
+{\cjk 她待人如水，利而不争。}\\[0.2em]
+who is to others as water is: benefiting, and not contending.\\[1.0em]
+{\upshape\footnotesize\color{gold} {\cjk 致我最爱的人。}\,\;To the one I love most.}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Abstract ----------
+\thispagestyle{empty}
+\noindent\textbf{\large\color{rosedeep} Abstract}\\[0.6em]
+\input{sections/abstract.tex}
+
+\vspace{1.2em}
+\noindent{\color{rosedeep}\textbf{Keywords:}}\, \textcolor{inksoft}{water; non-contention; the lowly place; non-possessive generativity; practical ethics; holonomy.}
+\newpage
+
+\tableofcontents
+\newpage
+
+% ============================================================
+%  Body
+% ============================================================
+\input{sections/s01_intro.tex}        % §1  Water-good as the water-phase of the dark virtue
+\input{sections/s02_review.tex}       % §2  Doctrinal survey: the ethics of the water-virtues
+\input{sections/s03_noncontention.tex}% §3  The generativity of non-contention
+\input{sections/s04_lowliness.tex}    % §4  The political economy of the lowly place
+\input{sections/s05_dialectic.tex}    % §5  Dialectical core: water-good, not formlessness
+\input{sections/s06_nonfullness.tex}  % §6  Non-fullness and renewal
+\input{sections/s07_practice.tex}     % §7  The practice of the water-virtue
+\input{sections/s08_watershed.tex}    % §8  Watershed: from the dyad to the basin
+\input{sections/s09_formal.tex}       % §9  Formal expression: the translation layer
+\input{sections/s10_fissures.tex}     % §10 Directed fissures (the anti-envoi)
+
+% ============================================================
+\input{sections/s11_ack.tex}          % Acknowledgements (anonymous)
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}
