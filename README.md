@@ -1,7 +1,7 @@
 # Philosophy of Intimacy and the Theory of Justice
 
-An open book — a series of eight philosophy papers on intimate life, relational
-being, and justice, stewarded by **Serendip Commons Society**.
+An open book — a growing series of twenty-seven philosophy papers on intimate
+life, relational being, and justice, stewarded by **Serendip Commons Society**.
 
 | #    | Paper |
 |------|-------|
@@ -25,6 +25,13 @@ being, and justice, stewarded by **Serendip Commons Society**.
 | XVIII| Generative Effacement in the Intimate Relation |
 | XIX  | On the Emergence of Happiness and the Self-Continuation of Generativity |
 | XX   | The Hydraulic Virtue of Intimate Relations |
+| XXI  | The Field of "Travel" |
+| XXII | Relational Aesthetics and the Construction of the Field |
+| XXIII| The Aesthetic Philosophy of the Quotidian and the Cultivation of Perception |
+| XXIV | The Emergence of Culture in Intimate Relation |
+| XXV  | Optimization Theory and Rationality in Intimate Relations |
+| XXVI | The Limitation of Language in Intimate Relation |
+| XXVII| Relational Understanding in Intimate Relations |
 
 ## Repository layout
 

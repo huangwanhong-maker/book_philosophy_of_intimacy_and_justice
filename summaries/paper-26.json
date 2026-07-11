@@ -1,0 +1,64 @@
+{
+  "papers/paper-26.pdf": {
+    "subtitle": "Drive as the Phenomenology of Manque",
+    "teaser": "Where our words run out, something still remains — and this paper argues that the place language cannot reach is not an absence to be lamented but the very source of a relation's life. What stands at the limit of language, it claims, is drive: the lived form of the gap between the symbolic and the Real.",
+    "keywords": [
+      "the limit of language",
+      "manque",
+      "drive",
+      "desire",
+      "the Real",
+      "objet petit a",
+      "the symbolic",
+      "the poem",
+      "generative relational being"
+    ],
+    "background": "Every intimate relation reaches a place words cannot go: the being of the bond, the living present shared, the value it generates, the measure of its ethics, its justice, and the direction of its growth all have a core that language circles and never captures. It is tempting to treat this as a failure — a better vocabulary, a more honest conversation, would close the gap. This paper, Paper XXVI and a companion to Paper VIII (the intervention of language), argues the opposite: that language has a constitutive limit, and that the limit is generative. The claim is psychoanalytic at its root. What stands at the limit is not missing information but drive — and drive is not a content language omits and might recover, but the phenomenology of manque, the gap between the symbolic and the Real that resists complete symbolization.",
+    "approach": "The paper moves in five parts. Part One establishes the limit across six dimensions of relational life — existence, maintenance, value, ethics, justice, and evolution — each stated as its own claim, each a core language reaches toward and cannot reach. Part Two gives the phenomenology of the gap: entry into the symbolic leaves a pre-symbolic remainder, the Real has two faces (genetic and logical) that are one, the objet petit a descends at the gap, and drive circles while desire slides — culminating in a thought experiment showing that closing the gap would extinguish rather than fulfil them. Part Three follows drive into the time of relation (the symptom as fidelity to the unsymbolizable, the early signifier, making room for the other's core, the interweaving of drive in the couple). Part Four draws out the generativity of the limit — in the poem, in an ethics without possession, and in a justice that guards what it cannot settle — and offers a coalgebraic and reduction-theoretic (Mori–Zwanzig) counterpart as a heuristic. Part Five is a polyphonic close: the paper offers no final synthesis, and its form enacts its content. Three TikZ figures diagram the gap, the circling of drive, and the two faces.",
+    "questions": [
+      "Is the place language cannot reach in a relation a failure to be fixed, or a ground to be understood?",
+      "What actually stands at the limit of language — missing information, or something else?",
+      "What is drive, if it is not a content that language omits and might recover?",
+      "How are the two faces of the Real — the pre-symbolic remainder and the impossibility of closure — one and the same?",
+      "What would happen to drive and desire if the gap between the symbolic and the Real could be closed?",
+      "How does the limit become generative — in the poem, in ethics, in justice?",
+      "Can a philosophical paper enact, rather than merely assert, the non-closure it describes?"
+    ],
+    "key_concepts": [
+      { "term": "The limit of language is generative", "gloss": "The paper's thesis: language's inability to reach the core of a relation is not a lack to be lamented but the ground of its generativity." },
+      { "term": "Drive as the phenomenology of manque", "gloss": "Drive is not omitted content but the lived form of the gap (manque) between the symbolic and the Real that resists complete symbolization — the central identification." },
+      { "term": "The six dimensions of the limit", "gloss": "Existence, maintenance, value, ethics, justice, and evolution: in each, a core language reaches toward and cannot reach (each stated as its own claim)." },
+      { "term": "The two faces of the Real (that are one)", "gloss": "A pre-symbolic remainder cut off when the subject enters language (genetic) and the resulting impossibility of closure (logical) — a single structure seen twice." },
+      { "term": "Drive circles, desire slides", "gloss": "Drive (Trieb) circles the objet petit a that descends at the gap; desire slides along the signifying chain — two motions around the same non-closure." },
+      { "term": "The closure that would extinguish", "gloss": "A thought experiment: fully symbolizing the gap would extinguish drive and desire rather than satisfy them, so the non-closure of language is the condition of their persistence." },
+      { "term": "The co-structure of the limit", "gloss": "A coalgebraic and reduction-theoretic (Mori–Zwanzig) counterpart to the phenomenology, offered as a heuristic rather than a reduction." },
+      { "term": "Ethics without possession / justice that guards", "gloss": "The generative face of the limit: making room for the other's unsymbolizable core without possessing it, and a justice that guards what it cannot settle." }
+    ],
+    "claims": [
+      "Language has a constitutive limit, and across six dimensions of relational life there is in each a core it reaches toward and cannot reach.",
+      "What stands at the limit is drive, and drive is the phenomenology of manque — not a content language omits and might recover.",
+      "The gap between the symbolic and the Real has two faces — a pre-symbolic remainder and the impossibility of closure — that are one.",
+      "Around the gap drive circles and desire slides.",
+      "Closing the gap would extinguish rather than fulfil drive and desire, so the non-closure of language is the condition of their persistence.",
+      "The limit is generative: it grounds the poem, an ethics without possession, and a justice that guards what it cannot settle.",
+      "A coalgebraic and reduction-theoretic account can serve as a heuristic counterpart to the phenomenology of the limit.",
+      "The paper offers no final synthesis; its polyphonic form enacts the non-closure it describes."
+    ],
+    "conclusion": "The paper turns a familiar disappointment — that words fail before what matters most in a bond — into a first principle. Because entry into language leaves a remainder that can never be fully symbolized, every relation carries a core its speech circles and cannot close; and what lives at that core is drive, the phenomenology of manque itself. Far from a defect, this non-closure is generative: it is what keeps drive and desire alive (a thought experiment shows that closing the gap would kill them), and it is the ground of the poem that circles the unsayable, of an ethics that makes room for the other's core without possessing it, and of a justice that guards what it cannot settle. A coalgebraic and Mori–Zwanzig heuristic gives the shape of the limit a formal echo. Fittingly, the paper declines a final synthesis: to close its own argument would betray its thesis, so it ends in polyphony and an envoi, enacting the very limit it has proposed — not lamented.",
+    "contributions": [
+      "The thesis that language has a constitutive limit and that the limit is generative, established across six dimensions of relational life.",
+      "The identification of what stands at the limit as drive, understood as the phenomenology of manque rather than as omitted content.",
+      "An analysis of the two faces of the Real as one, and of how drive circles while desire slides around the gap.",
+      "A thought experiment showing that closing the gap would extinguish drive and desire, making non-closure the condition of their persistence.",
+      "An account of the generativity of the limit in the poem, in an ethics without possession, and in a justice that guards what it cannot settle.",
+      "A coalgebraic and reduction-theoretic (Mori–Zwanzig) co-structure of the limit as a heuristic, and a polyphonic form that enacts the paper's content."
+    ],
+    "outline": [
+      { "section": "Part One — The Six Dimensions of the Limit (§1–7)", "gist": "The limit proposed (not lamented), then traced through the being of a relation, the living present, relational value without a place to be priced, the aesthetic measure of the ethical response, the generativity justice guards, and the unsayable direction of growth." },
+      { "section": "Part Two — The Phenomenology of the Gap (§8–12)", "gist": "Entry into the symbolic and the pre-symbolic remainder; the two faces of the Real; the descent of the object at the gap; drive that circles and desire that slides; and the thought experiment that closure would extinguish them." },
+      { "section": "Part Three — The Persistence of Drive (§13–16)", "gist": "The symptom as fidelity to the unsymbolizable; the early signifier and the time of relation; making room for the other's core; and the interweaving of drive in the couple." },
+      { "section": "Part Four — The Generativity of the Limit (§17–21)", "gist": "The poem as a language that circles the gap; room for the core without possession (ethics); the guarding of generativity (justice); the co-structure of the limit (coalgebra + Mori–Zwanzig); and objections and replies." },
+      { "section": "Part Five — Polyphonic Close (§22–23)", "gist": "The limit as ground rather than problem, and an envoi — the paper refusing a final synthesis so that its form enacts its content." }
+    ]
+  }
+}

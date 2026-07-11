@@ -33,7 +33,14 @@ book_src/
     ├── paper_17_generativity_under_power/    ← multi-file (sections/); converted to serendip-paper; love under power (no TikZ)
     ├── paper_18_generative_effacement/       ← multi-file (sections/); converted to serendip-paper; ontological injustice + phase-diagram figure
     ├── paper_19_emergence_of_happiness/      ← multi-file (sections/); converted to serendip-paper; van der Pol limit-cycle figure (no TikZ)
-    └── paper_20_hydraulic_virtue/            ← multi-file (sections/); converted to serendip-paper; ethics of water (no figure); ethical layer of "From Fluid to Braid"
+    ├── paper_20_hydraulic_virtue/            ← multi-file (sections/); converted to serendip-paper; ethics of water (no figure); ethical layer of "From Fluid to Braid"
+    ├── paper_21_field_of_travel/             ← multi-file (sections/, ~123 pp); converted to serendip-paper; needs tcolorbox + Greek (no figure); relational production
+    ├── paper_22_relational_aesthetics/       ← multi-file (sections/, ~138 pp; separate preamble.tex); converted to serendip-paper; heavy TikZ + tcolorbox; author-year natbib; aesthetic education
+    ├── paper_23_quotidian_aesthetics/        ← multi-file (sections/); converted to serendip-paper; no figure; everyday aesthetics + cultivation of perception
+    ├── paper_24_emergence_of_culture/        ← multi-file (sections/, ~81 pp, 3 parts); converted to serendip-paper; no figure; culture in the intimate dyad (prints one author \todo in s07)
+    ├── paper_25_optimization_and_rationality/ ← multi-file (sections/, 5 parts); converted to serendip-paper; no figure; against optimization as a law of the universe
+    ├── paper_26_limitation_of_language/      ← multi-file (sections/, 5 parts, ~55 pp); converted to serendip-paper; needs TikZ (3 figures); the limit of language + drive as manque
+    └── paper_27_relational_understanding/    ← multi-file (sections/, 7 parts, ~43 pp); converted to serendip-paper; needs TikZ (2 figures); relational understanding as a crossing of worlds
 ```
 
 | ID | Title |
@@ -58,6 +65,13 @@ book_src/
 | XVIII| Generative Effacement in the Intimate Relation |
 | XIX | On the Emergence of Happiness and the Self-Continuation of Generativity |
 | XX | The Hydraulic Virtue of Intimate Relations |
+| XXI | The Field of "Travel" |
+| XXII | Relational Aesthetics and the Construction of the Field |
+| XXIII| The Aesthetic Philosophy of the Quotidian and the Cultivation of Perception |
+| XXIV | The Emergence of Culture in Intimate Relation |
+| XXV | Optimization Theory and Rationality in Intimate Relations |
+| XXVI| The Limitation of Language in Intimate Relation |
+| XXVII| Relational Understanding in Intimate Relations |
 
 ## Build (XeLaTeX + latexmk, under WSL/TeX Live)
 
@@ -81,14 +95,15 @@ shared `serendip-paper.sty`, selects XeLaTeX, and runs biber/bibtex as needed.
 
 ## Bibliographies
 
-Every paper now carries its own `refs.bib` in its folder, and all twenty build
+Every paper now carries its own `refs.bib` in its folder, and all twenty-seven build
 with citations fully resolved (no "??").
 
 - Papers I, II, III, VI, VIII use **biblatex/biber** (`\addbibresource{refs.bib}`).
 - Paper XII uses **plain bibtex** (`\bibliographystyle{plain}` + `\nocite{*}`).
-- Papers IV, V, VII, IX, X, XI, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX use **natbib/bibtex** (`\bibliographystyle{plainnat}` +
+- Papers IV, V, VII, IX, X, XI, XIII, XIV, XV, XVI, XVII, XVIII, XIX, XX, XXI, XXIII, XXIV, XXV, XXVI, XXVII use **natbib/bibtex** (`\bibliographystyle{plainnat}` +
   `\bibliography{refs}`). Paper IV's references, formerly inline, were moved into
-  `refs.bib` and wired up the same way.
+  `refs.bib` and wired up the same way. Paper XXII also uses natbib/bibtex but in
+  **author-year** mode (`[round,authoryear]`), not numbered.
 
 Note for the bibtex (natbib) papers: classic BibTeX treats every `@` as the start
 of an entry, even inside a `%` comment, so keep the literal `@` out of comment

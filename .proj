@@ -8,7 +8,7 @@ program:
 keywords: [philosophy of intimacy, theory of justice, relational being, care ethics, AI-mediated intimacy, gift, recognition, alienation, self-legislation, subject formation, joint attention, epistemic injustice, diplomacy, lyric poetry]
 
 # ── Lifecycle & gating ───────────────────────────────────────────────────────
-status: active                       # ongoing series — twenty papers so far
+status: active                       # ongoing series — twenty-seven papers so far
 visibility: public
 featured: true
 
@@ -25,7 +25,7 @@ title:
 abstract:
   en: |
     A philosophical research series examining intimate life through relational
-    being and justice. Across twenty papers it develops an integrative theory of
+    being and justice. Across twenty-seven papers it develops an integrative theory of
     justice for intimacy: (I) relational being in intimate life and an ethics of
     dialectical-positivist practice; (II) the justice and ethics of AI-mediated
     intimacy — alienation, power, exploitation, and the limits of instrumental
@@ -77,12 +77,68 @@ abstract:
     water-good is not formless yielding but chosen good (a rigid lower bound
     separates it from collapse), and asks not the abolition of power but the
     shaping of asymmetry so that its surplus is returned rather than retained —
-    the water-phase of a non-possessive "dark virtue".
+    the water-phase of a non-possessive "dark virtue";
+    and (XXI) the field of "travel" — a philosophy of shared travel made the route
+    to a general theory of relational production: a journey taken together as a
+    concrete universal, travel as a field of spaciousness (虚) in which the
+    relation's own movement comes to self-presence, the experience it generates as
+    relational wealth that shared retelling reproduces, and beauty, co-creation,
+    and aesthetic education as the cycle's faces — keyed by the principle of
+    subject-preservation, that no good relation may purchase its unity by
+    annihilating the other;
+    and (XXII) relational aesthetics and the construction of the field — the
+    construction of a generative field reframed as the proper object of an
+    aesthetic education of the everyday: beauty as a coupling event between
+    subjects rather than a property of objects, a four-step cycle of perception,
+    reception, sharing, and reproduction (a holonomy that returns to its root, not
+    its origin), and a cultivation that, needing no surplus of time or means, is
+    most available to and most needed by those whose days hold none;
+    and (XXIII) the aesthetic philosophy of the quotidian and the cultivation of
+    perception — everyday aesthetic perception, small and prone to go dead through
+    habituation, as generated rather than given (above all between two perceivers
+    turned toward a shared world), yielding a generative relational aesthetic
+    education whose beauty and ethics share one root; that the uneven distribution
+    of perceptual capacity is a neglected injustice; and four openly revisable
+    models of everyday aesthetic practice;
+    and (XXIV) the emergence of culture in intimate relation — culture not as a
+    finished, transmissible object but as a generation that does not close: the
+    dialectical exteriorization, across the three Lacanian registers and under
+    material constraint, of two subjects' interwoven history (a "three-register
+    dialectic of the relational Real"); the intimate dyad as the minimal unit of
+    cultural emergence, and how capital reaches into the bond to capture, by
+    decoherence, the value it generates — so that the just generation of culture
+    must in the same movement generate the counter-power that restrains power;
+    and (XXV) optimization theory and rationality in intimate relations — a formal
+    proof (carrying no value judgment) that intimate relation is not a well-defined
+    optimization problem, through four impossibilities (the drive's non-structurability,
+    the relationality of value and its absent quantifier, incommensurability, and the
+    subject's constitution within the relation); then a critique of imposing the frame
+    anyway as extractive computation and a symptom of capital, the optimal and the good
+    being orthogonal; and the recovery of a rationality that responds rather than
+    maximizes, closing in a polyphony that refuses to name a new master objective;
+    and (XXVI) the limitation of language in intimate relation — that language has a
+    limit and the limit is generative: across six dimensions of relational life
+    (existence, maintenance, value, ethics, justice, evolution) a core language
+    reaches toward and cannot reach, and what stands at that limit is drive, the
+    phenomenology of manque (the gap between the symbolic and the Real); around it
+    drive circles and desire slides, and since closing the gap would extinguish
+    rather than fulfil them, the non-closure of language is the condition of their
+    persistence, and of the poem, an ethics without possession, and a justice that
+    guards what it cannot settle;
+    and (XXVII) relational understanding in intimate relations — understanding as a
+    crossing of symbolic worlds (a generative relational epistemology carried into
+    intimacy): a functional case (trust, shared value, conflict, well-being; the
+    relational and generative characters) and a normative case (legitimacy without
+    correctness; an efficient possession of the other counterfeits understanding;
+    ethical legitimacy observed across traditions, with non-possession throughout);
+    intimacy as a wager, not a rehearsal; and the dialectical turn that a full
+    crossing would end the bond, since the other's unsymbolizable remainder is what
+    desire moves around and the bond generates from.
     Together the papers ask how love, freedom, and justice
     can be sustained within asymmetry and dependency, and how intimate relations
     resist reduction to instrumental or transactional logics.
   ja: |
-    親密な生を関係的存在と正義の観点から考察する哲学研究シリーズ。二十の論文から
+    親密な生を関係的存在と正義の観点から考察する哲学研究シリーズ。二十七の論文から
     なる。(I) 親密な生における関係的存在と弁証法的・実証主義的実践の倫理、(II) AI
     に媒介された親密性の正義と倫理――疎外・権力・搾取と道具的帰責の限界、(III) 親密
     な関係における自己立法の規範性――恋人の誓い、それが打ち立てる権利秩序、そして
@@ -98,10 +154,10 @@ abstract:
     見えない縁の彼方へ余剰を抽出する偽りの閉鎖ではなく、いかなる条件のもとで真に
     正しいものとなるのか、(XIII) 拘束なき誓いの因果性――強制力をもたない約束がいかに
     して真の信頼を生むか、信頼とは生成モデルが「約束は守られる」に与える精度であり、
-    後ろ盾なく自らを縛る誓いこそ約束のより純粋な実現である。(XIV) 生成的・関係的な実存主義的エウダイモニズム――親密な生において分かち合われる幸福は、いずれの個人の所有物でもなく、共進化する関係から立ち現れる兆候であり、「分かち合う」という行為によって生成される。(XV) 親密な関係の政治経済学――生成的関係的富。関係の共進化によって生み出される富であり、いずれの当事者の所有物でもなく、使用によって減るどころかむしろ増えうる。(XVI) 親密な関係における奢侈の記号論――奢侈とは経済的価値ではなく関係的なものであり、主体の現前・志向・このひとのためになされた唯一の選択がどれだけ対象に埋め込まれているかによって測られる。交換可能な記号に交換不可能なものを担わせないという選択の正義を伴う。(XVII) 権力のもとでの生成性――非対称性の場において愛はいかにあり得るか。権力と富は愛が生起する〈条件〉を守りうるが、愛そのものを生み出すことはできない（愛の政治経済学ではなく、条件の政治経済学）。信頼は両水準を貫く界面であり、非対称性が生成的となるか凍結するかを決する。生成的な関係は権力にではなく、権力の凍結に抗う。(XVIII) 生成的抹消――共有された生成の空間をあまりに満たすことで、もう一方が関係のなかで〈在る〉ことをやめてしまうという存在論的不正義。支配ではなく献身を通じて訪れる害であり、その救済は生成を減らすことではなく、他者が生成する余地を残すことにある（非決定の正義）。(XIX) 幸福の創発と生成性の自己継続――何も起こらないのに満ちている、平淡で分かち合われた幸福を、状態でも出来事でもなく、生成的な関係がおのれを継続することの創発として読む。象徴界と現実界の裂け目を欠如ではなく充溢の様態において生きること、幸福は解釈学的であり（力学はその背景多様体にすぎない）、分かち合われた幸福は融合ではなく共鳴であり、沈黙は欠如ではなく成就である。(XX) 親密な関係における水の徳――水の倫理（上善若水）。争わずに利し、低きに処り、満たされぬままであること。これを修養としてではなく構造として読む。水善は無形の屈従ではなく選ばれた善であり（堅固な下限が崩壊から分かつ）、権力の廃絶ではなく、非対称の余剰が保持されず還元されるよう権力を形づくることを求める――非所有的な「玄徳」の水の相。愛・自由・正義が非対称性と依存のなかでいかに維持
+    後ろ盾なく自らを縛る誓いこそ約束のより純粋な実現である。(XIV) 生成的・関係的な実存主義的エウダイモニズム――親密な生において分かち合われる幸福は、いずれの個人の所有物でもなく、共進化する関係から立ち現れる兆候であり、「分かち合う」という行為によって生成される。(XV) 親密な関係の政治経済学――生成的関係的富。関係の共進化によって生み出される富であり、いずれの当事者の所有物でもなく、使用によって減るどころかむしろ増えうる。(XVI) 親密な関係における奢侈の記号論――奢侈とは経済的価値ではなく関係的なものであり、主体の現前・志向・このひとのためになされた唯一の選択がどれだけ対象に埋め込まれているかによって測られる。交換可能な記号に交換不可能なものを担わせないという選択の正義を伴う。(XVII) 権力のもとでの生成性――非対称性の場において愛はいかにあり得るか。権力と富は愛が生起する〈条件〉を守りうるが、愛そのものを生み出すことはできない（愛の政治経済学ではなく、条件の政治経済学）。信頼は両水準を貫く界面であり、非対称性が生成的となるか凍結するかを決する。生成的な関係は権力にではなく、権力の凍結に抗う。(XVIII) 生成的抹消――共有された生成の空間をあまりに満たすことで、もう一方が関係のなかで〈在る〉ことをやめてしまうという存在論的不正義。支配ではなく献身を通じて訪れる害であり、その救済は生成を減らすことではなく、他者が生成する余地を残すことにある（非決定の正義）。(XIX) 幸福の創発と生成性の自己継続――何も起こらないのに満ちている、平淡で分かち合われた幸福を、状態でも出来事でもなく、生成的な関係がおのれを継続することの創発として読む。象徴界と現実界の裂け目を欠如ではなく充溢の様態において生きること、幸福は解釈学的であり（力学はその背景多様体にすぎない）、分かち合われた幸福は融合ではなく共鳴であり、沈黙は欠如ではなく成就である。(XX) 親密な関係における水の徳――水の倫理（上善若水）。争わずに利し、低きに処り、満たされぬままであること。これを修養としてではなく構造として読む。水善は無形の屈従ではなく選ばれた善であり（堅固な下限が崩壊から分かつ）、権力の廃絶ではなく、非対称の余剰が保持されず還元されるよう権力を形づくることを求める――非所有的な「玄徳」の水の相。(XXI) 「旅」の場――共にする旅の哲学を、関係的生産の一般理論への通路とする。共にした一つの旅を具体的普遍として読み、旅を虚（『道徳経』十一章）の場として捉える。そこでは関係それ自体の運動が自己現前し、旅が生む経験は関係的富であり、共に語り直すことがそれを再生産し、美・共創・美的教育がその循環の諸相をなす。要石は主体保存の原理――いかなる善き関係も、他者を抹消することでその統一を購ってはならない。(XXII) 関係的美学と場の構築――生成的な場の構築を、日常の美的教育の本来の対象として捉え直す。美は対象の性質ではなく主体間のカップリング出来事であり、知覚・受容・分有・再生産の四段の循環（始点ではなく根へと還る幾何学的位相の循環）をなす。この涵養は時間や資力の余剰を要さず、それゆえ余剰なき日々を生きる者にこそ最も開かれ、最も必要とされる。(XXIII) 日常の美学哲学と美育――日常の美的知覚は、微細で習慣化により死にやすいが、与えられるのではなく生成される（とりわけ共有された世界へと共に向かう二人の知覚者のあいだで）。ここから、美と倫理が一つの根を分かつ生成的・関係的な美育が導かれる。知覚能力の不均等な配分は看過された不正義であり、日常の美的実践の四つの（改訂に開かれた）モデルが提示される。(XXIV) 親密な関係における文化の涌現――文化を、完成し伝達可能な対象としてではなく、閉じない生成として捉える。すなわち、三つのラカン的界域にわたり、物質的制約のもとで、二人の主体の織り合わされた歴史が弁証法的に外化されること（「関係的実在の三界弁証法」）。親密なダイアッドを文化涌現の最小単位とし、資本が絆の内へと手を伸ばし、それが生む価値を〈脱コヒーレンス〉によって捕獲するさまを説く。ゆえに文化の正しい生成は、同じ運動において、権力を抑える反権力を生み出さねばならない。(XXV) 親密な関係における最適化理論と理性――最適化は宇宙の法則ではない。親密な関係が明確に定義された最適化問題を与えないことを、価値判断を伴わない形式的証明として示す（四つの不可能性――欲動の非構造化可能性、価値の関係性と外的定量者の不在、通約不可能性、関係のうちで構成される主体）。次に、その枠組みをなお押しつけることを〈抽出的計算〉として、また資本の症候として批判する――最適と善とは直交する。そして、最大化ではなく応答する理性を回復し、新たな至上目的を名指すことを拒む多声性のうちに閉じる。(XXVI) 親密な関係における言語の限界――言語には限界があり、その限界こそが生成的である。関係的生の六つの次元（存在・維持・価値・倫理・正義・進化）において、言語が向かいながら到達しえない核があり、その限界に立つのは欲動である。欲動は言語が取りこぼした内容ではなく、欠如（マンク）の現象学、すなわち象徴界と現実界の裂け目である。その周りを欲動は巡り、欲望は滑る。裂け目を閉じることはそれらを満たすどころか消し去るのであり、ゆえに言語の非閉包こそが、それらの持続の――そして詩・所有なき倫理・裁定しえぬものを守る正義の――条件である。(XXVII) 親密な関係における関係的理解――理解を象徴世界の交差として捉える（生成的関係的認識論を親密性へと持ち込む）。機能的論証（信頼・共有価値・葛藤・共同生活の質、そして関係的・生成的という二つの性格）と規範的論証（正しさなき正統性、他者の効率的な所有は理解を偽造しうる、諸伝統にわたって観察される倫理的正統性、その全体を貫く非所有）。親密性は予行ではなく賭けであり、弁証法的転回として、完全な交差は絆を終わらせる――他者の象徴化しえぬ残余こそ欲望が巡り、絆が生成する源だからである。愛・自由・正義が非対称性と依存のなかでいかに維持
     されうるか、親密な関係が道具的・取引的論理への還元にいかに抗うかを問う。
   zh: |
-    一个从关系性存在与正义视角考察亲密生活的哲学研究系列，包含二十篇论文：（I）亲密
+    一个从关系性存在与正义视角考察亲密生活的哲学研究系列，包含二十七篇论文：（I）亲密
     生活中的关系性存在与辩证—实证主义实践的伦理；（II）AI 中介之亲密关系的正义与
     伦理——异化、权力、剥削及工具性归责的限度；（III）亲密关系中自我立法的规范性
     ——恋人的誓言、其所确立的权利秩序，以及它转为支配的条件；（IV）馈赠的语言——
@@ -114,7 +170,7 @@ abstract:
     所构成的价值循环，以及由正义所构成的繁荣；（XII）甜的循环——从内部看来于人无损的
     甜与娇宠之循环，在何种条件下才是真正正义的，而非把剩余抽取到看不见的边缘之外的
     伪闭合；（XIII）无强制之誓的因果性——不带强制力的承诺如何生成真实的信任，信任即
-    生成模型赋予"承诺将被遵守"的精度，而无所凭恃地自我约束之誓，正是承诺更纯粹的实现；（XIV）一种生成性—关系性的存在主义幸福论——亲密生活中被分享的幸福并非任何一方的所有物，而是关系共同演化所涌现的信号，由「分享」这一行为生成；（XV）亲密关系的政治经济学——生成性关系财富，即由关系之共同演化所生成、不属于任何一方、且越用越增而非耗减的财富；（XVI）亲密关系中奢侈的符号学——奢侈并非经济价值而是关系性的，由主体的在场、意图与专为这一位所做的唯一选择有多少被嵌入对象之中来衡量，并主张以不可交换者优先于可交换符号的选择正义；（XVII）权力之下的生成性——在非对称的场域中爱如何可能；权力与财富能守护爱得以发生的〈条件〉，却无法生产爱本身（不是爱的政治经济学，而是条件的政治经济学）；信任是贯穿两个层级的界面，决定非对称究竟成为生成性的还是被冻结；生成性的关系并不反对权力，而是反对权力的凝固；（XVIII）生成性抹除——将共享的生成空间填满，以致另一方在关系之中不再〈存在〉的本体论不正义；它经由奉献而非支配而至，其补救不在于少生成，而在于为对方留出生成的余地（非决定的正义）；（XIX）幸福的涌现与生成性的自我延续——将那种「什么也没发生却充盈」的平淡而共享的幸福，读作既非状态亦非事件，而是生成性关系自我延续之涌现：在充盈而非欠缺的样态中生活象征界与实在界之裂隙；幸福是诠释学的（动力学只是其背景流形）；共享的幸福是共鸣而非融合；沉默是成就而非欠缺；（XX）亲密关系中的水之德——水的伦理（上善若水）：利而不争、处下、不盈，皆作结构而非修养来读；水善并非无形的屈从而是被选择的善（以刚性的下限与崩塌相区分），其所求非废除权力，而是塑造不对称使其剩余被归还而非留存——非占有性「玄德」的水相。
+    生成模型赋予"承诺将被遵守"的精度，而无所凭恃地自我约束之誓，正是承诺更纯粹的实现；（XIV）一种生成性—关系性的存在主义幸福论——亲密生活中被分享的幸福并非任何一方的所有物，而是关系共同演化所涌现的信号，由「分享」这一行为生成；（XV）亲密关系的政治经济学——生成性关系财富，即由关系之共同演化所生成、不属于任何一方、且越用越增而非耗减的财富；（XVI）亲密关系中奢侈的符号学——奢侈并非经济价值而是关系性的，由主体的在场、意图与专为这一位所做的唯一选择有多少被嵌入对象之中来衡量，并主张以不可交换者优先于可交换符号的选择正义；（XVII）权力之下的生成性——在非对称的场域中爱如何可能；权力与财富能守护爱得以发生的〈条件〉，却无法生产爱本身（不是爱的政治经济学，而是条件的政治经济学）；信任是贯穿两个层级的界面，决定非对称究竟成为生成性的还是被冻结；生成性的关系并不反对权力，而是反对权力的凝固；（XVIII）生成性抹除——将共享的生成空间填满，以致另一方在关系之中不再〈存在〉的本体论不正义；它经由奉献而非支配而至，其补救不在于少生成，而在于为对方留出生成的余地（非决定的正义）；（XIX）幸福的涌现与生成性的自我延续——将那种「什么也没发生却充盈」的平淡而共享的幸福，读作既非状态亦非事件，而是生成性关系自我延续之涌现：在充盈而非欠缺的样态中生活象征界与实在界之裂隙；幸福是诠释学的（动力学只是其背景流形）；共享的幸福是共鸣而非融合；沉默是成就而非欠缺；（XX）亲密关系中的水之德——水的伦理（上善若水）：利而不争、处下、不盈，皆作结构而非修养来读；水善并非无形的屈从而是被选择的善（以刚性的下限与崩塌相区分），其所求非废除权力，而是塑造不对称使其剩余被归还而非留存——非占有性「玄德」的水相；（XXI）「旅行」的场域——以共同旅行的哲学通向关系性生产的一般理论：将一段共同的旅程作为具体的普遍，把旅行视为「虚」（《道德经》十一章）的场域，关系自身的运动在其中自我现前；旅程所生成的经验即关系性财富，共同的复述将其再生产，而美、共创与审美教育构成此循环的诸面相；其拱心石是主体保存原则——任何良好的关系都不得以消灭对方来换取自身的统一；（XXII）关系性美学与场域的构筑——将生成性场域的构筑重新界定为日常之审美教育的本来对象：美并非对象的属性，而是主体间的耦合事件；它构成知觉、接纳、分享、再生产的四步循环（一个回到其根而非起点的几何相位循环）；此种涵养无需时间或财力的剩余，因而恰恰对那些日子里没有任何剩余的人最为可及、也最为必要；（XXIII）日常的美学哲学与美育——日常的审美知觉虽微小、且易因习惯化而麻木，却非被给予而是被生成（尤以共同朝向一个世界的两位知觉者之间为最），由此导出一种美与伦理同出一源的生成性关系性美育；知觉能力的不均分配是一种被忽视的不正义；并提出四种开放可修订的日常审美实践模型；（XXIV）亲密关系中的文化涌现——文化并非完成而可传递的对象，而是一种不闭合的生成：在三个拉康式界域之上、于物质约束之下，两个主体交织之历史的辩证外化（「关系性实在的三界辩证」）；以亲密的二人组为文化涌现的最小单位，揭示资本如何伸入这一纽带、以〈退相干〉捕获其所生成的价值——因而文化的正当生成必须在同一运动中生成抑制权力的反权力；（XXV）亲密关系中的优化理论与理性——优化并非宇宙的法则。以不含价值判断的形式证明表明：亲密关系并不构成一个良定义的优化问题（四种不可能：欲力的不可结构化、价值的关系性与外部量化者的缺席、不可通约性、主体在关系之中被构成）；继而批判仍然强加此框架，视之为〈抽取式计算〉与资本的症候——最优与善相互正交；最后恢复一种应答而非最大化的理性，并在拒绝命名新的至上目标的复调中作结；（XXVI）亲密关系中语言的限度——语言有其限度，而这一限度恰恰是生成性的：在关系性生活的六个维度（存在、维系、价值、伦理、正义、演化）中，皆有语言趋近却无法抵达的内核，立于此限度之处的即是欲力。欲力并非语言遗漏的内容，而是欠缺（manque）的现象学，即象征界与实在界之间的裂隙；欲力绕其而行，欲望沿链滑动。闭合此裂隙非但不能满足、反而会熄灭它们，因而语言之不闭合正是它们得以持存的条件，也是诗、无占有之伦理、以及守护其无法裁定者之正义的条件；（XXVII）亲密关系中的关系性理解——将理解视为象征世界的交叉（把生成性关系认识论带入亲密关系）：一为功能论证（信任、共享价值、冲突、共同生活的质地，以及关系性与生成性两种品格），一为规范论证（无正确性的正当性；对他者的高效占有会伪造理解；跨诸传统所观察到的伦理正当性，并以非占有贯穿始终）；亲密关系是一场赌注而非排练；并以辩证的转折指出：完全的交叉会终结它本欲成全的纽带，因为他者不可符号化的残余，正是欲望绕行之所、也是纽带据以继续生成之源。
     诸篇共同追问：爱、自由与正义如何在非对称与依赖中得以维系，亲密关系
     如何抵抗被还原为工具性或交易性逻辑。
 cover:
@@ -146,6 +202,13 @@ documents:
   - { type: publication, label: "XVIII — Generative Effacement in the Intimate Relation",            path: papers/paper-18.pdf,                                        format: pdf, visibility: public }
   - { type: publication, label: "XIX — On the Emergence of Happiness (working draft)",               path: papers/paper-19.pdf,                                        format: pdf, visibility: public }
   - { type: publication, label: "XX — The Hydraulic Virtue of Intimate Relations (working draft)",    path: papers/paper-20.pdf,                                        format: pdf, visibility: public }
+  - { type: publication, label: "XXI — The Field of “Travel” (working draft)",                       path: papers/paper-21.pdf,                                        format: pdf, visibility: public }
+  - { type: publication, label: "XXII — Relational Aesthetics and the Construction of the Field (working draft)", path: papers/paper-22.pdf,                            format: pdf, visibility: public }
+  - { type: publication, label: "XXIII — The Aesthetic Philosophy of the Quotidian and the Cultivation of Perception (working draft)", path: papers/paper-23.pdf,      format: pdf, visibility: public }
+  - { type: publication, label: "XXIV — The Emergence of Culture in Intimate Relation (working draft)", path: papers/paper-24.pdf,                                    format: pdf, visibility: public }
+  - { type: publication, label: "XXV — Optimization Theory and Rationality in Intimate Relations (working draft)", path: papers/paper-25.pdf,                          format: pdf, visibility: public }
+  - { type: publication, label: "XXVI — The Limitation of Language in Intimate Relation (working draft)", path: papers/paper-26.pdf,                                    format: pdf, visibility: public }
+  - { type: publication, label: "XXVII — Relational Understanding in Intimate Relations (working draft)", path: papers/paper-27.pdf,                                    format: pdf, visibility: public }
   - { type: approval, label: "Project Approval (SCS/PA/2026/02)", path: docs/project_approval.pdf, format: pdf, date: 2026-06-26, visibility: public }
 
 custom_page:

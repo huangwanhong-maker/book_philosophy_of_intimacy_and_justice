@@ -1,0 +1,191 @@
+% !TEX program = xelatex
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper XXIV
+%  The Emergence of Culture in Intimate Relation
+%  《亲密关系中的文化涌现》
+%
+%  Series visual identity (shared with Papers XVIII--XX): blush page,
+%  deep-rose headings, rose emphasis, gold rules, ink body.
+%  XeLaTeX + TeX Gyre Pagella, Noto Serif CJK SC for CJK terms.
+%
+%  Central thesis: the three-register dialectic of the relational Real
+%  (关系性实在论的三界辩证观). Culture in intimate relation as the
+%  dialectical sedimentation of interwoven drive across the three Lacanian
+%  registers, under material conditions.
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+\PassOptionsToPackage{table}{xcolor}
+
+% ---------- Fonts (CJK fallback for occasional Chinese/Japanese terms) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk #1}}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 0.1pt
+
+% natbib (numbered) before serendip-paper (hyperref loads inside it)
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{serendip-paper}
+
+% colour used on the title page (headings/links come from serendip-paper)
+\definecolor{inksoft}{HTML}{342E37}
+
+% ---------- Math ----------
+\newcommand{\holo}{\operatorname{hol}}
+
+% ---------- Graphics (loaded after serendip-paper so rosedeep is defined) ----------
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{font=small,labelfont={bf,color=rosedeep}}
+
+% ---------- Tables (beyond the shared style) ----------
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}p{3.1cm}}
+
+% ---------- Paper-specific emphasis & helpers ----------
+\newcommand{\emc}[1]{\textcolor{rose}{\oldtextit{#1}}}
+\newcommand{\emb}[1]{\textcolor{rose}{\oldtextbf{#1}}}
+\newcommand{\goldrule}{\noindent\textcolor{gold}{\rule{\linewidth}{0.6pt}}\par\vspace{0.4em}}
+\newcommand{\todo}[1]{\textcolor{gray}{\small[TODO: #1]}}
+\newcommand{\xref}[1]{\textcolor{rose}{\S\ref{#1}}}
+\newcommand{\pinkref}[1]{\textcolor{rose}{#1}}
+
+\newenvironment{claim}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.4em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.6em}}
+
+\newenvironment{casebox}[1]{%
+  \par\vspace{0.4em}\noindent\textit{\textcolor{rose}{An illustrative case --- #1.}}\hspace{0.4em}\ignorespaces}{%
+  \par\vspace{0.4em}}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title page ----------
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper XXIV}\\[0.3cm]
+\coverrule\\[1.2cm]
+{\LARGE\bfseries\color{warnred} The Emergence of Culture in Intimate Relation}\\[0.7cm]
+{\large\itshape\color{warnred} The Three-Register Dialectic of the Relational Real}\\[0.8cm]
+{\normalsize\color{inksoft} Between two people a whole world is spoken in words no third person can translate.}\\[2cm]
+\coverrule[0.25]\\[0.6cm]
+{\normalsize\color{inksoft} Wanhong}\\
+\vfill
+{\footnotesize\color{gold} Working draft --- not for citation or circulation}
+\coverfootnote
+\end{center}
+\newpage
+
+% ---------- Epigraph ----------
+\thispagestyle{empty}
+\vspace*{2.2cm}
+\begin{center}
+\begin{minipage}{0.76\linewidth}
+\centering\itshape\color{rose}
+{\cjk 观乎人文，以化成天下。}\\[0.3em]
+Observe the patterns of the human,\\[0.15em]
+and by them the world is brought to form.\\[1.4em]
+\upshape\itshape
+{\cjk 化者，生生之谓也。}\\[0.3em]
+To culture is to make live, and live again.\\[0.6em]
+{\upshape\footnotesize\color{gold} --- after the \emph{Book of Changes}}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Dedication ----------
+\thispagestyle{empty}
+\vspace*{4.5cm}
+\begin{center}
+\begin{minipage}{0.74\linewidth}
+\centering\itshape\color{rose}
+{\cjk 致她——}\\[0.3em]
+For her---\\[0.7em]
+\upshape {\cjk 那个属于森林的女孩，}\\[0.2em]
+the girl who belongs to the forest,\\[0.5em]
+{\cjk 与我共写一种只有我们懂得的语言。}\\[0.2em]
+with whom I write a language only we two understand.\\[1.0em]
+{\upshape\footnotesize\color{gold} {\cjk 致我最爱的人。}\,\;To the one I love most.}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Abstract ----------
+\thispagestyle{empty}
+\noindent\textbf{\large\color{rosedeep} Abstract}\\[0.6em]
+\input{sections/abstract.tex}
+
+\vspace{1.2em}
+\noindent{\color{rosedeep}\textbf{Keywords:}}\, \textcolor{inksoft}{culture in intimate relation; generative relational being; the relational Real; the commodification of culture; generative justice.}
+
+\vspace{1.0em}
+\noindent{\color{rosedeep}\textbf{AI usage statement:}}\, \textcolor{inksoft}{The ideas, claims, and theoretical framework of this paper originate with the author. AI tools were used as an aid in drafting and revision. Every sentence has been checked by the author line by line, and the origin of each idea verified, so that the author takes full responsibility for the content.}
+\newpage
+
+\tableofcontents
+\newpage
+
+% ============================================================
+%  PART ONE — Ontology and Epistemology: how culture emerges
+% ============================================================
+\part*{\textcolor{rosedeep}{Part One \quad Ontology and Epistemology: How Culture Emerges}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part One — Ontology and Epistemology}
+
+\input{sections/s01_intro.tex}          % §1  Introduction: the first fissure and the problem of 文/化
+\input{sections/s02_taxonomy.tex}       % §2  A taxonomy of definitions of culture (thesis table)
+\input{sections/s03_transmission.tex}   % §3  Transmission and collective representation
+\input{sections/s04_hermeneutic.tex}    % §4  Symbol and interpretation
+\input{sections/s05_reproduction.tex}   % §5  Structure and reproduction (incl. Bourdieu)
+\input{sections/s06_power.tex}          % §6  Power as the ontology of culture
+\input{sections/s07_chinese.tex}        % §7  The Chinese 文—化 tradition
+\input{sections/s08_dialogic.tex}       % §8  The dialogic and the unfinished
+\input{sections/s09_eastwest.tex}       % §9  East and West: an unactivated resonance
+\input{sections/s10_manifesto.tex}      % §10 Meta-theoretical statement: the Lacanian variant
+\input{sections/s11_inversion.tex}      % §11 The shared presupposition and its inversion
+\input{sections/s12_drive.tex}          % §12 Culture as the exteriorization and organization of drive
+\input{sections/s13_material.tex}       % §13 The dialectic of the material and the ideal
+\input{sections/s14_definition.tex}     % §14 The definition of cultural emergence in intimate relation
+\input{sections/s15_powersublation.tex} % §15 The dialectical sublation of power
+\input{sections/s16_evolution.tex}      % §16 The dialectic of cultural evolution
+
+% ============================================================
+%  PART TWO — Phenomenology: cultural phenomena in intimate relation
+% ============================================================
+\part*{\textcolor{rosedeep}{Part Two \quad Phenomenology: Cultural Phenomena in Intimate Relation}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part Two — Phenomenology}
+
+\input{sections/s17_special.tex}        % §17 Intimate relation as a special site
+\input{sections/s18_description.tex}    % §18 Description of private-culture phenomena
+\input{sections/s19_participation.tex}  % §19 Participatory knowing and epistemic exclusivity
+\input{sections/s20_dyad.tex}           % §20 Pillar 1: the dyad and the vacant big Other
+\input{sections/s21_interweaving.tex}   % §21 Pillar 2: the double interweaving of drive
+\input{sections/s22_sedimentation.tex}  % §22 Pillar 3: high-density sedimentation, accelerated time
+\input{sections/s23_registers.tex}      % §23 Pillar 4: the special configuration of the three registers
+\input{sections/s24_fragility.tex}      % §24 Pillar 5: fragility and reversibility
+\input{sections/s25_hermeneutics.tex}   % §25 The hermeneutics of private culture
+\input{sections/s26_negotiation.tex}    % §26 Emergence-moments and negotiation with the outer symbolic order
+
+% ============================================================
+%  PART THREE — Ethics and Praxis: production, capture, and its lessons
+% ============================================================
+\part*{\textcolor{rosedeep}{Part Three \quad Ethics and Praxis: Production, Capture, and Its Lessons}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part Three — Ethics and Praxis}
+
+\input{sections/s27_familyethos.tex}    % §27 Family ethos as a middle-scale case (家风)
+\input{sections/s27_production.tex}     % §28 The production of culture
+\input{sections/s28_capture.tex}        % §29 The capture of intimate culture by capital
+\input{sections/s29_feedback.tex}       % §30 The closed loop back into intimate relation
+\input{sections/s30_constraint.tex}     % §31 Constrained but not determined
+\input{sections/s31_ethics.tex}         % §32 The ethics of cultural cognition and practice
+\input{sections/s32_envoi.tex}          % §33 Cross-scale retrospect and Envoi
+
+% ============================================================
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

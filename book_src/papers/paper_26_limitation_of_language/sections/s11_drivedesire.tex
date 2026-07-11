@@ -1,0 +1,53 @@
+% ===== §11 =====
+\section{Drive That Circles, Desire That Slides}
+\label{sec:drivedesire}
+
+\noindent
+This section establishes the distinction the paper needs between two movements that turn around the gap, drive and desire, and shows that relational life requires both. The aim is to give each its structure, drive as a circling whose satisfaction lies in the circuit and desire as a metonymic sliding along the chain of signifiers, and to assign to each a definite office in the life of a relation, the one supplying its constant core and the other its movement in time. The section takes drive first, then desire, reviews the psychoanalytic sources that fix each, and states their joint necessity.
+
+\subsection*{Drive, the circuit around the void}
+
+Drive (\emph{Trieb}) circles. Its movement is a turning around the object-cause, and its satisfaction, in the precise and initially strange sense psychoanalysis gives it, lies in the circling itself and not in the attainment of any object. Freud had already noted that the drive is oddly independent of its object, that the object is what is most variable in a drive and is not originally connected with it, so that satisfaction does not consist in reaching a predetermined thing \citep{freud1915instincts}. Lacan sharpened this into the topology of the circuit: the drive does not reach its object and rest but makes a circuit around it, and its satisfaction is in the closed loop of the going-out and the return, the aim fulfilled in the movement rather than in the goal \citep{lacan1977xi}. This is the energetic topology of the drive, a closed circuit around a void, sustained by the very fact that the void is not filled. Behind it stands Freud's most difficult claim, that beyond the pleasure principle there is a compulsion to repeat, a pressure that returns upon the same regardless of pleasure, circling a place rather than seeking a satisfaction \citep{freud1920beyond}. What the drive gives to a relation is the account of why the bond has a core that does not go out, an unextinguished pressure that keeps turning at the center, drawing its constancy from a circling that has no terminus because it seeks none.
+
+\subsection*{Desire, the sliding along the chain}
+
+Desire (\emph{désir}) slides. Its movement is not a circling but a metonymy, a passage along the chain of signifiers from one to the next, coming to rest on none. Lacan located desire in the very structure of the signifying chain: because meaning is produced by the movement from signifier to signifier and no signifier delivers a final signified, desire runs along the chain in an endless metonymy, always carried past the signifier it reaches toward the next \citep{lacan2006ecrits}. Desire is set going by the same manque that the drive circles, but where the drive turns around the void, desire runs along the signifiers, each of which promises and none of which delivers, so that desire is carried forward without end. What desire gives to a relation is the account of why it keeps reorganizing itself in time, why the bond does not settle into a fixed figure but moves through new forms, new words, new objects, always displacing, because no signifier it reaches is the one that would still it.
+
+\begin{figure}[t!]
+\centering
+\begin{tikzpicture}[scale=1.0,
+  sig/.style={draw=rose,thick,circle,fill=pageblush,inner sep=1.5pt,font=\footnotesize\color{inksoft}},
+  slide/.style={-{Latex[length=2mm]},rose,thick},
+  drive/.style={{Latex[length=2mm]}-,gold,very thick}]
+% the void
+\draw[gold,very thick,dashed] (0,0) circle (0.55cm);
+\node[font=\footnotesize\itshape\color{rosedeep}] at (0,0) {objet a};
+\node[font=\scriptsize\color{gold}] at (0,-0.85) {(void)};
+% drive circuit around the void
+\draw[drive] (0,0) ++(35:1.35cm) arc (35:325:1.35cm);
+\node[font=\footnotesize\color{gold}] at (1.95,0.9) {drive: circles};
+% desire chain sliding away
+\foreach \i/\x in {1/3.6,2/5.0,3/6.4}{
+  \node[sig] (S\i) at (\x,-1.7) {$S_{\i}$};
+}
+\draw[slide] (S1) -- (S2);
+\draw[slide] (S2) -- (S3);
+\draw[slide] (S3) -- ++(1.0,0);
+\node[font=\footnotesize\color{rose}] at (5.0,-2.5) {desire: slides};
+\draw[rose,thick,dotted] (0.55,-0.2) .. controls (2.0,-1.2) .. (S1.west);
+\end{tikzpicture}
+\caption{Two movements around one gap. Drive (gold) makes a closed circuit around the void the objet a marks, satisfied in the circling and not in any seizing. Desire (rose) slides along the chain of signifiers $S_1 \to S_2 \to S_3 \to \cdots$, resting on none. Both are set going by the same manque; neither closes it.}
+\label{fig:drivedesire}
+\end{figure}
+
+\subsection*{Why the distinction, and why both}
+
+The distinction is not a scholastic refinement but a requirement of the phenomenon. A relation shows two features that no single movement explains. It has constancy, a core that persists through change, the sense in which a bond remains itself across years of alteration. And it has development, a movement through forms, the sense in which a bond does not stand still but keeps becoming. A single movement cannot ground both. The circling alone would give constancy without development, a bond that held its core and never moved, condemned to repeat. The sliding alone would give development without constancy, a bond that moved endlessly and had no core, no self that persisted through the movement. Only the two together give what a relation actually is, a constancy that is nonetheless in motion.
+
+\begin{claim}[The two movements and their offices]
+Drive and desire are distinct movements around the one gap, and a relation requires both. Drive circles the object-cause and is satisfied in the circuit; it supplies the constant core, the pressure that does not go out. Desire slides along the chain of signifiers and rests on none; it supplies the movement in time, the displacement through forms. Constancy without development would be repetition; development without constancy would be dispersal; the life of a bond is their compound.
+\end{claim}
+
+\subsection*{Joined at the gap}
+
+The two are joined at the gap and divided in their motion. Drive supplies the energetic topology, the unspent core; desire supplies the symbolic movement, the displacement in time. Both draw their life from the same manque that neither closes, the drive circling what cannot be reached and the desire sliding because it cannot reach it. The persistence of a bond, taken up in Part Three, is the co-working of these two, and the thought experiment of the next section shows what would become of both were the gap they turn on ever closed.

@@ -1,0 +1,154 @@
+% !TEX program = xelatex
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper XXIII
+%  The Aesthetic Philosophy of the Quotidian and the Cultivation of Perception
+%  《日常的美学哲学与美育》
+%
+%  Series visual identity (shared with Papers XVIII--XX): blush page,
+%  deep-rose headings, rose emphasis, gold rules, ink body.
+%  XeLaTeX + TeX Gyre Pagella, Noto Serif CJK SC for CJK terms.
+%
+%  Central thesis: generative relational aesthetic education.
+%  Contribution (preliminary): rethinking aesthetic education along three
+%  axes -- the relational system, the theory of justice, and ethics --
+%  and proposing four models of everyday aesthetic practice.
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+\PassOptionsToPackage{table}{xcolor}
+
+% ---------- Fonts (CJK fallback for occasional Chinese/Japanese terms) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk #1}}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 0.1pt
+
+% natbib (numbered) before serendip-paper (hyperref loads inside it)
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{serendip-paper}
+
+% colour used on the title page (headings/links come from serendip-paper)
+\definecolor{inksoft}{HTML}{342E37}
+
+% ---------- Math ----------
+\newcommand{\holo}{\operatorname{hol}}
+
+% ---------- Graphics (loaded after serendip-paper so rosedeep is defined) ----------
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{font=small,labelfont={bf,color=rosedeep}}
+
+% ---------- Tables (beyond the shared style) ----------
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}p{3.1cm}}
+
+% ---------- Paper-specific emphasis & helpers ----------
+\newcommand{\emc}[1]{\textcolor{rose}{\oldtextit{#1}}}
+\newcommand{\emb}[1]{\textcolor{rose}{\oldtextbf{#1}}}
+\newcommand{\goldrule}{\noindent\textcolor{gold}{\rule{\linewidth}{0.6pt}}\par\vspace{0.4em}}
+\newcommand{\todo}[1]{\textcolor{gray}{\small[TODO: #1]}}
+\newcommand{\xref}[1]{\textcolor{rose}{\S\ref{#1}}}
+\newcommand{\pinkref}[1]{\textcolor{rose}{#1}}
+
+% A claim set off from the prose: a thin gold rule above and below.
+\newenvironment{claim}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.4em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.6em}}
+
+% Inline prose case: a run-in italic label.
+\newenvironment{casebox}[1]{%
+  \par\vspace{0.4em}\noindent\textit{\textcolor{rose}{An illustrative case --- #1.}}\hspace{0.4em}\ignorespaces}{%
+  \par\vspace{0.4em}}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title page ----------
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper XXIII}\\[0.3cm]
+\coverrule\\[1.2cm]
+{\LARGE\bfseries\color{warnred} The Aesthetic Philosophy of the Quotidian and the Cultivation of Perception}\\[1.0cm]
+{\normalsize\color{inksoft} Almost all that is ever seen as beautiful is seen in the course of an ordinary day.}\\[2cm]
+\coverrule[0.25]\\[0.6cm]
+{\normalsize\color{inksoft} Wanhong}\\
+\vfill
+{\footnotesize\color{gold} Working draft --- not for citation or circulation}
+\coverfootnote
+\end{center}
+\newpage
+
+% ---------- Epigraph ----------
+\thispagestyle{empty}
+\vspace*{2.2cm}
+\begin{center}
+\begin{minipage}{0.76\linewidth}
+\centering\itshape\color{rose}
+{\cjk 大道至简，大美在常。}\\[0.3em]
+The great Way is utterly simple;\\[0.15em]
+the great beauty dwells in the ordinary.\\[1.4em]
+\upshape\itshape
+{\cjk 一期一会。}\\[0.3em]
+One time, one meeting.\\[0.6em]
+{\upshape\footnotesize\color{gold} --- the way of tea}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Dedication ----------
+\thispagestyle{empty}
+\vspace*{4.5cm}
+\begin{center}
+\begin{minipage}{0.74\linewidth}
+\centering\itshape\color{rose}
+{\cjk 致她——}\\[0.3em]
+For her---\\[0.7em]
+\upshape {\cjk 那个属于森林的女孩，}\\[0.2em]
+the girl who belongs to the forest,\\[0.5em]
+{\cjk 她教我看见平常日子里的光。}\\[0.2em]
+who taught me to see the light in ordinary days.\\[1.0em]
+{\upshape\footnotesize\color{gold} {\cjk 致我最爱的人。}\,\;To the one I love most.}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Abstract ----------
+\thispagestyle{empty}
+\noindent\textbf{\large\color{rosedeep} Abstract}\\[0.6em]
+\input{sections/abstract.tex}
+
+\vspace{1.2em}
+\noindent{\color{rosedeep}\textbf{Keywords:}}\, \textcolor{inksoft}{everyday aesthetics; the cultivation of perception; generative relational ontology; perceptual plasticity; the distribution of the sensible.}
+\newpage
+
+\tableofcontents
+\newpage
+
+% ============================================================
+%  Body
+% ============================================================
+\input{sections/s01_intro.tex}          % §1  Introduction: generative relational aesthetic education
+\input{sections/s02_diagnostics.tex}    % §2  The phenomenology and diagnostics of the everyday
+\input{sections/s03_generation.tex}   % §3  The generation of perception: several schools
+\input{sections/s04_symbolic.tex}     % §4  The symbolic and its two fates
+\input{sections/s05_value.tex}        % §5  Value, perception, and circulation
+\input{sections/s06_body.tex}         % §6  The philosophy of the body
+\input{sections/s07_plasticity.tex}   % §7  The neural plasticity of perception
+\input{sections/s08_convergence.tex}  % §8  The convergence of the schools
+\input{sections/s09_education.tex}    % §9  From tradition to relational aesthetic education
+\input{sections/s10_space.tex}        % §10 The design of space and perception
+\input{sections/s11_practicefield.tex}% §11 The theory and existing forms of everyday practice
+\input{sections/s12_typology.tex}     % §12 A typology of everyday aesthetic practice
+\input{sections/s13_distribution.tex} % §13 The distribution of the sensible
+\input{sections/s14_limits.tex}       % §14 The ethical limits of aesthetic education
+\input{sections/s15_fissures.tex}     % §15 Directed fissures (anti-envoi)
+
+% ============================================================
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

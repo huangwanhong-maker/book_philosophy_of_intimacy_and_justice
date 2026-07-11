@@ -1,0 +1,73 @@
+{
+  "papers/paper-23.pdf": {
+    "subtitle": "《日常的美学哲学与美育》 · Everyday Aesthetics and the Cultivation of Perception",
+    "teaser": "Almost everything we ever find beautiful is seen in the course of an ordinary day — and that perception, small and quick to go dead through habit, is not given but made. This paper argues it is generated in relation, above all between two people turned toward the same world, and builds a theory of aesthetic education on that.",
+    "keywords": [
+      "everyday aesthetics",
+      "the cultivation of perception",
+      "generative relational aesthetic education",
+      "perceptual plasticity",
+      "the distribution of the sensible",
+      "the generation of perception",
+      "aesthetic education",
+      "the everyday"
+    ],
+    "background": "The beautiful is usually theorised through the exceptional object — the artwork, the sublime landscape, the masterpiece. But almost all the beauty anyone ever actually perceives is quotidian: the light in a kitchen, a shared cup of tea, an ordinary street at dusk. This everyday aesthetic perception is small in amplitude and, worse, prone to go dead through habituation — the world becoming invisible precisely because it is familiar. This paper, Paper XXIII, takes that fragile everyday perception as its subject and asks how it comes to be and how it can be cultivated. Its wager, against the view that perception simply registers what is there, is that everyday aesthetic perception is generated rather than given — it comes to be in the relation between a perceiver and what is perceived, and, in the cases that matter most, between two perceivers turned together toward a shared world.",
+    "approach": "From the generative claim the paper draws a single thesis with four faces — generative relational aesthetic education — and defends it across three spines. The spine of generation argues, across phenomenology, cognitive science, psychoanalysis, and the political economy of the senses, that perception constructs a world under a prior frame. The spine of the body gives this an empirical ground in the neuroscience of perceptual plasticity. The spine of justice, via Rancière's distribution of the sensible, shows that the uneven distribution of perceptual capacity is a neglected injustice. Method is polyphonic and dialectical: several schools of the generation of perception are set out and then converged rather than merged. On this ground the paper offers, as a preliminary and openly revisable contribution, four models of everyday aesthetic practice, each with its theoretical descent made explicit, and it installs an account of the ethical limits of aesthetic education before closing, not in synthesis, but in directed fissures.",
+    "questions": [
+      "Where is almost all the beauty anyone ever perceives actually found?",
+      "Is everyday aesthetic perception given, or is it generated — and if generated, in what?",
+      "Why does the familiar go perceptually dead, and can that deadening be reversed?",
+      "Should an education in beauty cultivate the individual (as from Schiller) or the relation?",
+      "Are beauty and ethics joined by a later moral rule, or do they share a single source?",
+      "Is the uneven distribution of perceptual capacity a matter of justice?",
+      "What concrete practices could cultivate everyday aesthetic perception — and what are their limits?"
+    ],
+    "key_concepts": [
+      { "term": "Generative relational aesthetic education", "gloss": "The central thesis: beauty is generated within a relational structure, so an education in beauty must cultivate the relation, not only the individual — with four faces (relational generation; cultivate-the-relation; the relational/individual spiral; the shared root of beauty and ethics)." },
+      { "term": "Perception is generated, not given", "gloss": "Everyday aesthetic perception comes to be in the relation between perceiver and perceived, and above all between two perceivers turned together toward a shared world." },
+      { "term": "Going dead through habituation", "gloss": "The characteristic failure mode of everyday perception: the familiar becomes invisible; cultivation is, in part, the reversal of this deadening." },
+      { "term": "The three spines (generation, the body, justice)", "gloss": "Perception constructs a world under a prior frame; perceptual plasticity is its empirical ground; the distribution of the sensible makes it a question of justice." },
+      { "term": "The distribution of the sensible", "gloss": "After Rancière: the uneven distribution of perceptual capacity is a neglected injustice, not a mere fact of taste." },
+      { "term": "The symbolic and its two fates", "gloss": "The fork by which the symbolic order either deadens perception or renews it." },
+      { "term": "The four models of everyday practice", "gloss": "A basic generative cycle; a reflective variant beginning in silence (reception suspends private judgement); the leaving of emptiness (contingency generates of itself); and iterative symbolic refinement (evolution without a fitness function)." },
+      { "term": "Contra Schiller's individualism", "gloss": "The relational thesis marks itself off from the individualist tradition of aesthetic education running from Schiller onward." }
+    ],
+    "claims": [
+      "Almost all aesthetic perception is quotidian, small in amplitude, and prone to go dead through habituation.",
+      "Everyday aesthetic perception is generated rather than given — in the relation between perceiver and perceived, and above all between two perceivers turned toward a shared world.",
+      "Because beauty is generated within a relational structure, an education in beauty must cultivate the relation and not only the individual (against the tradition from Schiller onward).",
+      "The relational and the individual stand in a spiral dialectic in which neither is prior.",
+      "Aesthetic generation carries an ethical valence at its root, so beauty and ethics share a single source rather than being joined by a later moral rule.",
+      "Perception constructs a world under a prior frame; perceptual plasticity is its empirical ground.",
+      "The uneven distribution of perceptual capacity is a neglected injustice (the distribution of the sensible).",
+      "Four openly revisable models of everyday aesthetic practice can cultivate perception, each with an explicit theoretical descent — but aesthetic education has ethical limits."
+    ],
+    "conclusion": "The everyday is where beauty is most often perceived, most easily lost, and — this paper argues — most worth cultivating. Because everyday aesthetic perception is generated rather than given, and generated above all between two people turned toward one world, the education that would keep it alive must be relational at its root; and because that generation already carries an ethical valence, such an education is not a training of taste bolted onto a separate morality but the cultivation of a perception in which beauty and the good arise together. Set on three spines — the generation of perception, the plastic body, and the just distribution of the sensible — the account both diagnoses how the familiar goes dead and offers four revisable practices for reviving it, while marking the ethical limits past which aesthetic education must not go. It closes not in synthesis but in directed fissures, the first opening toward the emergence of culture in intimate relation.",
+    "contributions": [
+      "An aesthetics of the everyday centred on the claim that everyday aesthetic perception is generated, not given.",
+      "The thesis of generative relational aesthetic education, with its four faces and its break from the individualist (Schillerian) tradition.",
+      "A three-spine argument (generation, the body, justice) integrating phenomenology, cognitive science, psychoanalysis, the political economy of the senses, and the neuroscience of perceptual plasticity.",
+      "The identification of the uneven distribution of perceptual capacity as a neglected injustice, via the distribution of the sensible.",
+      "Four preliminary, openly revisable models of everyday aesthetic practice, each with an explicit theoretical descent.",
+      "An account of the ethical limits of aesthetic education, and a set of directed fissures opening toward the emergence of culture in intimate relation."
+    ],
+    "outline": [
+      { "section": "1. Introduction", "gist": "Frames the project — generative relational aesthetic education — and the guiding claim that everyday aesthetic perception is generated, not given." },
+      { "section": "2. The Phenomenology and Diagnostics of the Everyday", "gist": "Describes everyday aesthetic experience and diagnoses how it goes dead through habituation." },
+      { "section": "3. The Generation of Perception: Several Schools", "gist": "Sets out the contending accounts of how perception is generated under a prior frame." },
+      { "section": "4. The Symbolic Order and Its Two Fates", "gist": "Shows how the symbolic either deadens or renews perception — its two fates." },
+      { "section": "5. Value, Perception, and Circulation", "gist": "Reads perception through the political economy of the senses: value, attention, and circulation." },
+      { "section": "6. The Philosophy of the Body", "gist": "Grounds perception in the body, preparing the empirical turn." },
+      { "section": "7. The Neural Plasticity of Perception", "gist": "Gives the generative claim its empirical ground in the neuroscience of perceptual plasticity." },
+      { "section": "8. The Convergence of the Schools", "gist": "Converges the several schools toward generative relational aesthetic education, without merging them." },
+      { "section": "9. Aesthetic Education: From Tradition to the Relational", "gist": "Moves from the individualist tradition (Schiller onward) to a relational conception of aesthetic education." },
+      { "section": "10. The Design of Space and Perception", "gist": "Considers how the design of space shapes and cultivates perception." },
+      { "section": "11. The Theory and Existing Forms of Everyday Practice", "gist": "Surveys existing forms of everyday aesthetic practice and their theory." },
+      { "section": "12. A Typology of Everyday Aesthetic Practice", "gist": "Builds a typology and presents the four models (basic cycle, silence-reception, leaving of emptiness, iterative symbolic refinement)." },
+      { "section": "13. The Distribution of the Sensible", "gist": "Argues, via Rancière, that the uneven distribution of perceptual capacity is a neglected injustice." },
+      { "section": "14. The Ethical Limits of Aesthetic Education", "gist": "Marks the limits past which the cultivation of perception must not go." },
+      { "section": "15. Directed Fissures (anti-envoi)", "gist": "Closes not in synthesis but in directed openings — the first toward the emergence of culture in intimate relation." }
+    ]
+  }
+}

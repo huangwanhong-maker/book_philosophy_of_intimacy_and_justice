@@ -1,0 +1,196 @@
+% !TEX program = xelatex
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper XXV
+%  Optimization Theory and Rationality in Intimate Relations
+%  《亲密关系中的优化理论与理性》
+%
+%  Series visual identity (shared with Papers XVIII--XXIV): blush page,
+%  deep-rose headings, rose emphasis, gold rules, ink body.
+%  XeLaTeX + TeX Gyre Pagella, Noto Serif CJK SC for CJK terms.
+%
+%  Central claim: optimization is not a law of the universe. Morality and
+%  the manner of being of intimate relation are not, in their structure,
+%  optimization problems. The paper first proves (formally, without value
+%  judgment) that optimization is ill-defined in intimate relation, then
+%  criticizes (normatively) the cost of imposing it anyway, then recovers
+%  a non-optimizing relational rationality, closing in polyphony.
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+
+% ---------- Fonts (CJK fallback for occasional Chinese/Japanese terms) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk #1}}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 0.1pt
+
+% natbib (numbered) before serendip-paper (hyperref loads inside it)
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{serendip-paper}
+
+% colour used on the title page (headings/links come from serendip-paper)
+\definecolor{inksoft}{HTML}{342E37}
+
+% ---------- Math ----------
+\newcommand{\argmax}{\operatorname*{arg\,max}}
+\newcommand{\argmin}{\operatorname*{arg\,min}}
+
+% ---------- Graphics (loaded after serendip-paper so rosedeep is defined) ----------
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{font=small,labelfont={bf,color=rosedeep}}
+
+% ---------- Tables (beyond the shared style) ----------
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}p{3.1cm}}
+
+% ---------- Paper-specific emphasis & helpers ----------
+\newcommand{\emc}[1]{\textcolor{rose}{\oldtextit{#1}}}
+\newcommand{\emb}[1]{\textcolor{rose}{\oldtextbf{#1}}}
+\newcommand{\goldrule}{\noindent\textcolor{gold}{\rule{\linewidth}{0.6pt}}\par\vspace{0.4em}}
+\newcommand{\xref}[1]{\textcolor{rose}{\S\ref{#1}}}
+\newcommand{\pinkref}[1]{\textcolor{rose}{#1}}
+
+\newenvironment{claim}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.4em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.6em}}
+
+\newenvironment{casebox}[1]{%
+  \par\vspace{0.4em}\noindent\textit{\textcolor{rose}{An illustrative case --- #1.}}\hspace{0.4em}\ignorespaces}{%
+  \par\vspace{0.4em}}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title page ----------
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper XXV}\\[0.3cm]
+\coverrule\\[1.2cm]
+{\LARGE\bfseries\color{warnred} Optimization Theory and Rationality in Intimate Relations}\\[0.7cm]
+{\large\itshape\color{warnred} On the Limits of Optimization as a Law of the Universe}\\[0.8cm]
+{\normalsize\color{inksoft} There are goods a love does not maximize, and it is not for want of a better measure.}\\[2cm]
+\coverrule[0.25]\\[0.6cm]
+{\normalsize\color{inksoft} Wanhong}\\
+\vfill
+{\footnotesize\color{gold} Working draft --- not for citation or circulation}
+\coverfootnote
+\end{center}
+\newpage
+
+% ---------- Epigraph ----------
+\thispagestyle{empty}
+\vspace*{2.2cm}
+\begin{center}
+\begin{minipage}{0.76\linewidth}
+\centering\itshape\color{rose}
+{\cjk 有价值不生于度量，}\\[0.3em]
+{\cjk 权之，则已失其所是。}\\[0.5em]
+There are goods that do not arise from measure,\\[0.15em]
+and to weigh them is already to have mistaken\\[0.15em]
+what kind of thing they are.\\[1.4em]
+\upshape\itshape
+{\cjk 能权万物之权，未尝有也。}\\[0.3em]
+The scale that would weigh all things\\[0.15em]
+has never been.\\[0.6em]
+{\upshape\footnotesize\color{gold} --- the author}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Dedication ----------
+\thispagestyle{empty}
+\vspace*{4.5cm}
+\begin{center}
+\begin{minipage}{0.74\linewidth}
+\centering\itshape\color{rose}
+{\cjk 致她——}\\[0.3em]
+For her---\\[0.7em]
+\upshape {\cjk 那个属于森林的女孩，}\\[0.2em]
+the girl who belongs to the forest,\\[0.5em]
+{\cjk 我从未计算过值不值得，}\\[0.2em]
+whom I have never once weighed for whether she was worth it,\\[0.2em]
+{\cjk 因为那从来不是一个可以计算的问题。}\\[0.2em]
+because that was never a question one could compute.\\[1.0em]
+{\upshape\footnotesize\color{gold} {\cjk 致我最爱的人。}\,\;To the one I love most.}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Abstract ----------
+\thispagestyle{empty}
+\noindent\textbf{\large\color{rosedeep} Abstract}\\[0.6em]
+\input{sections/abstract.tex}
+
+\vspace{1.2em}
+\noindent{\color{rosedeep}\textbf{Keywords:}}\, \textcolor{inksoft}{optimization; incommensurability; relational value; generative justice.}
+
+\vspace{1.0em}
+\noindent{\color{rosedeep}\textbf{AI usage statement:}}\, \textcolor{inksoft}{AI assistants were used for drafting and discussion. The claims and the theoretical framework are the author's own, and the author takes full responsibility for the content.}
+\newpage
+
+\tableofcontents
+\newpage
+
+% ============================================================
+%  PART ONE — Optimization as a worldview
+% ============================================================
+\part*{\textcolor{rosedeep}{Part One \quad The Problem: Optimization as a Worldview}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part One — Optimization as a Worldview}
+
+\input{sections/s01_intro.tex}          % §1  Introduction: an operation mistaken for a law
+\input{sections/s02_anatomy.tex}        % §2  The formal anatomy of an optimization problem
+\input{sections/s03_genealogy.tex}      % §3  The genealogy of optimizationism
+
+% ============================================================
+%  PART TWO — Four impossibilities: why intimate relation is not an optimization problem
+% ============================================================
+\part*{\textcolor{rosedeep}{Part Two \quad Four Impossibilities: Why Intimate Relation Is Not a Well-Defined Optimization Problem}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part Two — Four Impossibilities}
+
+\input{sections/s04_structurability.tex} % §4  First: the non-structurability of value (drive)
+\input{sections/s05_relationality.tex}   % §5  Second: the relationality of value; no external quantifier
+\input{sections/s06_incommensurability.tex} % §6 Third: incommensurability
+\input{sections/s07_constitution.tex}    % §7  Fourth: the constitution of the subject
+
+% ============================================================
+%  PART THREE — The cost of optimizationism
+% ============================================================
+\part*{\textcolor{rosedeep}{Part Three \quad The Cost of Optimizationism}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part Three — The Cost of Optimizationism}
+
+\input{sections/s08_damage.tex}          % §8  The damage to generativity (extractive computation)
+\input{sections/s09_symptom.tex}         % §9  Optimizationism as a symptom of modernity
+\input{sections/s10_ethics.tex}          % §10 Optimizing practice is not ethical practice
+
+% ============================================================
+%  PART FOUR — After the negation: a non-optimizing relational rationality
+% ============================================================
+\part*{\textcolor{rosedeep}{Part Four \quad After the Negation: A Non-Optimizing Relational Rationality}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part Four — A Non-Optimizing Relational Rationality}
+
+\input{sections/s11_reclaiming.tex}      % §11 Rationality is not optimization: reclaiming the word
+\input{sections/s12_form.tex}            % §12 The form of relational rationality: response, attunement, sustaining
+\input{sections/s13_wuwei.tex}           % §13 Non-action as the highest rationality
+
+% ============================================================
+%  PART FIVE — Close
+% ============================================================
+\part*{\textcolor{rosedeep}{Part Five \quad Close}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part Five — Close}
+
+\input{sections/s14_polyphony.tex}       % §14 The polyphonic conclusion; refusing a new objective
+\input{sections/s15_envoi.tex}           % §15 Envoi: a promise that is not optimized
+
+% ---------- Acknowledgements ----------
+\input{sections/s16_acknowledgements.tex}
+
+% ============================================================
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

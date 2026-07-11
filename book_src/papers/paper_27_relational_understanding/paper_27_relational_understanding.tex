@@ -1,0 +1,192 @@
+% !TEX program = xelatex
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper XXVII
+%  Relational Understanding in Intimate Relations
+%  The Generative Relational Epistemology in the Domain of Intimacy
+%
+%  Series visual identity: blush page, deep-rose headings,
+%  rose emphasis, gold rules, ink body.
+%  XeLaTeX + TeX Gyre Pagella, Noto Serif CJK SC for CJK terms.
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+\PassOptionsToPackage{table}{xcolor}
+
+% ---------- Fonts (CJK fallback for occasional Chinese/Japanese terms) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk #1}}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 0.1pt
+
+% natbib (numbered) before serendip-paper (hyperref loads inside it)
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{serendip-paper}
+
+% colour used on the title page (headings/links come from serendip-paper)
+\definecolor{inksoft}{HTML}{342E37}
+
+% ---------- Diagrams (loaded after serendip-paper so rosedeep is defined) ----------
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.pathmorphing,positioning,calc,shapes.geometric}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{font=small,labelfont={bf,color=rosedeep}}
+
+% ---------- Paper-specific emphasis & helpers ----------
+\newcommand{\emc}[1]{\textcolor{rose}{\oldtextit{#1}}}
+\newcommand{\emb}[1]{\textcolor{rose}{\oldtextbf{#1}}}
+\setlist{leftmargin=1.6em,itemsep=0.2em,topsep=0.3em}
+\newcommand{\goldrule}{\noindent\textcolor{gold}{\rule{\linewidth}{0.6pt}}\par\vspace{0.4em}}
+\newcommand{\xref}[1]{\textcolor{rose}{\S\ref{#1}}}
+
+% ---------- Environments ----------
+\newenvironment{claim}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.4em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.6em}}
+
+\newenvironment{casebox}[1]{%
+  \par\vspace{0.4em}\noindent\textit{\textcolor{rose}{An illustrative case --- #1.}}\hspace{0.4em}\ignorespaces}{%
+  \par\vspace{0.4em}}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title page ----------
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper XXVII}\\[0.3cm]
+\coverrule\\[1.2cm]
+{\LARGE\bfseries\color{warnred} Relational Understanding in Intimate Relations}\\[0.7cm]
+{\large\itshape\color{warnred} The Generative Relational Epistemology in the Domain of Intimacy}\\[1.6cm]
+\coverrule[0.25]\\[0.6cm]
+{\normalsize\color{inksoft} Wanhong Huang}\\
+\vfill
+{\footnotesize\color{gold} Working draft --- not for citation or circulation}
+\coverfootnote
+\end{center}
+\newpage
+
+% ---------- Epigraph ----------
+\thispagestyle{empty}
+\vspace*{2.4cm}
+\begin{center}
+\begin{minipage}{0.76\linewidth}
+\centering\itshape\color{rose}
+{\cjk 相视而笑，莫逆于心。}\\[0.35em]
+They looked at one another and smiled,\\[0.1em]
+with no resistance in their hearts.\\[1.2em]
+{\upshape\footnotesize\color{gold} --- \emph{Zhuangzi}, \emph{The Great and Venerable Teacher}}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Dedication ----------
+\thispagestyle{empty}
+\vspace*{4.5cm}
+\begin{center}
+\begin{minipage}{0.74\linewidth}
+\centering\itshape\color{rose}
+{\cjk 致她——}\\[0.3em]
+For her---\\[0.7em]
+\upshape {\cjk 那个属于森林的女孩，}\\[0.2em]
+the girl who belongs to the forest,\\[0.5em]
+{\cjk 我学着走进你的语言，}\\[0.2em]
+{\upshape\footnotesize\color{gold} {\cjk 致我最爱的人。}\,\;To the one I love most.}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Abstract ----------
+\thispagestyle{empty}
+\noindent\textbf{\large\color{rosedeep} Abstract}\\[0.6em]
+\input{sections/abstract.tex}
+
+\vspace{1.2em}
+\noindent{\color{rosedeep}\textbf{Keywords:}}\, \textcolor{inksoft}{relational understanding; generative relational epistemology; the other's language world; translation; the throwing of a generative thing; non-possession; ethical legitimacy across traditions; the unsymbolizable remainder; desire and generation; generative justice; the wager of intimacy.}
+
+\vspace{1.0em}
+\noindent{\color{rosedeep}\textbf{AI usage statement:}}\, \textcolor{inksoft}{AI assistants were used for drafting and discussion. The claims and the theoretical framework are the author's own, and the author takes full responsibility for the content.}
+\newpage
+
+\tableofcontents
+\newpage
+
+% ============================================================
+%  PART ONE — Background: The Generative Relational Epistemology
+% ============================================================
+\part*{\textcolor{rosedeep}{Part One \quad Background: The Generative Relational Epistemology}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part One — Background}
+
+\input{sections/s01_intro.tex}
+\input{sections/s02_recap.tex}
+\input{sections/s03_bridge.tex}
+
+% ============================================================
+%  PART TWO — The Functional Case: What Understanding Does in Intimacy
+% ============================================================
+\part*{\textcolor{rosedeep}{Part Two \quad The Functional Case: What Understanding Does in Intimacy}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part Two — The Functional Case}
+
+\input{sections/s04_trust.tex}
+\input{sections/s05_sharedvalue.tex}
+\input{sections/s06_conflict.tex}
+\input{sections/s07_wellbeing.tex}
+\input{sections/s08_twocharacters.tex}
+
+% ============================================================
+%  PART THREE — The Normative Case: Beyond Function
+% ============================================================
+\part*{\textcolor{rosedeep}{Part Three \quad The Normative Case: Beyond Function}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part Three — The Normative Case}
+
+\input{sections/s09_functionlimit.tex}
+\input{sections/s10_legitimacy.tex}
+\input{sections/s11_traditions.tex}
+
+% ============================================================
+%  PART FOUR — The Special Problem of Intimacy
+% ============================================================
+\part*{\textcolor{rosedeep}{Part Four \quad The Special Problem of Intimacy}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part Four — The Special Problem of Intimacy}
+
+\input{sections/s11_wager.tex}
+\input{sections/s12_fields.tex}
+
+% ============================================================
+%  PART FIVE — The Practical Theory and Its Cultivation
+% ============================================================
+\part*{\textcolor{rosedeep}{Part Five \quad The Practical Theory and Its Cultivation}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part Five — The Practical Theory}
+
+\input{sections/s13_capacities.tex}
+\input{sections/s14_throwing.tex}
+\input{sections/s15_preservation.tex}
+\input{sections/s16_nonpossession.tex}
+\input{sections/s16b_instrument.tex}
+
+% ============================================================
+%  PART SIX — The Dialectic of Understanding and its Remainder
+% ============================================================
+\part*{\textcolor{rosedeep}{Part Six \quad The Dialectic of Understanding and its Remainder}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part Six — The Dialectic of Understanding and its Remainder}
+
+\input{sections/s18_remainder.tex}
+
+% ============================================================
+%  PART SEVEN — Polyphonic Close
+% ============================================================
+\part*{\textcolor{rosedeep}{Part Seven \quad Polyphonic Close}}
+\addcontentsline{toc}{section}{\protect\numberline{}Part Seven — Polyphonic Close}
+
+\input{sections/s17_close.tex}
+
+\input{sections/acknowledgments.tex}
+
+% ============================================================
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

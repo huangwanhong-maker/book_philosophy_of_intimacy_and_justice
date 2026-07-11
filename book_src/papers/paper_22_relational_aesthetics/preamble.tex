@@ -1,0 +1,93 @@
+% ============================================================
+%  Preamble — Philosophy of Intimacy, Paper XXII
+%  Converted to the shared style: \usepackage{serendip-paper}
+%  provides the page colour, fonts, headings, hyperref, and the
+%  unified cover macros. The paper keeps its own accent palette
+%  (deeprose/goldenrod/casebg), its TikZ styles, and its boxes.
+% ============================================================
+
+% xcolor option set early (serendip-paper loads xcolor without these)
+\PassOptionsToPackage{dvipsnames,svgnames,table}{xcolor}
+
+% ---------- Fonts (CJK + Greek fallbacks; main font from serendip-paper) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk\upshape #1}}
+\newfontfamily\greekfont{DejaVu Serif}
+\newcommand{\el}[1]{{\greekfont #1}}
+
+% natbib (author-year) before serendip-paper (hyperref loads inside it)
+\usepackage[round,authoryear]{natbib}
+\bibliographystyle{plainnat}
+
+\usepackage{serendip-paper}
+
+% ---------- Accent palette (beyond serendip's rose/rosedeep/gold/warnred) ----------
+\definecolor{blush}{HTML}{FDF6F8}
+\definecolor{deeprose}{HTML}{8C2F4A}
+\definecolor{goldenrod}{HTML}{B98A3C}
+\definecolor{casebg}{HTML}{FBEEF2}
+
+% ---------- Spacing ----------
+\usepackage{ragged2e}
+
+% ---------- Rules ----------
+\newcommand{\goldrule}{\par\noindent{\color{goldenrod}\rule{\linewidth}{0.8pt}}\par}
+\newcommand{\thinrule}{\par\noindent{\color{goldenrod}\rule{\linewidth}{0.4pt}}\par}
+
+% ---------- Emphasis macros ----------
+\newcommand{\emc}[1]{{\color{deeprose}\itshape #1}}   % conceptual emphasis
+\newcommand{\emb}[1]{{\color{deeprose}\bfseries #1}}  % strong emphasis
+\newcommand{\term}[1]{{\color{rose}\itshape #1}}       % term introduction
+
+% ---------- Claim & case boxes ----------
+\usepackage[most]{tcolorbox}
+\newtcolorbox{claimbox}{
+  enhanced, breakable,
+  colback=casebg, colframe=deeprose,
+  boxrule=0.4pt, left=10pt, right=10pt, top=8pt, bottom=8pt,
+  fonttitle=\bfseries\color{deeprose},
+  borderline west={2.5pt}{0pt}{deeprose}}
+\newcommand{\claim}[1]{\begin{claimbox}\noindent #1\end{claimbox}}
+\newtcolorbox{casebox}[1][]{
+  enhanced, breakable,
+  colback=blush, colframe=goldenrod,
+  boxrule=0.5pt, left=10pt, right=10pt, top=7pt, bottom=7pt,
+  fonttitle=\itshape\color{goldenrod}, title={#1}}
+
+% ---------- Cross-reference (hyperref comes from serendip-paper) ----------
+\newcommand{\xref}[1]{\S\ref{#1}}
+
+% ---------- Tables & diagrams ----------
+\usepackage{tabularx}
+\usepackage{makecell}
+\renewcommand{\arraystretch}{1.25}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc,fit,backgrounds}
+\usepackage{caption}
+\captionsetup{font={small},labelfont={bf,color=deeprose},textfont={color=ink}}
+% table column types
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+% tikz shared styles
+\tikzset{
+  chainbox/.style={draw=deeprose, fill=casebg, rounded corners=2pt,
+    line width=0.6pt, text width=2.6cm, align=center, inner sep=5pt,
+    font=\footnotesize\color{ink}},
+  chainarrow/.style={-{Stealth[length=2.2mm]}, draw=goldenrod, line width=0.9pt},
+  stepnode/.style={draw=rose, fill=blush, rounded corners=3pt, line width=0.6pt,
+    text width=2.4cm, align=center, inner sep=5pt, font=\footnotesize\color{ink}},
+  facenode/.style={draw=deeprose, fill=casebg, rounded corners=3pt, line width=0.6pt,
+    text width=2.4cm, align=center, inner sep=5pt, font=\footnotesize\color{ink}},
+  maplink/.style={-{Stealth[length=1.8mm]}, draw=rose, line width=0.7pt},
+}
+% table header helper
+\newcommand{\thd}[1]{{\color{deeprose}\bfseries #1}}
+
+% ---------- Misc ----------
+\setlist{leftmargin=1.4em,itemsep=0.2em,topsep=0.3em}
+\usepackage{csquotes}
+\usepackage{epigraph}
+\renewcommand{\epigraphsize}{\small\itshape}
+\setlength{\epigraphwidth}{0.62\textwidth}
+\renewcommand{\textflush}{flushright}
+\renewcommand{\sourceflush}{flushright}

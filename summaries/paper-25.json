@@ -1,0 +1,64 @@
+{
+  "papers/paper-25.pdf": {
+    "subtitle": "On the Limits of Optimization as a Law of the Universe (《亲密关系中的优化理论与理性》)",
+    "teaser": "We are told to optimize everything — time, health, careers, even relationships. This paper proves, formally and without moralizing, that an intimate relation is not a well-defined optimization problem at all, then asks what is lost when we impose the frame anyway, and recovers a rationality that responds rather than maximizes.",
+    "keywords": [
+      "optimization",
+      "optimizationism",
+      "incommensurability",
+      "relational value",
+      "the drive",
+      "extractive computation",
+      "the optimal and the good",
+      "non-optimizing rationality",
+      "wuwei",
+      "generative justice"
+    ],
+    "background": "Optimization has quietly become the default grammar of modern reason: the best choice is the one that maximizes some objective, and rationality is the machinery that finds it. Applied to intimate life, this yields a familiar counsel — weigh the costs and benefits, maximize the relationship's value, decide whether it is 'worth it.' This paper, Paper XXV, refuses that grammar at the root. Its claim is not that optimizing love is distasteful but that it is, in a precise and provable sense, ill-defined: optimization is a local, historical operation, not a law of the universe, and morality and the manner of being of an intimate relation are not, in their structure, optimization problems at all. The paper is careful to separate this formal result from any value judgment, so that the ethical critique that follows rests on a proof rather than a preference.",
+    "approach": "The paper proceeds in two movements it deliberately keeps apart, across five parts. The first movement is a formal proof, carrying no value judgment, that intimate relation furnishes no well-defined optimization problem, established through four impossibilities, each striking a distinct precondition of the maximization operation, any one of which suffices. The second movement takes the result as given and criticizes the imposition of the optimization frame regardless: as extractive computation (in the vocabulary of generative justice), as a symptom of the crisis of the symbolic and of a life-world habituated to capital, and as a category error about what morality is. It then recovers a non-optimizing relational rationality — one that responds rather than maximizes, described through response, attunement, and the sustaining of generation, and raised to wuwei (non-action) as the highest rationality — and closes in polyphony, refusing to name a new master objective, since to do so would reinstate the very frame it has dismantled. That refusal, enacted in the paper's form, is its positive claim.",
+    "questions": [
+      "Is optimization a law of the universe, or a local operation mistaken for one?",
+      "Can an intimate relation even be posed as a well-defined optimization problem?",
+      "What precise preconditions must hold for 'maximize the value' to mean anything — and do they hold here?",
+      "What is lost when we optimize where no optimization problem exists?",
+      "Are the optimal and the good the same thing, or orthogonal?",
+      "If rationality is not optimization, what is it?",
+      "Can a positive alternative be stated without installing a new master objective?"
+    ],
+    "key_concepts": [
+      { "term": "Optimizationism", "gloss": "The projection of optimization — a local, historical operation — onto the cosmos as its law; the worldview the paper diagnoses and rejects." },
+      { "term": "The four impossibilities", "gloss": "Non-structurability (the drive resists representation as a term in the objective); relationality (value is generated within and exists only in the relation, so no external quantifier can fix the objective); incommensurability (to price certain goods betrays rather than mismeasures them); and subject-constitution (the optimizer is constituted within the relation, so it is an output of the process it is meant to stand outside). Any one leaves maximization undefined." },
+      { "term": "Extractive computation", "gloss": "Optimizing where no optimization problem exists converts a value that should circulate into one that can be settled and drawn off — a harm named by the theory of generative justice." },
+      { "term": "The optimal and the good are orthogonal", "gloss": "An optimizing practice, even a successful one, may fail as an ethics; optimizing practice is not ethical practice." },
+      { "term": "Non-optimizing relational rationality", "gloss": "A rationality that responds rather than maximizes — articulated through response, attunement, and the sustaining of generation." },
+      { "term": "Wuwei (non-action) as the highest rationality", "gloss": "Non-forcing, non-action as the paper's positive form of reason, against the compulsion to maximize." },
+      { "term": "The polyphonic refusal", "gloss": "Declining to name a new master objective — which would reinstate the optimization frame — is itself the paper's positive claim, enacted in its polyphonic form." }
+    ],
+    "claims": [
+      "Optimization is not a law of the universe but a local, historical operation mistaken for one.",
+      "Intimate relation furnishes no well-defined optimization problem — a formal result that carries, in itself, no value judgment.",
+      "Four independent impossibilities (non-structurability, relationality, incommensurability, subject-constitution) each leave the maximization operation undefined.",
+      "To optimize where no optimization problem exists is extractive computation: it converts circulating value into value that can be settled and drawn off.",
+      "Optimizationism is a symptom of the crisis of the symbolic and of a life-world habituated to the logic of capital.",
+      "The optimal and the good are orthogonal: an optimizing practice, even a successful one, may fail as an ethics.",
+      "Rationality is not optimization; a relational rationality responds rather than maximizes, with wuwei as its highest form.",
+      "Refusing to name a new master objective is the paper's positive claim, enacted in its polyphonic form."
+    ],
+    "conclusion": "The paper dismantles a worldview by first proving, without judgment, that its central operation cannot be defined for intimate life, and only then judging the cost of imposing it anyway. Because the value of a relation is non-structurable, relational, incommensurable, and bound up with a subject the relation itself constitutes, there is simply no objective to maximize; and to act as if there were is extractive computation, a symptom of capital and the crisis of the symbolic, and a category error about the good, which is orthogonal to the optimal. What remains, once the frame is set aside, is not a better objective but a different kind of reason — one that responds, attunes, and sustains generation, and that at its height becomes wuwei. Fittingly, the paper declines to crown a new master value: to do so would rebuild the machine it took apart. Its refusal, carried in its polyphonic close and in an envoi of a promise that is not optimized, is the positive claim — reason after optimization, enacted rather than legislated.",
+    "contributions": [
+      "A formal proof, explicitly value-neutral, that intimate relation is not a well-defined optimization problem, via four independent impossibilities.",
+      "The diagnosis of optimizationism as a local operation projected onto the cosmos as its law, and its critique as extractive computation and a symptom of capital.",
+      "The orthogonality of the optimal and the good — that an optimizing practice may succeed and yet fail as an ethics.",
+      "A positive account of non-optimizing relational rationality (response, attunement, sustaining), raised to wuwei as the highest rationality.",
+      "A methodological separation of formal proof from normative critique, so the ethics rests on a result rather than a preference.",
+      "A performative conclusion: refusing to name a new master objective as the paper's positive claim, enacted in its polyphonic form."
+    ],
+    "outline": [
+      { "section": "Part One — Optimization as a Worldview (§1–3)", "gist": "Introduces optimization as an operation mistaken for a law; lays out the formal anatomy of an optimization problem and the genealogy of optimizationism." },
+      { "section": "Part Two — Four Impossibilities (§4–7)", "gist": "The formal core: intimate relation is not a well-defined optimization problem — the non-structurability of value (the drive), the relationality of value and its absent quantifier, incommensurability, and the constitution of the subject; any one voids maximization." },
+      { "section": "Part Three — The Cost of Optimizationism (§8–10)", "gist": "The normative critique: the damage to generativity (extractive computation), optimizationism as a symptom of modernity, and the argument that optimizing practice is not ethical practice (the optimal and the good are orthogonal)." },
+      { "section": "Part Four — A Non-Optimizing Relational Rationality (§11–13)", "gist": "Reclaims 'rationality' from optimization; gives its form as response, attunement, and the sustaining of generation; and raises non-action (wuwei) as the highest rationality." },
+      { "section": "Part Five — Close (§14–15)", "gist": "A polyphonic conclusion that refuses to name a new master objective, and an envoi on a promise that is not optimized — the refusal enacted as the paper's positive claim." }
+    ]
+  }
+}

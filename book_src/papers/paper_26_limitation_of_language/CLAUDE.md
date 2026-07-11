@@ -1,0 +1,33 @@
+# Paper XXVI — The Limitation of Language in Intimate Relation
+
+**Full title:** The Limitation of Language in Intimate Relation
+**Subtitle:** Drive as the Phenomenology of Manque
+**Status:** working draft, 2026 · **Bibliography:** natbib/bibtex (numbered, plainnat; 32 entries, ~27 cited)
+**Build:** `make paper_26_limitation_of_language` (from book_src/; WSL TeX Live — see ../../CLAUDE.md). ~55 pp, 22 sections in five parts. **Needs TikZ** (3 figures). Companion to **Paper VIII** (The Intervention of Language).
+
+## What it argues
+Language has a **limit**, and the limit is **generative**. Across **six dimensions of relational life** — its **existence, maintenance, value, ethics, justice, and evolution** — there is in each case a **core that language reaches toward and cannot reach**. The paper sets out these six limits (each its own claim) and then argues that **what stands at the limit is drive**, in the psychoanalytic sense. Drive is **not a content language omits and might recover**; it is the **phenomenology of manque** — the **gap between the symbolic and the Real** that resists complete symbolization. The gap has **two faces that are one**: a **pre-symbolic remainder** cut off when the subject enters language, and the resulting **impossibility of closure**. Around it **drive circles and desire slides**. A **thought experiment** shows that **closing the gap would extinguish rather than fulfill** them, so the **non-closure of language is the condition of their persistence**. The paper then follows drive into the **time of relation** and draws out the **generativity of the limit** — in the **poem** (a language that circles the gap), in an **ethics without possession** (room for the other's core), and in a **justice that guards what it cannot settle** — with a **coalgebraic and reduction-theoretic (Mori–Zwanzig) counterpart** offered as a heuristic (the co-structure of the limit). It offers **no final synthesis**; its **form enacts its content** (polyphonic close).
+
+## Structure (five parts; sections/ \input by main)
+**I — The Six Dimensions of the Limit (§1–7):** s01 The Limit Proposed, Not Lamented · s02 The Being of a Relation · s03 The Living Present · s04 Relational Value Without a Place to Be Priced · s05 The Aesthetic Measure of the Ethical Response · s06 The Generativity That Justice Guards · s07 The Unsayable Direction of Growth. **II — The Phenomenology of the Gap (§8–12):** s08 Entry into the Symbolic and the Pre-Symbolic Remainder · s09 The Two Faces of the Real · s10 The Descent of the Object at the Gap · s11 Drive That Circles, Desire That Slides · s12 The Closure That Would Extinguish. **III — The Persistence of Drive (§13–16):** s13 The Symptom as Fidelity to the Unsymbolizable · s14 The Early Signifier and the Time of Relation · s15 Making Room for the Other's Core · s15b The Interweaving of Drive in the Couple. **IV — The Generativity of the Limit (§17–21):** s16 The Poem, a Language That Circles the Gap · s17 Room for the Core Without Possession · s18 The Guarding of Generativity · s18c The Co-Structure of the Limit · s18b Objections and Replies. **V — Polyphonic Close (§22–23):** s19 The Limit as Ground · s20 Envoi.
+
+## Key concepts & coined terms
+- **The limit of language is generative** — the paper's thesis: language's inability to reach the core of relation is not a lack to be lamented but the ground of generativity.
+- **Drive as the phenomenology of manque** — drive is not omitted content but the *lived form of the gap* between the symbolic and the Real; the paper's central identification.
+- **The six dimensions of the limit** — existence, maintenance, value, ethics, justice, evolution: each has a core language reaches toward and cannot reach (each a named claim).
+- **The two faces of the Real (that are one)** — the pre-symbolic remainder cut off at the subject's entry into language, and the impossibility of closure that follows.
+- **Drive circles, desire slides** — drive (Trieb) circles the objet petit a at the gap; desire slides along the signifying chain.
+- **The closure that would extinguish** — a thought experiment: full symbolization would kill drive and desire, not satisfy them; non-closure is the condition of their persistence.
+- **The co-structure of the limit** — a coalgebraic + Mori–Zwanzig (reduction-theoretic) heuristic counterpart to the phenomenology.
+- **Ethics without possession / justice that guards** — room for the other's core without possessing it; a justice that guards what it cannot settle.
+- Cross-links: companion to **Paper VIII** (the intervention of language, verse); extends the Real and the drive of **Paper XXIV**, the incommensurable/unpriceable of **Papers XXV, IV, XV**, and the poem/manque of **Paper VIII**.
+
+## Local notes / quirks
+- **natbib/bibtex, NUMBERED** (`[numbers,sort&compress]`, `plainnat`; **32** entries, ~27 cited — a fresh, paper-specific bib). No duplicate keys, no `@`-in-comments. The five **Lacan seminars + Derrida** `@book` entries carry both `author` and `editor` (Miller as editor) — this only produces a **bibtex warning**, not an error; build resolves with **0 undefined**, so left as-is.
+- **Needs TikZ** (`tikz` + `arrows.meta`/`decorations.pathmorphing`/`positioning`/`calc`/`shapes.geometric`) + `float` — **3 figures** (the gap, drive circling, the two faces). No `\includegraphics`. No table packages (`tabularx`/`Y` not used).
+- Multi-file: body in `sections/` (23 files) + `abstract.tex`; `\input` order in main is authoritative — file-name quirks: **`s15b`** prints as §16, and in Part Four `s16`/`s18c`/`s18b` print as §17/§20/§21 (section numbers auto-generated, so they diverge from the file stems).
+- **Converted to the shared style** from the bespoke preamble (Pagella + own palette) to `\usepackage{serendip-paper}` + the unified cover (pink scshape series line, `warnred` title — manual `\\` removed — italic subtitle "Drive as the Phenomenology of Manque" (from the source header), `\coverrule`×2, `\coverfootnote`; the source's foot repeated the series line). Carries the **concise AI-usage statement** (the series standard). Epigraph 书不尽言，言不尽意 (after the *Book of Changes*, *Xici*). **Anonymous** dedication ("For her / 致她", "where my words run out, you are still there"). Macros: `\zh`/`\cjk`, `\emc`/`\emb`, `claim`/`casebox`, `\goldrule`, `\xref`.
+
+## Files
+- `paper_26_limitation_of_language.tex` — main (cover, epigraph, dedication, abstract + AI statement, ToC, `\part*` × 5, `\input` of sections, bibliography)
+- `sections/` — 23 body files + `abstract.tex` · `refs.bib` (32) · `latexmkrc` · `README.txt` (upstream build notes)

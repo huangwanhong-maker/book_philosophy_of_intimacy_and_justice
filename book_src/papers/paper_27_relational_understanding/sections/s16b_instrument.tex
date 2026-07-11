@@ -1,0 +1,48 @@
+% ===== §16b =====
+\section{The Practical Theory Embodied}
+\label{sec:instrument}
+
+\noindent
+The seven capacities have been given as a theory of a practice, and a theory of a practice invites the question of whether the practice it describes can be carried, in a concrete instrument, into the ordinary passage of a bond. The question is worth a brief answer, since an affirmative one shows the account to bear on a life and not on a page alone. The seven capacities can be embodied in a simple instrument, a kept record through which the crossing of two worlds is practiced day by day, and the shape of such an instrument is sketched here in outline, as a demonstration that the practical theory admits of realization, and not as a design to be specified.
+
+The instrument follows the account's own structure. The near-practicable capacities become occasions of noticing and recording, a place to set down an observed facet of the other, a rendering attempted in the other's terms, a structural correspondence marked between the two worlds, a translation kept in a private lexicon of the bond. The wagered capacities become occasions of a different kind, since they cannot be drilled, a place to record a generative thing offered and to leave open how the other took it up, a marked restraint held in place of an intervention, and, at the last, a return. The return is the seventh capacity made concrete. What has been recorded and could not yet be valued is kept, and revisited from a later season, so that what an early moment generated and left unread is observed at last for what it was, and preserved again. The instrument is thus a device for holding the bond's generated matter against the delay in which its value returns, and for carrying it back into a further generation. Its motion is the spiral the account has described, a return that finds the kept moment grown.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  moment/.style={draw=rose, line width=0.7pt, rounded corners=2pt, fill=white,
+                 inner sep=3.5pt, align=center, text=inksoft, text width=3.4cm, minimum height=8mm},
+  keep/.style={draw=gold, line width=0.9pt, rounded corners=3pt, fill=white,
+               inner sep=5pt, align=center, text=inksoft, text width=3.6cm},
+  flow/.style={-{Stealth[length=2mm]}, rose, line width=0.6pt},
+  ret/.style={-{Stealth[length=2mm]}, gold, line width=0.8pt}
+]
+% left column: recording occasions, uniform width, generous vertical spacing
+\node[moment] (n1) at (0,3.6)  {noticing a facet of the other};
+\node[moment] (n2) at (0,2.3)  {a rendering tried in the other's terms};
+\node[moment] (n3) at (0,1.0)  {a structural correspondence};
+\node[moment] (n4) at (0,-0.3) {a translation kept in a private lexicon};
+\node[moment] (n5) at (0,-1.9) {a generative thing offered, left open};
+\node[moment] (n6) at (0,-3.2) {a restraint held in place of steering};
+% bracket labels, clear of the boxes
+\node[font=\footnotesize\itshape, text=rose] at (0,4.35) {near-practicable occasions};
+\node[font=\footnotesize\itshape, text=rose] at (0,-4.0) {wagered occasions};
+
+% the kept record (preservation)
+\node[keep] (garden) at (6.4,0.7) {the kept record\\\emph{what is preserved}\\against the delay\\in which value returns};
+% flows into the garden, all anchored at box east edge
+\foreach \n in {n1,n2,n3,n4,n5,n6}{ \draw[flow] (\n.east) -- (garden.west); }
+
+% return / re-observation node and loop
+\node[keep] (ret) at (6.4,-3.0) {a later return\\re-observes and\\preserves again};
+\draw[ret] (garden.south) -- (ret.north);
+\draw[ret] (ret.west) .. controls (2.6,-4.7) and (-2.9,-4.4) .. (n6.south);
+\node[font=\footnotesize\itshape, text=gold, align=center] at (1.7,-5.05)
+  {the spiral of preservation and further generation};
+\end{tikzpicture}
+\caption{A concept sketch of the practical theory embodied. The near-practicable capacities become occasions of noticing and recording, and the wagered capacities become occasions of an offering left open and a restraint held. All feed a kept record, which holds the bond's generated matter against the delay in which its value returns. A later return re-observes what was kept and preserves it again, and this return is the spiral the account describes, carried into a further generation. The sketch shows that the practical theory admits of a concrete instrument, and it specifies no design.}
+\label{fig:instrument}
+\end{figure}
+
+The point of the sketch is modest and it is real. It shows that the seven capacities form a structure that can be embodied and carried into practice, and are no mere redescription of what good partners already do, and that the account's most distinctive claim, the preservation of relational experience against a delayed value, has a concrete form. The instrument does no more than hold the bond's generated matter and return it, and it does exactly what the account requires, that the crossing of two worlds be practiced, its generation kept, and its value observed when the season for its observation comes. The realization sketched here is one among the forms the practical theory might take, and the theory is answerable to no single one of them.

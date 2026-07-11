@@ -1,0 +1,187 @@
+% !TEX program = xelatex
+% ============================================================
+%  Philosophy of Intimacy and the Theory of Justice · Paper XXI
+%  The Field of "Travel":
+%  Spaciousness, Contingency, and the Generation of the Relational Subject
+%
+%  Series visual identity (shared with Papers XVIII--XX): blush page,
+%  deep-rose headings, rose emphasis, gold rules, ink body.
+%  XeLaTeX + TeX Gyre Pagella, Noto Serif CJK SC for CJK terms.
+%
+%  Formal companion (lightly cited): Huang (2026), "From Fluid to Braid",
+%  Knowledge Commons, DOI 10.17613/j9kjd-vce60  [cite key: wan2026braid]
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+\PassOptionsToPackage{table}{xcolor}
+
+% ---------- Fonts (CJK + Greek fallbacks) ----------
+\usepackage{fontspec}
+\newfontfamily\cjk{Noto Serif CJK SC}
+\newcommand{\zh}[1]{{\cjk #1}}
+\newfontfamily\grk{DejaVu Serif}
+\newcommand{\el}[1]{{\grk #1}}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 0.1pt
+
+% natbib (numbered) before serendip-paper (hyperref loads inside it)
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{serendip-paper}
+
+% title-page + table-box colours (headings/links come from serendip-paper)
+\definecolor{inksoft}{HTML}{342E37}
+\definecolor{tablehead}{HTML}{F3E1E7}
+
+% ---------- Math ----------
+\newcommand{\holo}{\operatorname{hol}}
+
+% ---------- Graphics ----------
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{font=small,labelfont={bf,color=rosedeep}}
+
+% ---------- Tables (beyond the shared style) ----------
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\renewcommand{\arraystretch}{1.3}
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+% literature-review table helper: header cell in rosedeep
+\newcommand{\lrhead}[1]{\textcolor{rosedeep}{\textbf{#1}}}
+\setlist{leftmargin=1.6em,itemsep=0.2em,topsep=0.3em}
+
+% ---------- Paper-specific emphasis & helpers ----------
+\newcommand{\emc}[1]{\textcolor{rose}{\oldtextit{#1}}}
+\newcommand{\emb}[1]{\textcolor{rose}{\oldtextbf{#1}}}
+\newcommand{\goldrule}{\noindent\textcolor{gold}{\rule{\linewidth}{0.6pt}}\par\vspace{0.4em}}
+\newcommand{\todo}[1]{\textcolor{gray}{\small[TODO: #1]}}
+\newcommand{\xref}[1]{\textcolor{rose}{\S\ref{#1}}}
+
+% A claim set off from the prose: a thin gold rule above and below.
+\newenvironment{claim}[1][]{%
+  \par\vspace{0.6em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.4em}
+  \ifx\relax#1\relax\else\noindent\emb{#1.}\hspace{0.4em}\fi\ignorespaces}{%
+  \par\vspace{0.4em}\noindent\textcolor{gold}{\rule{\linewidth}{0.4pt}}\par\vspace{0.6em}}
+
+% Inline prose case: a run-in italic label.
+\newenvironment{casebox}[1]{%
+  \par\vspace{0.4em}\noindent\textit{\textcolor{rose}{An illustrative case --- #1.}}\hspace{0.4em}\ignorespaces}{%
+  \par\vspace{0.4em}}
+
+% thesis box for the three aesthetic theses
+\newenvironment{thesis}[1]{%
+  \par\vspace{0.6em}\noindent\textcolor{rosedeep}{\rule{\linewidth}{0.8pt}}\par\vspace{0.3em}
+  \noindent\emb{#1}\par\vspace{0.2em}\itshape\ignorespaces}{%
+  \upshape\par\vspace{0.2em}\noindent\textcolor{rosedeep}{\rule{\linewidth}{0.8pt}}\par\vspace{0.6em}}
+
+% formal definition box (shaded), for the principles of relational production
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\newtcolorbox{definitionbox}[1][]{%
+  enhanced, breakable, colback=tablehead, colframe=rosedeep,
+  boxrule=0.8pt, arc=2pt, left=8pt, right=8pt, top=6pt, bottom=6pt,
+  fonttitle=\bfseries\color{rosedeep}, coltitle=rosedeep,
+  title={#1}}
+\newtcolorbox{recapbox}[1][Recapitulation]{%
+  enhanced, breakable, colback=pageblush, colframe=gold,
+  boxrule=1pt, arc=2pt, left=8pt, right=8pt, top=6pt, bottom=6pt,
+  fonttitle=\bfseries\color{gold}, coltitle=gold,
+  title={#1}}
+
+% ============================================================
+\begin{document}
+
+% ---------- Title page ----------
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2cm}
+{\footnotesize\color{rosedeep}\scshape Philosophy of Intimacy and the Theory of Justice \quad$\cdot$\quad Paper XXI}\\[0.3cm]
+\coverrule\\[1.2cm]
+{\LARGE\bfseries\color{warnred} The Field of ``Travel''}\\[0.5cm]
+{\large\itshape\color{warnred} Spaciousness, Contingency, and the Generation of the Relational Subject}\\[0.8cm]
+{\small\color{gold} [\,Working Draft\,]}\\[0.8cm]
+{\normalsize\color{inksoft} \zh{当其无，有器之用。} It is in its emptiness that the use of the vessel lies.}\\[2cm]
+\coverrule[0.25]\\[0.6cm]
+{\normalsize\color{inksoft} Wanhong}\\
+\vfill
+{\footnotesize\color{gold} Working draft --- not for citation or circulation}
+\coverfootnote
+\end{center}
+\newpage
+
+% ---------- Epigraph ----------
+\thispagestyle{empty}
+\vspace*{2.2cm}
+\begin{center}
+\begin{minipage}{0.78\linewidth}
+\centering\itshape\color{rose}
+\zh{凿户牖以为室，当其无，有室之用。}\\[0.2em]
+\zh{故有之以为利，无之以为用。}\\[0.3em]
+Cut out doors and windows to make a room;\\[0.1em]
+it is in its emptiness that the use of the room lies.\\[0.1em]
+Thus what is there gives advantage, but what is not there gives use.\\[0.6em]
+{\upshape\footnotesize\color{gold} --- Laozi, \emph{Daodejing}, ch.~11}\\[1.4em]
+\itshape
+\el{χαλεπὰ τὰ καλά.}\\[0.2em]
+Beautiful things are difficult.\\[0.6em]
+{\upshape\footnotesize\color{gold} --- Plato, \emph{Hippias Major}, 304e}
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Dedication ----------
+\thispagestyle{empty}
+\vspace*{4.5cm}
+\begin{center}
+\begin{minipage}{0.74\linewidth}
+\centering\itshape\color{rose}
+\zh{致她——}\\[0.3em]
+For her---\\[0.7em]
+\upshape \zh{那个属于森林的女孩，}\\[0.2em]
+the girl who belongs to the forest,\\[0.5em]
+\zh{她爱旅行——}\\[0.2em]
+who loves to travel —\\[0.5em]
+\zh{我盼望有一天与她同行，}\\[0.2em]
+with whom I long, one day, to fare together,\\[0.2em]
+\zh{那将是我们一起建造的一个世界。}\\[0.2em]
+for that will be a world we build together.
+\end{minipage}
+\end{center}
+\newpage
+
+% ---------- Abstract ----------
+\thispagestyle{empty}
+\noindent\textbf{\large\color{rosedeep} Abstract}\\[0.6em]
+\input{sections/abstract.tex}
+
+\vspace{1.2em}
+\noindent{\color{rosedeep}\textbf{Keywords:}}\, \textcolor{inksoft}{relational production; the relational subject; spaciousness; aesthetic judgement; the reproduction of experience.}
+\newpage
+
+\tableofcontents
+\newpage
+
+% ============================================================
+%  Body
+% ============================================================
+\input{sections/s01_intro.tex}
+\input{sections/s02_field.tex}
+\input{sections/s03_selfpresence.tex}
+\input{sections/s04_reproduction.tex}
+\input{sections/s05_ethics.tex}
+\input{sections/s05b_relational_production.tex}
+\input{sections/s06_construction.tex}
+\input{sections/s06ab_creation.tex}
+\input{sections/s06b_aesthetics_problems.tex}
+\input{sections/s06c_evolution.tex}
+\input{sections/s07_aesthetic_perception.tex}
+\input{sections/s08_aesthetic_education.tex}
+\input{sections/s08b_continuity.tex}
+\input{sections/s09_political_economy_beauty.tex}
+\input{sections/s10_generalized_travel.tex}
+\input{sections/s11_closure.tex}
+\input{sections/s12_ack.tex}
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}
