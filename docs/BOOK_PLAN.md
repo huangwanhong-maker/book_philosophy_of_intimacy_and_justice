@@ -13,6 +13,9 @@
 | D3 | Book form | **True book**, not a bound collection | Each paper becomes a chapter: continuous pagination, running heads, unified TOC, one deduplicated bibliography. Not 9 stapled preprints. |
 | D4 | Bibliography backend | **biblatex + biber**, unified across all 27 | *Forced* by D3 — see §3. Also handles translated classics (`translator`/`origyear`) that bibtex mangles. |
 | D5 | Reference lists | **Per-chapter**, via biblatex `refsection` | Each paper keeps its own reference list, as a collected-papers volume should; a consolidated bibliography can still be printed per volume. |
+| D6 | Trim size | **B5 (176×250mm)** | Academic-monograph standard (Japan/ISO); its larger text block keeps a 1000+ page work bindable and near print-on-demand limits. A5 was too thick (Vol II/III ~1200pp); 6×9″ packs less. |
+| D7 | Front matter | **Designed covers** (`assets/cover_front_vol*.pdf`, `cover_back_book.pdf`) + a single-page **Foreword** (book dedication) + the series **Preface** (Vol I) | Real-book covers, not a text title page. Author name on the cover; no organization/email/date. "Serendip Commons Society" removed per author. |
+| D8 | 致辞 / 致谢 | Each chapter carries its **致辞 (Dedication)** as an independent `\section*` and keeps its **致谢 (Acknowledgements)** | The standalone papers' full-page dedications become sections in the book; papers that fold the dedication into the acknowledgements keep it there. |
 
 ## 2. The three volumes
 

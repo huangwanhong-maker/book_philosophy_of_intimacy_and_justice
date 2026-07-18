@@ -6,6 +6,7 @@
 \documentclass[11pt,twoside,openright]{book}
 
 \usepackage{serendip-book}
+\usepackage{pdfpages}
 \usepackage{import}
 
 \usepackage[backend=biber, style=authoryear, sorting=nyt,
@@ -39,20 +40,10 @@
 
 \frontmatter
 
-\begin{titlepage}
-\centering
-\vspace*{3cm}
-{\scshape\color{rosedeep} Philosophy of Intimacy and the Theory of Justice}\\[0.8em]
-\coverrule\\[1.6cm]
-{\Huge\bfseries\color{warnred} Volume III}\\[1.0em]
-{\LARGE\itshape\color{warnred} Happiness, Ethics, Aesthetics, and Culture}\\[1.4em]
-\coverrule[0.25]\\[1.0cm]
-{\large\color{inksoft} Papers XIX–XXVII}\\[2.4em]
-{\normalsize\color{inksoft} Wanhong Huang}\\[0.4em]
-{\footnotesize\color{ink} Serendip Commons Society}
-\vfill
-{\footnotesize\color{ink} Tokyo}
-\end{titlepage}
+% Designed front cover (VOLUME 3; author retained; SCS removed).
+\includepdf[fitpaper=true,pages=1]{../assets/cover_front_vol3.pdf}
+
+\import{../}{foreword.tex}
 
 \tableofcontents
 
@@ -87,5 +78,8 @@
   {The Generative Relational Epistemology in the Domain of Intimacy}
 
 \backmatter
+
+% Designed back cover (SCS removed).
+\includepdf[fitpaper=true,pages=1]{../assets/cover_back_book.pdf}
 
 \end{document}
