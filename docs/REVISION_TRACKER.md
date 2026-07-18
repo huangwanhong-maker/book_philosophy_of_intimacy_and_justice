@@ -59,17 +59,25 @@ split + 4 self-citations) are cited only by Volume II/III papers.
 
 ## Volume II — Papers X–XVIII
 
-| # | Paper | pp | words | bib | Status | Known issues / notes |
-|---|-------|----|-------|-----|--------|----------------------|
-| X | The Joint Attention of Value and the Creation of Language | 62 | 26.8k | natbib | — | antecedent to IX |
-| XI | A Just Eudaimonia | 82 | 39.9k | natbib | — | needs TikZ; POMDP/free-energy |
-| XII | The Sweet Cycle | 48 | 26.5k | **plain bibtex** | — | only `\nocite{*}` paper — bibliography is unfiltered |
-| XIII | The Causality of the Non-Binding Vow | 77 | 38.3k | natbib | — | needs TikZ; 140-entry bib |
-| XIV | Contingency, Existence, and Eudaimonia | 97 | 41.5k | natbib | — | Kuramoto / hyperscanning / STDP analogy |
-| XV | The Political Economy of Intimate Relations | 97 | 40.0k | natbib | — | **TikZ figure is an empty placeholder** |
-| XVI | The Semiotics of Luxury | 58 | 24.2k | natbib | — | extends XV |
-| XVII | Generativity Under Power | 67 | 29.5k | natbib | — | |
-| XVIII | Generative Effacement | 36 | 14.5k | natbib | — | has figure `phase_diagram.png` |
+Objective-fix status. Volume II builds clean (1174 pp, 0 undefined cites/refs/todos).
+
+| # | Paper | pp | Objective fixes | Notes |
+|---|-------|----|-----------------|-------|
+| X | The Joint Attention of Value | 62 | bib OK | antecedent to IX |
+| XI | A Just Eudaimonia | 82 | **FIXED** | nussbaum2001→nussbaum1986fragility (Fragility of Goodness) |
+| XII | The Sweet Cycle | 48 | bib OK | `\nocite` list made explicit (was `\nocite{*}`) |
+| XIII | The Causality of the Non-Binding Vow | 77 | bib OK | 140-entry bib |
+| XIV | Contingency, Existence, and Eudaimonia | 97 | bib OK | note: "GRB" = Generative Relational Being, not gamma-ray-burst |
+| XV | The Political Economy of Intimate Relations | 97 | bib OK · **open** | **blank TikZ figure** (empty `tikzpicture` in s4); **`\Lag`/Lagrangian macro defined-but-unused** — author decision needed |
+| XVI | The Semiotics of Luxury | 58 | bib OK | extends XV |
+| XVII | Generativity Under Power | 67 | bib OK · **open** | **§8 footnotes lack citekeys** (placeholder refs); **etiology total stated as both 19 and 16**; "cause N" refs point to a list never shown — author to reconcile |
+| XVIII | Generative Effacement | 36 | **FIXED** | nussbaum2001→nussbaum2000women (Women and Human Development); figure `phase_diagram.png` |
+
+**Self-citations reconciled** (author-authoritative, from each paper's cover):
+`paperix`/`paperxiii`/`paperxv` titles corrected (paper XV was cited under a wholly
+wrong title in XX/XXI/XXIII); `wan2024grb` title fixed (year flagged for
+finalization). `nussbaum2001` split into `nussbaum1986fragility` + `nussbaum2000women`
+and citing papers repointed. All in `bib/overrides.bib`.
 
 ## Volume III — Papers XIX–XXVII
 
