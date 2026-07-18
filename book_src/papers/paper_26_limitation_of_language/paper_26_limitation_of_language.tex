@@ -27,7 +27,8 @@
 \XeTeXlinebreakskip = 0pt plus 0.1pt
 
 % natbib (numbered) before serendip-paper (hyperref loads inside it)
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage[backend=biber, style=authoryear, sorting=nyt, maxcitenames=2, uniquelist=false]{biblatex}
+\addbibresource{../../bib/master.bib}
 \usepackage{serendip-paper}
 
 % colour used on the title page (headings/links come from serendip-paper)
@@ -182,7 +183,6 @@ where my words run out, you are still there.\\[1.0em]
 \input{sections/s20_envoi.tex}          % §20 Envoi
 
 % ============================================================
-\bibliographystyle{plainnat}
-\bibliography{refs}
+\printbibliography[heading=bibintoc]
 
 \end{document}

@@ -11,6 +11,8 @@
 \usepackage{fontspec}
 \usepackage{serendip-paper}
 \usepackage{ragged2e}
+\usepackage[backend=biber, style=authoryear, sorting=nyt, maxcitenames=2, uniquelist=false]{biblatex}
+\addbibresource{../../bib/master.bib}
 
 % Paper-specific colours used in the body, mapped into the series palette.
 % (rose, gold, ink are provided by serendip-paper.)
@@ -450,8 +452,14 @@ There remains the difficulty that no conclusion above can absorb, and it must be
 This paper, like the others in its series, was written for one reader before all others, the forest girl, who loves what grows and what travels, and whose way of being in a relation has been the standing argument that the sweetest cycle is the one made and kept between two people, returning to them what they put into it and costing no one outside it what it should not. The exchange with Ron Eglash on generative justice continues to shape how the author thinks about value returning to those who create it, and the present paper's central distinction owes much to that conversation. Whatever in these pages is just is owed to others; whatever is forged is the author's own.
 
 % ============================================================
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{refs}
+% This paper cites nothing inline; its bibliography is a reading list, formerly
+% produced by \nocite{*} against its own 31-entry refs.bib. Against the shared
+% master.bib, \nocite{*} would print the whole series bibliography, so the 31
+% entries are now named explicitly. Same output, correct scope.
+\nocite{doi,lacan-encore,lacan-four,ngai,lorenz,kringelbach,gilligan,noddings,
+  hochschild,fraser,marx,marx1844,lukacs,zizek,illouz,zuboff,bohme,mazzucato,
+  baudrillard,saussure,barthes,hegel,adorno,kant,kinsella,mcveigh,yano,allison,
+  azuma,eglash,huang-lack}
+\printbibliography[heading=bibintoc]
 
 \end{document}

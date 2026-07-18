@@ -19,7 +19,8 @@
 \XeTeXlinebreakskip = 0pt plus 0.1pt
 
 % natbib (numbered) before serendip-paper (hyperref loads inside it)
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage[backend=biber, style=authoryear, sorting=nyt, maxcitenames=2, uniquelist=false]{biblatex}
+\addbibresource{../../bib/master.bib}
 \usepackage{serendip-paper}
 
 % colour used on the title page (headings/links come from serendip-paper)
@@ -186,7 +187,6 @@ the girl who belongs to the forest,\\[0.5em]
 \input{sections/acknowledgments.tex}
 
 % ============================================================
-\bibliographystyle{plainnat}
-\bibliography{refs}
+\printbibliography[heading=bibintoc]
 
 \end{document}

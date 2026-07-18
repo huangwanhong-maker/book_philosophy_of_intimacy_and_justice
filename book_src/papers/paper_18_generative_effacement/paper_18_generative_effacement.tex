@@ -22,7 +22,8 @@
 \newcommand{\holo}{\operatorname{hol}}
 
 % natbib (numbered) before serendip-paper (hyperref loads inside it)
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage[backend=biber, style=authoryear, sorting=nyt, maxcitenames=2, uniquelist=false]{biblatex}
+\addbibresource{../../bib/master.bib}
 \usepackage{serendip-paper}
 
 % colour used on the title page (headings/links/palette come from serendip-paper)
@@ -142,7 +143,6 @@ to leave the open ground in which she grows.\\[1.0em]
 \input{sections/s08_conclusions.tex}      % §8  Conclusions and Envoi
 
 % ============================================================
-\bibliographystyle{plainnat}
-\bibliography{refs}
+\printbibliography[heading=bibintoc]
 
 \end{document}

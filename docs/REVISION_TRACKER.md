@@ -81,11 +81,34 @@ A paper is not marked `REV` until all of the following are done.
 
 | Issue | Scope | Status |
 |-------|-------|--------|
-| 84 bib keys with conflicting variants (same key, different facts) | corpus-wide | — |
-| natbib → biblatex conversion | 21 papers + XII | — |
-| Macro collisions: `\zh`, `\term`, `\el`, `\arraystretch` | corpus-wide | — |
-| Cross-volume references (VIII↔XXVI, XV↔XVI, XXI↔XXII) must survive being split across volumes | corpus-wide | — |
+| natbib → biblatex conversion (21 papers + XII) | corpus-wide | **DONE** — all 27 on biblatex/biber; 1,161 `\citep`→`\parencite`, 141 `\citet`→`\textcite`, 14 `\citealp`→`\cite` |
+| Unified `master.bib` (764 entries, deduplicated) | corpus-wide | **DONE (provisional)** — 736 merged clean; 28 contested keys flagged `>> PROVISIONAL <<`, pending source verification |
+| 28 contested bib keys (see CITATION_AUDIT.md) | corpus-wide | **OPEN** — source-verification agent hit session limit; not yet reconciled |
+| Macro collisions: `\zh`,`\term`,`\el`,`\emc`,`\emb`,`\xref`,`\claim` | corpus-wide | **DONE** — harvested verbatim into `serendip-macros.sty`; first-definition-wins, conflicts logged |
+| Column-type collision `Y` (p{3.1cm} vs tabularx X) | XXI vs 16 others | **DONE** — XXI's stretch column renamed `Z` |
+| Label collisions across papers (`sec:intro`, `sec:conclusion`…) | corpus-wide | **DONE** — 1,642 labels namespaced `pNN:`; 1,879 refs rewritten |
+| Cross-paper references written as prose (`\pinkref{Paper~XV}`) | VII, IX, X, XIV–XVIII | **OPEN** — these are not real `\ref`s; should become proper cross-refs or citations |
 | Redundancy between papers (the series restates itself) | corpus-wide | — |
+
+## Unresolved `\todo` in the manuscript (book build gate: `make todo-check`)
+
+The book build turns any stray `\todo` into a visible red marker + warning; none
+may remain in a shipped volume. **11 found:**
+
+| Paper | Count | Notes |
+|-------|-------|-------|
+| VII | 8 | working-titles, deferred tables, "confirm precise Eglash entry", Value-Foam notation alignment |
+| XX | 1 | acknowledgements to be completed by author |
+| XXI | 1 | acknowledgements to be completed by author |
+| XXIV | 1 | classical-Chinese material deliberately left unasserted (`s07_chinese.tex`) |
+
+## Other build-surfaced defects
+
+| Paper | Defect | Status |
+|-------|--------|--------|
+| VI | 3 `\ref{sec:mapping}` to a section that does not exist in this installment (deferred to "the full paper") | **OPEN** — needs author decision: add the section or rephrase |
+| VII | `\ref{Table~\ref{tab:frameworks}}` — nested/malformed refs; `tab:frameworks`, `tab:matrix` undefined | **OPEN** |
+| IX | duplicate `\label{sec:return}` (two sections) | **DONE** — subsection relabelled `sec:returnroot` |
 
 ## Baseline (2026-07-12)
 

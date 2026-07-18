@@ -24,7 +24,8 @@
 \XeTeXlinebreakskip = 0pt plus 0.1pt
 
 % natbib (numbered) before serendip-paper (hyperref loads inside it)
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage[backend=biber, style=authoryear, sorting=nyt, maxcitenames=2, uniquelist=false]{biblatex}
+\addbibresource{../../bib/master.bib}
 \usepackage{serendip-paper}
 
 % title-page + table-box colours (headings/links come from serendip-paper)
@@ -43,7 +44,7 @@
 \usepackage{tabularx}
 \usepackage{ragged2e}
 \renewcommand{\arraystretch}{1.3}
-\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{Z}{>{\RaggedRight\arraybackslash}X}
 \newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
 % literature-review table helper: header cell in rosedeep
 \newcommand{\lrhead}[1]{\textcolor{rosedeep}{\textbf{#1}}}
@@ -181,7 +182,6 @@ for that will be a world we build together.
 \input{sections/s11_closure.tex}
 \input{sections/s12_ack.tex}
 
-\bibliographystyle{plainnat}
-\bibliography{refs}
+\printbibliography[heading=bibintoc]
 
 \end{document}

@@ -1,6 +1,6 @@
 % ===== §18c: the co-structure of the limit =====
 \section{The Co-Structure of the Limit}
-\label{sec:costructure}
+\label{p26:sec:costructure}
 
 \noindent
 This section gives the limit a formal counterpart. The aim is to show that two figures the paper has described in prose, a lack that carries meaning rather than marking a mere absence, and a core knowable only through its effects on what surrounds it, have precise expressions, the first in the language of coalgebra and the second in the theory of reduced dynamics for open systems. The formal claims are offered as tools for later work and as heuristics that make the prose precise, not as laws to which relational being is asserted to conform. The section states the algebra-coalgebra duality, reifies the lack as a co-structure, gives the semantics of observation and indistinguishability, and then treats rigorously the case of the open composite system in which one component is knowable only through the others.
@@ -19,7 +19,7 @@ an operation that takes structured collections of elements and combines them int
 \[
 \gamma : X \longrightarrow F X,
 \]
-an operation that takes a single element and unfolds it into its structured observable behaviour, its one-step outward form together with its successors. Coalgebra is the mathematics of observation and of process: it does not assemble a whole from parts but unfolds a state into what can be seen of it and what it becomes \citep{rutten2000universal,jacobs2016introduction}.
+an operation that takes a single element and unfolds it into its structured observable behaviour, its one-step outward form together with its successors. Coalgebra is the mathematics of observation and of process: it does not assemble a whole from parts but unfolds a state into what can be seen of it and what it becomes \parencite{rutten2000universal,jacobs2016introduction}.
 
 The relevance to the argument is exact. The operation the paper has warned against throughout, the closure of the gap, the folding of the remainder into the signifier, the assembling of the whole into a possessed unity, is an algebraic operation, a map $F X \to X$ that would deliver the many into one and close them. The operation the paper has affirmed, the circling that unfolds without closing, the drive that turns and the desire that slides, the generativity that is never settled, is coalgebraic, a map $X \to F X$ that unfolds a state into its behaviour and its successors without gathering them into a completed whole. The distinction between a language reconciled to its limit and a language that would abolish it is, formally, the distinction between coalgebra and algebra.
 
@@ -31,9 +31,9 @@ This construction is coalgebraic in form. The reversal of the arrows is the pass
 
 \subsection*{The semantics of observation and of indistinguishability}
 
-Two notions give the account its semantics. The first is the final coalgebra. Among all coalgebras for a functor there is, under suitable conditions, a final one, into which every other maps uniquely, and it has the character of the space of all possible behaviours, never itself an assembled object but the completed horizon of what can be observed \citep{rutten2000universal}. The final coalgebra is the formal figure of a generativity that is never closed and yet is not formless: the whole of the behaviour without being a whole that could be possessed. It is the coalgebraic counterpart of what the paper has called the open centre, given not as an object but as the totality of what unfolds around a place.
+Two notions give the account its semantics. The first is the final coalgebra. Among all coalgebras for a functor there is, under suitable conditions, a final one, into which every other maps uniquely, and it has the character of the space of all possible behaviours, never itself an assembled object but the completed horizon of what can be observed \parencite{rutten2000universal}. The final coalgebra is the formal figure of a generativity that is never closed and yet is not formless: the whole of the behaviour without being a whole that could be possessed. It is the coalgebraic counterpart of what the paper has called the open centre, given not as an object but as the totality of what unfolds around a place.
 
-The second is bisimulation, the coalgebraic notion of sameness. Two states are bisimilar when no observation distinguishes them, when everything that can be unfolded from the one can be matched by an unfolding from the other \citep{jacobs2016introduction}. What is decisive is that bisimulation defines identity through observable behaviour alone, without appeal to any internal content the states might be supposed to have. This is the formal correlate of a recurring claim of the paper, that the core is knowable only through its effects. In the coalgebraic setting there is no internal content behind the behaviour to which one might appeal; a state is the pattern of its observable unfolding, and to know it is to observe that pattern, never to seize a content beneath it.
+The second is bisimulation, the coalgebraic notion of sameness. Two states are bisimilar when no observation distinguishes them, when everything that can be unfolded from the one can be matched by an unfolding from the other \parencite{jacobs2016introduction}. What is decisive is that bisimulation defines identity through observable behaviour alone, without appeal to any internal content the states might be supposed to have. This is the formal correlate of a recurring claim of the paper, that the core is knowable only through its effects. In the coalgebraic setting there is no internal content behind the behaviour to which one might appeal; a state is the pattern of its observable unfolding, and to know it is to observe that pattern, never to seize a content beneath it.
 
 \subsection*{A family of parallels, offered as analogy}
 
@@ -51,7 +51,7 @@ with flow $\Phi^t$ generated by a coupled vector field $f$, where coupling means
 \[
 (U^t g)(x) = g(\Phi^t x),
 \]
-which is linear on observables even when $f$ is nonlinear, this linearity being the point of the Koopman formulation \citep{koopman1931hamiltonian}. Suppose now that only the components $A$ and $C$ are accessible, so that the observables one can actually read form the closed subspace $\mathcal{O}_{AC} \subset L^2(M,\mu)$ of functions depending on $(x_A, x_C)$ alone. Let $\mathcal{P}$ be the orthogonal projection onto $\mathcal{O}_{AC}$, equivalently the conditional expectation $\mathbb{E}[\,\cdot \mid x_A, x_C\,]$ that averages out $B$, and let $\mathcal{Q} = I - \mathcal{P}$. Writing $L$ for the generator of $U^t$, the evolution of the accessible part of any observable satisfies the Mori--Zwanzig generalized Langevin equation
+which is linear on observables even when $f$ is nonlinear, this linearity being the point of the Koopman formulation \parencite{koopman1931hamiltonian}. Suppose now that only the components $A$ and $C$ are accessible, so that the observables one can actually read form the closed subspace $\mathcal{O}_{AC} \subset L^2(M,\mu)$ of functions depending on $(x_A, x_C)$ alone. Let $\mathcal{P}$ be the orthogonal projection onto $\mathcal{O}_{AC}$, equivalently the conditional expectation $\mathbb{E}[\,\cdot \mid x_A, x_C\,]$ that averages out $B$, and let $\mathcal{Q} = I - \mathcal{P}$. Writing $L$ for the generator of $U^t$, the evolution of the accessible part of any observable satisfies the Mori--Zwanzig generalized Langevin equation
 \[
 \frac{d}{dt}\, \mathcal{P} U^t g
 = \underbrace{\mathcal{P} U^t \mathcal{P} L\, g}_{\text{Markov}}
@@ -62,7 +62,7 @@ an identity that holds exactly, with the memory kernel
 \[
 K(s) = \mathcal{P} L\, e^{s \mathcal{Q} L} \mathcal{Q} L
 \]
-carrying the influence of the inaccessible dynamics \citep{zwanzig1961memory,mori1965transport,chorin2000optimal}.
+carrying the influence of the inaccessible dynamics \parencite{zwanzig1961memory,mori1965transport,chorin2000optimal}.
 
 The content of the formula, for the present purpose, is precise. The component $B$ never appears as a direct observation. There is no operator on $B$ in the equation for the accessible dynamics; $B$ has been projected out by $\mathcal{P}$. Yet $B$ is not absent from the dynamics. Its entire effect is carried by the memory term and the fluctuation term, that is, by the marks it leaves on the evolution of the accessible observables over $(A,C)$. To know $B$, in this exact sense, is to read its signature in the memory kernel $K(s)$ that governs how $A$ and $C$ evolve, and there is no other access to it, since the coupled and open structure permits no operator on $B$ itself. The naive picture, on which one would observe $B$ by acting on $B$, is not merely impractical but formally unavailable: the accessible algebra is $\mathcal{O}_{AC}$, and $B$ enters only through what $\mathcal{Q}$ carries into the memory of the accessible part.
 

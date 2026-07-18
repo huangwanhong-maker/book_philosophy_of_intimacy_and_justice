@@ -20,7 +20,8 @@
 \XeTeXlinebreakskip = 0pt plus 0.1pt
 
 % natbib (numbered) before serendip-paper (hyperref loads inside it)
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage[backend=biber, style=authoryear, sorting=nyt, maxcitenames=2, uniquelist=false]{biblatex}
+\addbibresource{../../bib/master.bib}
 \usepackage{serendip-paper}
 
 % colour used on the title page (headings/links come from serendip-paper)
@@ -146,7 +147,6 @@ with whom, doing nothing at all, I watch the rain beyond the window.\\[1.0em]
 % ============================================================
 \input{sections/s11_ack.tex}          % Acknowledgements (anonymous)
 
-\bibliographystyle{plainnat}
-\bibliography{refs}
+\printbibliography[heading=bibintoc]
 
 \end{document}

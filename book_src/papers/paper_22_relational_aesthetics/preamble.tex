@@ -17,8 +17,8 @@
 \newcommand{\el}[1]{{\greekfont #1}}
 
 % natbib (author-year) before serendip-paper (hyperref loads inside it)
-\usepackage[round,authoryear]{natbib}
-\bibliographystyle{plainnat}
+\usepackage[backend=biber, style=authoryear, sorting=nyt, maxcitenames=2, uniquelist=false]{biblatex}
+\addbibresource{../../bib/master.bib}
 
 \usepackage{serendip-paper}
 
