@@ -81,17 +81,19 @@ and citing papers repointed. All in `bib/overrides.bib`.
 
 ## Volume III — Papers XIX–XXVII
 
-| # | Paper | pp | words | bib | Status | Known issues / notes |
-|---|-------|----|-------|-----|--------|----------------------|
-| XIX | On the Emergence of Happiness | 53 | 20.0k | natbib | — | figure from `phase_diagram.py` |
-| XX | The Hydraulic Virtue (Ethics of Water) | 39 | 18.1k | natbib | — | companion `wan2026braid` — verify it is citable |
-| XXI | The Field of "Travel" | 123 | 64.3k | natbib | — | 2nd largest; needs `tcolorbox`, Greek |
-| XXII | Relational Aesthetics | 138 | 73.8k | natbib | — | **largest**; only paper with its own `preamble.tex`; heavy TikZ |
-| XXIII | The Aesthetic Philosophy of the Quotidian | 55 | 26.3k | natbib | — | sibling to XXII |
-| XXIV | The Emergence of Culture | 81 | 40.9k | natbib | — | **prints a `\todo` into the PDF** (`s07_chinese.tex`) |
-| XXV | Optimization Theory and Rationality | 42 | 21.5k | natbib | — | clean 27-entry bib |
-| XXVI | The Limitation of Language | 55 | 25.4k | natbib | — | companion to VIII (different volume — check cross-refs) |
-| XXVII | Relational Understanding | 43 | 20.4k | natbib | — | extends XXVI |
+Objective-fix status. Volume III builds clean (1244 pp, 0 undefined cites/refs/todos).
+
+| # | Paper | pp | Objective fixes | Notes |
+|---|-------|----|-----------------|-------|
+| XIX | On the Emergence of Happiness | 53 | bib OK | figure from `phase_diagram.py` |
+| XX | The Hydraulic Virtue (Ethics of Water) | 39 | **FIXED** · open | ack `\todo` removed; **`wan2026braid` cited `\textcite` but glossed "Huang (2026)" — author-key/name variant to reconcile** (cf. `wan2024grb`) |
+| XXI | The Field of "Travel" | 123 | **FIXED** | ack `\todo` removed |
+| XXII | Relational Aesthetics | 138 | bib OK | largest; own `preamble.tex`; heavy TikZ |
+| XXIII | The Aesthetic Philosophy of the Quotidian | 55 | bib OK · open | **reuses XXII's four-step cycle but never cites XXII**; relational-perception refs sit uncited in its own refs.bib — author to wire |
+| XXIV | The Emergence of Culture | 81 | **FIXED** | `\todo` → plain editorial note (the deliberate "marked and left open" classical material is preserved as reader-facing prose, no longer a red marker) |
+| XXV | Optimization Theory and Rationality | 42 | bib OK | clean 27-entry bib |
+| XXVI | The Limitation of Language | 55 | bib OK | companion to VIII (Vol I) — cross-volume ref |
+| XXVII | Relational Understanding | 43 | bib OK | extends XXVI; companion epistemology recalled but uncited |
 
 ## Cross-cutting issues (affect many papers)
 
