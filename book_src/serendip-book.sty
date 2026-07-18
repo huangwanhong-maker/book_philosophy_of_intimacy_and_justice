@@ -151,6 +151,16 @@
   \renewcommand{\headrulewidth}{0pt}}
 % \lrhead is defined by paper XXI; it comes in via serendip-macros.sty.
 
+% A paper's own \appendix must NOT switch the whole book into appendix mode
+% (book-class \appendix resets the chapter counter, which re-letters every later
+% chapter: 1, A, B, ...). Redefine it to affect only SECTION numbering, so a
+% paper's appendix sections become A, B, C within their chapter, and the chapter
+% number is untouched. \paperchapter resets section numbering at each chapter
+% start so the change never leaks to the next paper.
+\renewcommand\appendix{\par
+  \setcounter{section}{0}%
+  \gdef\thesection{\@Alph\c@section}}
+
 % ── Emphasis recolouring (series signature) ─────────────────────────────────
 \let\oldtextit\textit
 \renewcommand{\textit}[1]{{\color{pinkitalic}\oldtextit{#1}}}

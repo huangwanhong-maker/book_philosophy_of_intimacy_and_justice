@@ -30,7 +30,11 @@
   \ifx\relax#3\relax\else
     {\Large\itshape\color{warnred}#3\par}\vspace{1.4em}%
   \fi
+  \clearpage           % chapter title page; abstract begins on its own page
   \begin{refsection}
+    % normal section numbering per chapter (undo any previous paper's \appendix)
+    \setcounter{section}{0}%
+    \renewcommand{\thesection}{\thechapter.\arabic{section}}%
     \subimport{../papers/#1/}{content.tex}
     \printbibliography[heading=subbibliography, title={References}]
   \end{refsection}
