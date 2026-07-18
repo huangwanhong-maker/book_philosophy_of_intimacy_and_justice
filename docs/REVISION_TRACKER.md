@@ -37,17 +37,25 @@ A paper is not marked `REV` until all of the following are done.
 
 ## Volume I — Papers I–IX
 
-| # | Paper | pp | words | bib | Status | Known issues / notes |
-|---|-------|----|-------|-----|--------|----------------------|
-| I | Toward Relational Being in Intimate Life | 53 | 25.3k | biblatex | — | family-app case study; anchor paper of the series |
-| II | The Justice and Ethics of AI-Mediated Intimacy | 43 | 19.1k | biblatex | — | long abstract; `csquotes` |
-| III | The Normativity of Self-Legislation | 26 | 11.0k | biblatex | — | reference design for `serendip-paper.sty` |
-| IV | The Language of the Gift | 15 | 4.8k | natbib | — | shortest paper (4.8k) — is it complete? |
-| V | The Formation of the Subject | 36 | 14.7k | natbib | — | twin epigraphs |
-| VI | Toward a Just Proposal | 19 | 7.2k | biblatex | — | **3 broken `\ref`s → nonexistent `sec:mapping`** |
-| VII | Prolegomena to a Diplomacy | 53 | 24.6k | natbib | — | **no formal abstract**; `simon1983` = Barry Simon, not Herbert |
-| VIII | The Intervention of Language (excursus) | 32 | 15.2k | biblatex | — | companion to XXVI; `sections.tex` |
-| IX | The Sustainability of Intimacy | 74 | 33.8k | natbib | — | **`eglash2016` pages disagree with the rest of the series** |
+Objective-fix status of the "fix layer." `bib OK` = all citations resolve
+against the verified master.bib.
+
+| # | Paper | pp | Objective fixes | Notes |
+|---|-------|----|-----------------|-------|
+| I | Toward Relational Being in Intimate Life | 53 | bib OK | anchor paper; cites eglash2016generative (now correct: *Of Marx and Makers*) |
+| II | The Justice and Ethics of AI-Mediated Intimacy | 43 | bib OK | long abstract |
+| III | The Normativity of Self-Legislation | 26 | bib OK | reference design for the style |
+| IV | The Language of the Gift | 15 | bib OK | shortest paper (4.8k) — **flag: is it complete?** |
+| V | The Formation of the Subject | 36 | **FIXED** | lacan1998→lacan1977xi (was citing Encore for the Seminar XI gaze dictum) |
+| VI | Toward a Just Proposal | 19 | **FIXED** | 3 broken `sec:mapping` refs — label added to the mapping subsection |
+| VII | Prolegomena to a Diplomacy | 53 | **FIXED** | 8 `\todo` resolved (1→footnote, 7 removed), 2 malformed table refs fixed |
+| VIII | The Intervention of Language (excursus) | 32 | bib OK | companion to XXVI (Vol III) — cross-volume ref |
+| IX | The Sustainability of Intimacy | 74 | bib OK | eglash2016 page range corrected (369–404) via override |
+
+**Citations:** 25 of 28 contested keys resolved (18 source-verified + 7
+normalized) into `bib/overrides.bib`; see `CITATION_RESOLUTIONS.md`. All Volume I
+citations now resolve to verified data. Remaining 5 provisional (`nussbaum2001`
+split + 4 self-citations) are cited only by Volume II/III papers.
 
 ## Volume II — Papers X–XVIII
 
