@@ -61,8 +61,20 @@
 
 \frontmatter
 
-% Designed front cover (VOLUME 1; author retained; SCS removed).
-\includepdf[fitpaper=true,pages=1]{../assets/cover_front_vol1.pdf}
+% Text title page (the printed cover is a SEPARATE POD file, not in the interior).
+\thispagestyle{empty}
+\begin{center}
+\vspace*{0.14\textheight}
+{\large\scshape\color{rosedeep} Philosophy of Intimacy and the Theory of Justice}\\[0.8em]
+\coverrule\\[1.4em]
+{\itshape\color{ink} Studies in Generative Relational Being}\\[2.6em]
+{\Large\scshape\color{warnred} Volume I}\\[0.7em]
+{\large\itshape\color{warnred} Relational Being, the Subject, and the Word}\\[2.6em]
+\coverrule[0.25]\\[1.2em]
+{\large\color{inksoft} Wanhong Huang}\\[0.7em]
+{\scshape\color{rosedeep} First Edition}
+\end{center}
+\clearpage
 \import{../}{imprint.tex}
 
 \import{../}{foreword.tex}
@@ -109,8 +121,5 @@
   {Poetic Generativity and Generative Justice}
 
 \backmatter
-
-% Designed back cover (SCS removed).
-\includepdf[fitpaper=true,pages=1]{../assets/cover_back_book.pdf}
 
 \end{document}

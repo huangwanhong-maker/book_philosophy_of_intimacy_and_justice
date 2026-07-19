@@ -34,11 +34,13 @@
 \let\cjk\cjkfont
 \let\grk\greekfont
 
-% ── Page: two-sided book, B5 trim with a binding margin ──────────────────────
-% B5 (176x250mm) is the academic-monograph standard (Japan/ISO); its larger text
-% block keeps a 1000+ page work bindable. The designed covers are rendered to
-% match (assets/cover_front_vol*.pdf, cover_back_book.pdf).
-\RequirePackage[b5paper,inner=24mm,outer=18mm,top=24mm,bottom=26mm,twoside]{geometry}
+% ── Page: two-sided book, 7.5x9.25in trim with a binding margin ──────────────
+% 7.5x9.25in (190.5x235mm) is a print-on-demand-supported academic/textbook trim
+% (Draft2Digital, IngramSpark). Its large text block keeps this long work
+% bindable. The INTERIOR is body-only; the printed cover is a SEPARATE file
+% (assets/cover_front_vol*.pdf / cover_back_book.pdf) for the POD cover step.
+\RequirePackage[paperwidth=7.5in,paperheight=9.25in,%
+                inner=24mm,outer=18mm,top=22mm,bottom=24mm,twoside]{geometry}
 \RequirePackage{setspace}
 \onehalfspacing
 \RequirePackage{parskip}
