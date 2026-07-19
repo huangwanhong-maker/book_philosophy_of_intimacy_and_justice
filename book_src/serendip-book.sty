@@ -1,0 +1,218 @@
+% =========================================================================
+%  serendip-book.sty — style for the three-volume book edition of
+%  "Philosophy of Intimacy and the Theory of Justice".
+%
+%  Companion to serendip-paper.sty (which stays the style for the STANDALONE
+%  papers, still published individually on SSRN/OSF). This file is its book
+%  counterpart: same palette and voice, but for \documentclass{book} —
+%  chapters, running heads, two-sided margins, continuous pagination.
+%
+%  It is the UNION of every package, colour, font, macro and environment the
+%  27 papers define in their own preambles, so that a paper's body compiles
+%  unchanged as a chapter. Where papers disagreed, the conflict is resolved
+%  here, once (see "Resolved conflicts" below).
+%
+%  Bibliography: biblatex + biber, authoryear — unified across all 27 papers.
+%  (natbib cannot coexist with biblatex, and a volume spans both camps.)
+%
+%  Compile with XeLaTeX.
+% =========================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{serendip-book}[2026/07/12 Philosophy of Intimacy — book edition style]
+
+% xcolor is pulled in by tikz/tcolorbox below, so the [table] option (which
+% gives \rowcolor, used by VII and XI) must be registered before they load.
+\PassOptionsToPackage{table}{xcolor}
+
+% ── Fonts & language ─────────────────────────────────────────────────────────
+\RequirePackage{fontspec}
+\RequirePackage[english]{babel}
+\newfontfamily\cjkfont{Noto Serif CJK SC}
+\newfontfamily\greekfont{DejaVu Serif}
+% Resolved: papers used \cjk and \cjkfont interchangeably; \grk and \greekfont
+% likewise. Alias them so every paper's body works untouched.
+\let\cjk\cjkfont
+\let\grk\greekfont
+
+% ── Page: two-sided book, 7.5x9.25in trim with a binding margin ──────────────
+% 7.5x9.25in (190.5x235mm) is a print-on-demand-supported academic/textbook trim
+% (Draft2Digital, IngramSpark). Its large text block keeps this long work
+% bindable. The INTERIOR is body-only; the printed cover is a SEPARATE file
+% (assets/cover_front_vol*.pdf / cover_back_book.pdf) for the POD cover step.
+\RequirePackage[paperwidth=7.5in,paperheight=9.25in,%
+                inner=24mm,outer=18mm,top=22mm,bottom=24mm,twoside]{geometry}
+\RequirePackage{setspace}
+\onehalfspacing
+\RequirePackage{parskip}
+\RequirePackage[protrusion=true,expansion=false]{microtype}
+\RequirePackage{emptypage}
+
+% ── Packages the papers need (union across all 27) ───────────────────────────
+\RequirePackage{array}
+\RequirePackage{booktabs}
+\RequirePackage{longtable}
+\RequirePackage{tabularx}
+\RequirePackage{makecell}
+\RequirePackage{amsmath,amssymb,amsthm}
+\RequirePackage{graphicx}
+\RequirePackage{float}
+\RequirePackage{caption}
+\RequirePackage{ragged2e}
+\RequirePackage{csquotes}
+\RequirePackage{epigraph}
+\RequirePackage{pdflscape}
+\RequirePackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric,
+                decorations.pathmorphing,fit,backgrounds}
+\RequirePackage[most]{tcolorbox}
+\tcbuselibrary{skins,breakable}
+
+% TikZ styles from paper XXII's preamble.tex (its figures use chainbox/stepnode/
+% facenode/chainarrow/maplink). Harvested here because only XXII's body — not
+% its preamble — is included in the book.
+\tikzset{
+  chainbox/.style={draw=deeprose, fill=casebg, rounded corners=2pt,
+    line width=0.6pt, text width=2.6cm, align=center, inner sep=5pt,
+    font=\footnotesize\color{ink}},
+  chainarrow/.style={-{Stealth[length=2.2mm]}, draw=goldenrod, line width=0.9pt},
+  stepnode/.style={draw=rose, fill=blush, rounded corners=3pt, line width=0.6pt,
+    text width=2.4cm, align=center, inner sep=5pt, font=\footnotesize\color{ink}},
+  facenode/.style={draw=deeprose, fill=casebg, rounded corners=3pt, line width=0.6pt,
+    text width=2.4cm, align=center, inner sep=5pt, font=\footnotesize\color{ink}},
+  maplink/.style={-{Stealth[length=1.8mm]}, draw=rose, line width=0.7pt},
+}
+\RequirePackage{enumitem}
+\setlist{itemsep=2pt, topsep=4pt}
+
+% ── Table column types (union across the series) ─────────────────────────────
+% RESOLVED CONFLICT: Y is p{3.1cm} in 16 papers but a tabularx X-column in XXI
+% alone. In one document only one may win, so Y keeps the majority meaning and
+% XXI's stretch column is Z. (XXI's tables were updated to match.)
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}p{3.1cm}}
+\newcolumntype{Z}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+
+% ── Series palette (from serendip-paper.sty) ─────────────────────────────────
+\RequirePackage{xcolor}
+\definecolor{rose}{HTML}{b07a8e}
+\definecolor{sage}{HTML}{8aa07e}
+\definecolor{gold}{HTML}{c79a4a}
+\definecolor{lightgold}{HTML}{d9b35f}
+\definecolor{ink}{HTML}{6e5560}
+\definecolor{rosedeep}{HTML}{c56683}
+\definecolor{brightgold}{HTML}{e8b94a}
+\definecolor{pageblush}{HTML}{fdf8f9}
+\definecolor{pinkitalic}{HTML}{c56683}
+\definecolor{pinkbold}{HTML}{a83b5c}
+\definecolor{warnred}{HTML}{a01c2e}
+\definecolor{inksoft}{HTML}{342E37}
+% Papers XXII/XXIII palette, folded in:
+\definecolor{blush}{HTML}{FDF6F8}
+\definecolor{blushground}{HTML}{fdf8f9}
+\definecolor{casebg}{HTML}{FBEEF2}
+\definecolor{goldenrod}{HTML}{B98A3C}
+\definecolor{sectionpink}{RGB}{206,84,118}
+\definecolor{tablehead}{HTML}{F3E1E7}
+% RESOLVED CONFLICT: \deeprose was {8C2F4A} in XXII and {c56683} in others.
+% The series' own rosedeep is c56683; XXII's darker tone is kept as deeproseXXII
+% only if a paper needs it. One deeprose, matching the series.
+\definecolor{deeprose}{HTML}{c56683}
+
+\RequirePackage{pagecolor}
+\pagecolor{pageblush}
+
+% ── Headings: chapter = paper, section = the paper's own top level ───────────
+\RequirePackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\filright}
+  {\Large\scshape\color{rosedeep}\chaptertitlename\ \thechapter}
+  {0.6em}
+  {\Huge\bfseries\color{warnred}}
+\titlespacing*{\chapter}{0pt}{10pt}{28pt}
+\titleformat{\section}{\Large\mdseries\color{rosedeep}}{\thesection.}{0.6em}{}
+\titleformat{\subsection}{\large\mdseries\color{rose}}{\thesubsection}{0.6em}{}
+\titleformat{\subsubsection}{\normalsize\itshape\color{gold}}{\thesubsubsection}{0.5em}{}
+
+% ── Running heads ────────────────────────────────────────────────────────────
+\RequirePackage{fancyhdr}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+% \nouppercase: the book class's \chaptermark/\sectionmark wrap the title in
+% \MakeUppercase, which would uppercase colour names inside an \emph-in-title
+% (\color{pinkitalic} -> \color{PINKITALIC}, an undefined colour). Marks are
+% also set without \MakeUppercase, and titles are stripped of \emph colouring
+% for the head. Small caps carry the styling instead.
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\fancyhead[LE]{\footnotesize\scshape\color{rose}\nouppercase{\leftmark}}
+\fancyhead[RO]{\footnotesize\scshape\color{rose}\nouppercase{\rightmark}}
+\fancyfoot[C]{\footnotesize\color{ink}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\footnotesize\color{ink}\thepage}%
+  \renewcommand{\headrulewidth}{0pt}}
+% \lrhead is defined by paper XXI; it comes in via serendip-macros.sty.
+
+% A paper's own \appendix must NOT switch the whole book into appendix mode
+% (book-class \appendix resets the chapter counter, which re-letters every later
+% chapter: 1, A, B, ...). Redefine it to affect only SECTION numbering, so a
+% paper's appendix sections become A, B, C within their chapter, and the chapter
+% number is untouched. \paperchapter resets section numbering at each chapter
+% start so the change never leaks to the next paper.
+\renewcommand\appendix{\par
+  \setcounter{section}{0}%
+  \gdef\thesection{\@Alph\c@section}}
+
+% ── Emphasis recolouring (series signature) ─────────────────────────────────
+\let\oldtextit\textit
+\renewcommand{\textit}[1]{{\color{pinkitalic}\oldtextit{#1}}}
+\let\oldemph\emph
+\renewcommand{\emph}[1]{{\color{pinkitalic}\oldemph{#1}}}
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{{\color{pinkbold}\oldtextbf{#1}}}
+
+% ── Cover furniture (shared with serendip-paper.sty) ────────────────────────
+\newcommand{\coverrule}[1][0.4]{{\color{rosedeep}\rule{#1\linewidth}{0.4pt}}}
+\newcommand{\coveraddrA}{huangwanhong@serendip.ngo \quad huang-wanhong.com \quad +81-080-8946-0827}
+\newcommand{\coveraddrB}{LAZO GINZA HIGASHI 402, MINATO 2-6-4, CHUO KU, TOKYO, JAPAN 104-0043 (temporary; for the latest contact address see huang-wanhong.com)}
+\newcommand{\blfootnote}[1]{\begingroup\renewcommand{\thefootnote}{}\footnotetext{#1}\endgroup}
+\newcommand{\coverfootnote}{\blfootnote{\footnotesize\color{rosedeep}\coveraddrA\\[0.15em]\coveraddrB}}
+\renewcommand{\footnoterule}{\kern-3pt{\color{rosedeep}\hrule width 0.4\columnwidth height 0.4pt}\kern 2.6pt}
+
+% ── Links (hyperref before biblatex) ─────────────────────────────────────────
+\RequirePackage[colorlinks=true, linkcolor=rose, citecolor=rosedeep, urlcolor=gold]{hyperref}
+
+% =========================================================================
+%  Paper macros are NOT hand-written here. They are harvested VERBATIM from
+%  the 27 papers into serendip-macros.sty (loaded at the foot of this file).
+%  Writing them from memory silently changes their meaning — \pinkref, for
+%  instance, is a colour wrapper around arbitrary text, not a \ref.
+% =========================================================================
+
+% \todo — 11 unresolved author notes remain in the manuscript (VII×8, XX, XXI,
+% XXIV). They must not reach the finished book. During revision they render as
+% a loud inline marker and raise a warning, so the volume still builds and the
+% notes stay visible; `make todo-check` is the gate that must return zero
+% before a volume is called book-ready. See docs/REVISION_TRACKER.md.
+\newcommand{\todo}[1]{%
+  \PackageWarning{serendip-book}{UNRESOLVED \string\todo: #1}%
+  {\normalfont\bfseries\color{warnred}[TODO: #1]}}
+\let\TODO\todo
+
+% ── The `abstract` environment does NOT exist in the book class. ─────────────
+% Each paper opens with one; in the book it becomes a set-off headnote under
+% the chapter title.
+\newenvironment{abstract}
+  {\begingroup\small\itshape\color{ink}\setlength{\leftskip}{1.2em}\setlength{\rightskip}{1.2em}%
+   \noindent\ignorespaces}
+  {\par\endgroup\vspace{1.2em}\goldrule}
+
+% Table default
+\renewcommand{\arraystretch}{1.25}
+
+% ── Paper-specific macros, harvested verbatim from the 27 preambles ─────────
+% (\LE, \LX, \SE, \SX from IV; \defn/\prop/\crit/\objection/\reply from V;
+%  \keydef from VI; \epigraphsize/\textflush/\sourceflush from XXII.)
+\RequirePackage{serendip-macros}
+
+\endinput

@@ -1,0 +1,29 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bbl-SAVE-ERROR
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.toc
+*.lof
+*.lot
+*.xdv
+*.synctex.gz
+*.idx
+*.ilg
+*.ind
+
+# Built PDFs are artifacts, rebuilt from source
+book_src/pdfs/
+book_src/volumes/*.pdf
+book_src/preface.pdf
+book_src/papers/*/*.pdf
+
+# Editor/OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,5 @@
+@default_files = ("volume_1.tex", "volume_2.tex", "volume_3.tex");
+$pdf_mode = 5;      # xelatex -> xdv -> pdf
+$dvipdf = "xdvipdfmx %O -o %D %S";
+$bibtex_use = 2;
+$out_dir = ".";

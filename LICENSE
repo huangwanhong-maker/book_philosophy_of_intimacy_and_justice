@@ -1,141 +1,45 @@
-Philosophy of Intimacy and the Theory of Justice — an open book
-Copyright (c) 2026 Serendip Commons Society and the contributors listed in
-CONTRIBUTORS.md.
+Philosophy of Intimacy and the Theory of Justice
 
 ================================================================
-LICENSE
+NO REPOSITORY-WIDE LICENSE
 ================================================================
 
-This work — all prose, figures, and LaTeX sources in this repository — is
-licensed under the
-
-    Creative Commons Attribution-NonCommercial-ShareAlike 4.0
-    International License (CC BY-NC-SA 4.0).
-
-    Human-readable summary : https://creativecommons.org/licenses/by-nc-sa/4.0/
-    Full legal code        : https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
-
-The full legal code at the URL above is the authoritative and binding text.
-This file marks the work with that license (as the license itself permits)
-and specifies the manner of attribution the licensor requires.
-
-You are free to:
-  - Share — copy and redistribute the material in any medium or format;
-  - Adapt — remix, transform, and build upon the material ("extend" it),
-
-so long as you follow the license terms:
-
-  - Attribution (BY) — You must give appropriate credit in the manner set out
-    in "Required attribution" below, provide a link to the license, and
-    indicate if changes were made. You may do so in any reasonable manner, but
-    not in any way that suggests the licensor endorses you or your use.
-
-  - NonCommercial (NC) — The free public grant does NOT cover commercial use —
-    that is, any use primarily intended for or directed toward commercial
-    advantage or monetary compensation. Commercial use is not forbidden
-    outright, however: it is available by SEPARATE LICENSE from Serendip
-    Commons Society (see "Commercial use" below).
-
-  - ShareAlike (SA) — If you remix, transform, or build upon the material, you
-    must distribute your contributions under this SAME license
-    (CC BY-NC-SA 4.0), so the freedoms above travel with every extension.
-
-  - No additional restrictions — You may not apply legal terms or
-    technological measures that legally restrict others from doing anything the
-    license permits.
+This repository as a whole is NOT released under any single license. The
+repository itself makes no general grant of rights. Except where an individual
+work states otherwise, all rights are reserved by the respective copyright
+holders.
 
 ----------------------------------------------------------------
-REQUIRED ATTRIBUTION  (how the BY term is satisfied for THIS work)
+EACH PAPER HAS ITS OWN COPYRIGHT HOLDER AND LICENSE
 ----------------------------------------------------------------
 
-Any copy, redistribution, or extension of this work MUST:
+Each paper in this series has its own copyright holder (著作权人 / rights holder)
+and its own license. The copyright and licensing terms that apply to any
+individual paper are those stated at that paper's official place of publication
+— for example, its SSRN, OSF, SocArXiv, or other publication page.
 
-  1. Credit "Serendip Commons Society" as steward and publisher of the work.
-
-  2. Retain and carry forward the file CONTRIBUTORS.md, reproducing the
-     contributor list exactly as it stood in the version you copied or
-     extended — i.e. "the contributor list at the time of extension."
-     You MAY append new contributors; you may NOT remove or alter existing
-     entries.
-
-  3. Retain this copyright notice and the license notice, and provide a link
-     back to the source repository (or its DOI).
-
-  4. State that changes were made, if you modified the work, and keep your
-     derivative under CC BY-NC-SA 4.0.
-
-Suggested attribution line:
-
-    Based on "Philosophy of Intimacy and the Theory of Justice" by
-    Serendip Commons Society and its contributors (see CONTRIBUTORS.md),
-    licensed under CC BY-NC-SA 4.0. Changes, if any, are indicated.
+To determine what you may do with a given paper (read, copy, redistribute,
+adapt, or use commercially), consult the license shown on that paper's official
+publication page. That published license is the authoritative and binding text
+for that paper.
 
 ----------------------------------------------------------------
-COMMERCIAL USE  (forbidden by default; permitted only by separate license)
+SCOPE AND RESERVATIONS
 ----------------------------------------------------------------
 
-The NonCommercial term means commercial use is forbidden IN PRINCIPLE under the
-free public grant. It is permitted only as an EXCEPTION, by separate license
-from Serendip Commons Society obtained BEFORE the use.
+  - Nothing in this repository grants, enlarges, or restricts any right beyond
+    what the relevant paper's own publication license provides.
 
-  - Whether to grant a commercial license, and on what terms (scope, fees,
-    attribution, revenue sharing, etc.), is decided by Serendip Commons Society
-    according to its own bylaws and commercial-licensing policy, as amended
-    from time to time. Those rules — not this file — govern the procedure.
+  - Where a paper carries no stated license at its place of publication, all
+    rights in that paper are reserved by its copyright holder, and no permission
+    to copy, redistribute, or adapt it is granted here.
 
-  - The Society can license the work as a whole, including third-party
-    contributions, because every contributor grants it that right via the
-    inbound contributor grant in CONTRIBUTORS.md.
+  - The compilation of these papers into the three-volume book edition, together
+    with the book edition's own front matter, cover art, and build tooling,
+    remains the property of its author and copyright holder.
 
-  Commercial-licensing enquiries: Serendip Commons Society
-  (huangwanhong@serendip.ngo; see huang-wanhong.com).
+  - For permissions not covered by a paper's published license, contact that
+    paper's copyright holder.
 
-Net effect: the public always keeps the free, non-commercial CC BY-NC-SA 4.0
-freedoms, while every commercial use flows through a single authority — the
-Society — under rules the Society sets.
-
-----------------------------------------------------------------
-RESERVATION OF RIGHTS  (the copyright holders are NOT bound by NC / SA)
-----------------------------------------------------------------
-
-The CC BY-NC-SA 4.0 grant above runs to the PUBLIC and is NON-EXCLUSIVE. It
-restricts licensees; it does not restrict the copyright holders. Serendip
-Commons Society and the authors retain full copyright in their own material
-and all rights not expressly granted to the public.
-
-In particular, the copyright holders MAY, without limitation:
-  - publish, print, sell, or otherwise commercially exploit the work,
-    including the founder's own original edition(s) of this book;
-  - grant separate commercial or other licenses to third parties (for example,
-    a publisher) on negotiated terms; and
-  - release further versions under different terms.
-
-Publishing a commercial edition of the original work AND also releasing the
-work to the public under CC BY-NC-SA 4.0 — whether at the same time or one
-after the other (e.g. commercial first, open afterward) — is expressly
-permitted and is the intended model here. The public CC grant neither waives
-nor diminishes these reserved rights.
-
-These reserved rights cover each holder's OWN material. A commercial edition
-that also incorporates third-party contributions made to the open version
-relies, in addition, on the inbound contributor grant described in
-CONTRIBUTORS.md.
-
-----------------------------------------------------------------
-NO WARRANTY
-----------------------------------------------------------------
-
-Unless otherwise separately agreed, the work is provided "as is" and the
-licensor makes no representations or warranties of any kind concerning it,
-to the fullest extent permitted by applicable law, as set out in the full
-legal code.
-
-----------------------------------------------------------------
-NOTE ON EMBEDDED SOFTWARE
-----------------------------------------------------------------
-
-The above covers the book's text and figures. Small software components used
-only to build the book (e.g. the Makefile, latexmkrc, and serendip-paper.sty)
-are also offered, at your option, under the MIT License, so that the build
-tooling can be reused without the NonCommercial restriction. The book content
-itself remains CC BY-NC-SA 4.0.
+© 2026 the respective authors and copyright holders. All rights reserved except
+as stated at each paper's place of publication.

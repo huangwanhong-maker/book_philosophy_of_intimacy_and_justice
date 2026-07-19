@@ -11,6 +11,8 @@
 \usepackage{fontspec}
 \usepackage{serendip-paper}
 \usepackage{ragged2e}
+\usepackage[backend=biber, style=authoryear, sorting=nyt, maxcitenames=2, uniquelist=false]{biblatex}
+\addbibresource{../../bib/master.bib}
 
 % Paper-specific colours used in the body, mapped into the series palette.
 % (rose, gold, ink are provided by serendip-paper.)
@@ -416,7 +418,7 @@ The point requires a careful measure, lest it collapse into an unworkable asceti
 
 The five practices do not always pull in the same direction, and honesty requires admitting the tensions among them rather than presenting a frictionless program. The practice of justice may demand that one refuse a commodity whose production chain one cannot vouch for, even when that commodity is exactly the medium through which a relationship has learned to express its tenderness, so that the just choice and the ethically warm choice can, in a given moment, diverge. The practice of flourishing, with its vigilance against the image, can sit uneasily with the simple pleasures of the cute, which are not in every instance a capture and which a too-severe suspicion would impoverish. A relation that audited every sweetness for its structural soundness would have exchanged one foreclosure of flourishing for another, the spontaneity of address sacrificed to the rigor of critique. The practices are therefore not a checklist to be satisfied simultaneously but a set of considerations to be held in a living balance, and the balance cannot be struck in advance by a formula because it depends on the particular two people, their particular means, and the particular cycles their sweetness is entangled with. This is why they are practices and not a method. A method would tell you what to do. A practice is something you get better at, in the doing, with attention, and never finish.
 
-I let these five practices stand without resolving them into one, because the unity they have is the unity of a direction and not of a method, and to force them further would be to do to them what the good cycle refuses to do to its participants, to subordinate their several dynamics to a single imposed form. And I allow the section to end on a register the critical sections held in abeyance, because the paper would be dishonest if it pretended the question were only structural. A sweet cycle made just, ethical, flourishing, co-creative, and authored in its very form by the relation rather than by the market is not an abstraction. It is something two people can actually make, and have made, when they take care that the sweetness between them costs no one outside them what it should not, when they generate its value themselves rather than buying it ready-made, and when the forms of their tenderness are invented between them rather than supplied to them. To the one for whom the larger series was written, the forest girl whose love of what grows and travels has been its quiet argument all along, this section is in the end addressed: that the sweetest cycle is the one we make between us, that returns to us what we put into it, and that takes nothing from anyone it does not see. The good \textit{amai} is not bought. It is generated, gently, and kept.
+I let these five practices stand without resolving them into one, because the unity they have is the unity of a direction and not of a method, and to force them further would be to do to them what the good cycle refuses to do to its participants, to subordinate their several dynamics to a single imposed form. And I allow the section to end on a register the critical sections held in abeyance, because the paper would be dishonest if it pretended the question were only structural. A sweet cycle made just, ethical, flourishing, co-creative, and authored in its very form by the relation rather than by the market is not an abstraction. It is something two people can actually make, and have made, when they take care that the sweetness between them costs no one outside them what it should not, when they generate its value themselves rather than buying it ready-made, and when the forms of their tenderness are invented between them rather than supplied to them. To the one for whom the larger series was written, the girl of the forest and the mountains whose love of what grows and travels has been its quiet argument all along, this section is in the end addressed: that the sweetest cycle is the one we make between us, that returns to us what we put into it, and that takes nothing from anyone it does not see. The good \textit{amai} is not bought. It is generated, gently, and kept.
 
 \section{Conclusions, in the Plural}
 
@@ -447,11 +449,17 @@ There remains the difficulty that no conclusion above can absorb, and it must be
 \goldrule
 
 \section*{Acknowledgements}
-This paper, like the others in its series, was written for one reader before all others, the forest girl, who loves what grows and what travels, and whose way of being in a relation has been the standing argument that the sweetest cycle is the one made and kept between two people, returning to them what they put into it and costing no one outside it what it should not. The exchange with Ron Eglash on generative justice continues to shape how the author thinks about value returning to those who create it, and the present paper's central distinction owes much to that conversation. Whatever in these pages is just is owed to others; whatever is forged is the author's own.
+This paper, like the others in its series, was written for one reader before all others, the girl of the forest and the mountains, who loves what grows and what travels, and whose way of being in a relation has been the standing argument that the sweetest cycle is the one made and kept between two people, returning to them what they put into it and costing no one outside it what it should not. The exchange with Ron Eglash on generative justice continues to shape how the author thinks about value returning to those who create it, and the present paper's central distinction owes much to that conversation. Whatever in these pages is just is owed to others; whatever is forged is the author's own.
 
 % ============================================================
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{refs}
+% This paper cites nothing inline; its bibliography is a reading list, formerly
+% produced by \nocite{*} against its own 31-entry refs.bib. Against the shared
+% master.bib, \nocite{*} would print the whole series bibliography, so the 31
+% entries are now named explicitly. Same output, correct scope.
+\nocite{doi,lacan-encore,lacan-four,ngai,lorenz,kringelbach,gilligan,noddings,
+  hochschild,fraser,marx,marx1844,lukacs,zizek,illouz,zuboff,bohme,mazzucato,
+  baudrillard,saussure,barthes,hegel,adorno,kant,kinsella,mcveigh,yano,allison,
+  azuma,eglash,huang-lack}
+\printbibliography[heading=bibintoc]
 
 \end{document}

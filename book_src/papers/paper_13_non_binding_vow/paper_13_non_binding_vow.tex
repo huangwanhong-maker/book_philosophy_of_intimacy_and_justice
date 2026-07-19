@@ -19,7 +19,8 @@
 \XeTeXlinebreakskip = 0pt plus 0.1pt
 
 % natbib (numbered) before serendip-paper (hyperref loads inside it)
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage[backend=biber, style=authoryear, sorting=nyt, maxcitenames=2, uniquelist=false]{biblatex}
+\addbibresource{../../bib/master.bib}
 \usepackage{serendip-paper}
 
 % colour used on the title page (headings/links come from serendip-paper)
@@ -100,7 +101,7 @@ Not as requital---but to be, with you,\\in good faith for ever.\\[0.8em]
 \begin{center}
 \begin{minipage}{0.7\linewidth}
 \centering\itshape\color{rose}
-For the forest girl,\\[0.7em]
+For the girl of the forest and the mountains,\\[0.7em]
 \upshape to whom a promise was made\\[0.3em]
 that no sword stands behind,\\[0.7em]
 \itshape and which is, for that very reason,\\the more wholly given.\\[1.2em]
@@ -148,7 +149,6 @@ that no sword stands behind,\\[0.7em]
 % ---------- Back matter ----------
 \newpage
 \small
-\bibliographystyle{plainnat}
-\bibliography{refs}
+\printbibliography[heading=bibintoc]
 
 \end{document}

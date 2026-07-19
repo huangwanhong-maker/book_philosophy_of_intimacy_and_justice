@@ -19,7 +19,8 @@
 \newcommand{\coup}{\kappa}
 
 % natbib (numbered) before serendip-paper (hyperref loads inside it)
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage[backend=biber, style=authoryear, sorting=nyt, maxcitenames=2, uniquelist=false]{biblatex}
+\addbibresource{../../bib/master.bib}
 \usepackage{serendip-paper}
 
 % colour used on the title page (headings/links/palette come from serendip-paper)
@@ -133,7 +134,6 @@ who loves culture, travel, and the living world.\\[1.0em]
 \input{sections/s12_ack.tex}
 
 % ============================================================
-\bibliographystyle{plainnat}
-\bibliography{refs}
+\printbibliography[heading=bibintoc]
 
 \end{document}

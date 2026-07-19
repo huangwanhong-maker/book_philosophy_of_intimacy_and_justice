@@ -23,7 +23,8 @@
 \newcommand{\Lag}{\mathcal{L}}
 
 % natbib (numbered) before serendip-paper (hyperref loads inside it)
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage[backend=biber, style=authoryear, sorting=nyt, maxcitenames=2, uniquelist=false]{biblatex}
+\addbibresource{../../bib/master.bib}
 \usepackage{serendip-paper}
 
 % colour used on the title page (headings/links/palette come from serendip-paper)
@@ -153,7 +154,6 @@ who have ever wondered what they truly possess.\\[1.0em]
 \input{sections/s16_ack.tex}            % Acknowledgements
 
 % ============================================================
-\bibliographystyle{plainnat}
-\bibliography{refs}
+\printbibliography[heading=bibintoc]
 
 \end{document}

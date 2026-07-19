@@ -1,0 +1,125 @@
+% =========================================================================
+%  Philosophy of Intimacy and the Theory of Justice
+%  VOLUME I — Papers I–IX
+%
+%  Build:  latexmk  (XeLaTeX + biber)   from book_src/volumes/
+%
+%  Each chapter is a paper. The chapter body is the paper's own content.tex,
+%  the very same file its standalone build reads, so the book and the
+%  standalone paper can never drift apart.
+%
+%  \subimport is used (not \input) so that a paper's own relative paths —
+%  \input{sections/...}, \includegraphics{figures/...} — keep resolving
+%  against the PAPER's folder, not this one.
+%
+%  Bibliography: biblatex + biber, authoryear, against the shared
+%  ../bib/master.bib. Each chapter opens a refsection, so each paper prints
+%  its own reference list, as a collected-papers volume should.
+% =========================================================================
+\documentclass[11pt,twoside,openright]{book}
+
+\usepackage{serendip-book}
+\usepackage{pdfpages}
+\usepackage{import}
+
+\usepackage[backend=biber, style=authoryear, sorting=nyt,
+            maxcitenames=2, uniquelist=false]{biblatex}
+\addbibresource{../bib/master.bib}
+
+% A paper's figures live in its own folder; \subimport handles \input, and
+% these cover \includegraphics.
+\graphicspath{%
+  {../papers/paper_01_toward_relational_being/}%
+  {../papers/paper_02_ai_mediated_intimacy/}%
+  {../papers/paper_03_self_legislation/}%
+  {../papers/paper_04_language_of_the_gift/}%
+  {../papers/paper_05_subject_formation/}%
+  {../papers/paper_06_just_proposal/}%
+  {../papers/paper_07_diplomacy_of_intimacy/}%
+  {../papers/paper_08_intervention_of_language/}%
+  {../papers/paper_09_sustainability_of_intimacy/}%
+}
+
+% One chapter = one paper.
+\newcommand{\paperchapter}[3]{%
+  % #1 = folder   #2 = chapter title   #3 = subtitle (may be empty)
+  \chapter{#2}%
+  \ifx\relax#3\relax\else
+    {\Large\itshape\color{warnred}#3\par}\vspace{1.4em}%
+  \fi
+  \clearpage           % chapter title page; abstract begins on its own page
+  \begin{refsection}
+    % normal section numbering per chapter (undo any previous paper's \appendix)
+    \setcounter{section}{0}%
+    \renewcommand{\thesection}{\thechapter.\arabic{section}}%
+    \subimport{../papers/#1/}{content.tex}
+    \printbibliography[heading=subbibliography, title={References}]
+  \end{refsection}
+}
+
+\begin{document}
+
+\frontmatter
+
+% Text title page (the printed cover is a SEPARATE POD file, not in the interior).
+\thispagestyle{empty}
+\begin{center}
+\vspace*{0.14\textheight}
+{\large\scshape\color{rosedeep} Philosophy of Intimacy and the Theory of Justice}\\[0.8em]
+\coverrule\\[1.4em]
+{\itshape\color{ink} Studies in Generative Relational Being}\\[2.6em]
+{\Large\scshape\color{warnred} Volume I}\\[0.7em]
+{\large\itshape\color{warnred} Relational Being, the Subject, and the Word}\\[2.6em]
+\coverrule[0.25]\\[1.2em]
+{\large\color{inksoft} Wanhong Huang}\\[0.7em]
+{\scshape\color{rosedeep} First Edition}
+\end{center}
+\clearpage
+\import{../}{imprint.tex}
+
+\import{../}{foreword.tex}
+\import{../}{preface-body.tex}
+
+\tableofcontents
+
+\mainmatter
+
+\paperchapter{paper_01_toward_relational_being}
+  {Toward Relational Being in Intimate Life}
+  {A Family-and-Relationship Management Application as a Case Study}
+
+\paperchapter{paper_02_ai_mediated_intimacy}
+  {The Justice and Ethics of AI-Mediated Intimacy}
+  {\relax}
+
+\paperchapter{paper_03_self_legislation}
+  {The Normativity of Self-Legislation in Intimate Relationships}
+  {\relax}
+
+\paperchapter{paper_04_language_of_the_gift}
+  {The Language of the Gift in Intimate Relationships}
+  {\relax}
+
+\paperchapter{paper_05_subject_formation}
+  {The Formation of the Subject in Intimate Relationships}
+  {\relax}
+
+\paperchapter{paper_06_just_proposal}
+  {Toward a Just Proposal}
+  {\relax}
+
+\paperchapter{paper_07_diplomacy_of_intimacy}
+  {Prolegomena to a Diplomacy of Intimate Relationships}
+  {\relax}
+
+\paperchapter{paper_08_intervention_of_language}
+  {The Intervention of Language in Intimacy}
+  {An Excursus}
+
+\paperchapter{paper_09_sustainability_of_intimacy}
+  {The Sustainability of Intimacy}
+  {Poetic Generativity and Generative Justice}
+
+\backmatter
+
+\end{document}

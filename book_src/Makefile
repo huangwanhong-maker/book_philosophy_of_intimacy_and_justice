@@ -16,9 +16,28 @@
 PAPERS := $(notdir $(wildcard papers/*))
 PDFDIR := pdfs
 
-.PHONY: all build pdfs clean cleanall $(PAPERS)
+.PHONY: all build pdfs clean cleanall books volumes todo-check content $(PAPERS)
 
 all: build pdfs
+
+# ── Book edition (three volumes) ─────────────────────────────────────────────
+# Each paper's chapter body is its content.tex; the volumes/ masters include
+# them. See docs/BOOK_PLAN.md.
+VOLUMES := volume_1 volume_2 volume_3
+
+books: content todo-check volumes
+
+# Regenerate every paper's content.tex from its standalone source (content is a
+# derived artifact — regenerate after any change to a paper).
+content:
+	@python3 tools/split_content.py 2>/dev/null || py tools/split_content.py
+
+volumes:
+	@for v in $(VOLUMES); do echo "==> $$v"; ( cd volumes && latexmk $$v.tex ) || exit 1; done
+
+# Gate: no unresolved \todo may remain in the manuscript before a book ships.
+todo-check:
+	@python3 tools/find_todos.py 2>/dev/null || py tools/find_todos.py
 
 build:
 	@for d in papers/*/; do echo "==> $$d"; ( cd "$$d" && latexmk ) || exit 1; done

@@ -1,0 +1,161 @@
+"""Regenerate book_src/bib/master.bib from the 27 per-paper refs.bib files.
+
+  - identical / union-safe keys  -> merged (union of fields, most complete value)
+  - contested keys (same key, contradictory facts) -> emitted with a
+    note = {>> PROVISIONAL <<} marker and reported, NEVER silently guessed.
+
+Run:  python3 tools/merge_bib.py     (from book_src/)
+See:  docs/CITATION_AUDIT.md for the contested-key analysis.
+"""
+import re, os, glob, collections
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+PAPERS = os.path.join(HERE, "..", "papers")
+OUT = os.path.join(HERE, "..", "bib", "master.bib")
+OVERRIDES = os.path.join(HERE, "..", "bib", "overrides.bib")
+
+FACTUAL = {'author', 'title', 'journal', 'booktitle', 'year', 'volume',
+           'number', 'pages', 'publisher', 'edition', 'doi'}
+FIELD_ORDER = ['author', 'editor', 'translator', 'title', 'booktitle', 'journal',
+               'series', 'volume', 'number', 'pages', 'publisher', 'address',
+               'school', 'edition', 'origyear', 'year', 'doi', 'url', 'note']
+
+
+def split_fields(body):
+    fields = {}
+    m = re.match(r'\s*[^,]+,', body)
+    if not m:
+        return fields
+    i = m.end()
+    while i < len(body):
+        m = re.match(r'\s*(\w+)\s*=\s*', body[i:])
+        if not m:
+            break
+        name = m.group(1).lower()
+        i += m.end()
+        if i < len(body) and body[i] == '{':
+            depth, start = 0, i
+            while i < len(body):
+                if body[i] == '{':
+                    depth += 1
+                elif body[i] == '}':
+                    depth -= 1
+                    if depth == 0:
+                        i += 1
+                        break
+                i += 1
+            val = body[start + 1:i - 1]
+        elif i < len(body) and body[i] == '"':
+            start = i + 1
+            i += 1
+            while i < len(body) and body[i] != '"':
+                i += 1
+            val = body[start:i]
+            i += 1
+        else:
+            start = i
+            while i < len(body) and body[i] not in ',\n':
+                i += 1
+            val = body[start:i]
+        fields[name] = re.sub(r'\s+', ' ', val).strip()
+        m = re.match(r'\s*,', body[i:])
+        if m:
+            i += m.end()
+        else:
+            break
+    return fields
+
+
+def canon(v):
+    v = v.lower().replace('--', '-').replace('–', '-')
+    v = re.sub(r'[{}\\~"\'`^]', '', v)
+    v = re.sub(r'[^a-z0-9\- ]', ' ', v)
+    return re.sub(r'\s+', ' ', v).strip()
+
+
+entries = collections.defaultdict(list)
+for b in sorted(glob.glob(os.path.join(PAPERS, 'paper_*', '**', '*.bib'), recursive=True)):
+    paper = os.path.relpath(b, PAPERS).split(os.sep)[0]
+    txt = open(b, encoding='utf-8', errors='replace').read()
+    for m in re.finditer(r'@(\w+)\s*\{\s*([^,\s]+)\s*,', txt):
+        typ, key = m.group(1).lower(), m.group(2)
+        if typ in ('comment', 'preamble', 'string'):
+            continue
+        i = txt.index('{', m.start())
+        depth = 0
+        for j in range(i, len(txt)):
+            if txt[j] == '{':
+                depth += 1
+            elif txt[j] == '}':
+                depth -= 1
+                if depth == 0:
+                    break
+        entries[key].append((paper, typ, split_fields(txt[i + 1:j])))
+
+# Source-verified overrides (docs/CITATION_RESOLUTIONS.md). These win over the
+# per-paper variants and are emitted verbatim with no PROVISIONAL flag.
+override_keys = set()
+override_block = ""
+if os.path.exists(OVERRIDES):
+    override_block = open(OVERRIDES, encoding='utf-8').read()
+    override_keys = set(re.findall(r'@\w+\s*\{\s*([^,\s]+)\s*,', override_block))
+
+auto, contested = {}, {}
+for key, occs in entries.items():
+    if key in override_keys:
+        continue  # handled verbatim from overrides.bib
+    types = collections.Counter(t for _, t, _ in occs)
+    fieldvals = collections.defaultdict(list)
+    for _, _, f in occs:
+        for k, v in f.items():
+            if v:
+                fieldvals[k].append(v)
+    contradiction = (len(types) > 1) or any(
+        len({canon(v) for v in vs}) > 1 for k, vs in fieldvals.items() if k in FACTUAL)
+    if contradiction:
+        contested[key] = max(occs, key=lambda o: len(o[2]))
+    else:
+        auto[key] = (types.most_common(1)[0][0],
+                     {k: max(vs, key=len) for k, vs in fieldvals.items()})
+
+
+def emit(out, key, typ, f, provisional=False):
+    out.append(f"@{typ}{{{key},")
+    ks = [k for k in FIELD_ORDER if k in f] + [k for k in sorted(f) if k not in FIELD_ORDER]
+    for k in ks:
+        if k == 'note' and provisional:
+            continue
+        out.append(f"  {k:<10} = {{{f[k]}}},")
+    if provisional:
+        # Note text must be LaTeX-safe: no _, <, >, & — biblatex typesets it.
+        out.append("  note       = {PROVISIONAL bibliographic data, contested across papers; to be verified against the source. See the citation audit in the project docs.},")
+    out[-1] = out[-1].rstrip(',')
+    out += ["}", ""]
+
+
+out = [
+    "% master.bib -- unified bibliography for the three-volume book edition.",
+    "% GENERATED by tools/merge_bib.py from the 27 per-paper refs.bib files",
+    "% plus bib/overrides.bib. Do not hand-edit; fix the source and regenerate.",
+    "%",
+    f"% {len(auto)} entries merged with no contradiction.",
+    f"% {len(override_keys)} entries taken from overrides.bib (source-verified).",
+    f"% {len(contested)} entries still CONTESTED -> flagged PROVISIONAL.",
+    "",
+]
+for key in sorted(auto):
+    emit(out, key, auto[key][0], auto[key][1])
+for key in sorted(contested):
+    p, typ, f = contested[key]
+    emit(out, key, typ, f, provisional=True)
+
+if override_block:
+    out.append("")
+    out.append("% ===== source-verified overrides (docs/CITATION_RESOLUTIONS.md) =====")
+    out.append(override_block.strip())
+    out.append("")
+
+os.makedirs(os.path.dirname(OUT), exist_ok=True)
+open(OUT, 'w', encoding='utf-8').write('\n'.join(out))
+print(f"master.bib: {len(auto)} merged + {len(override_keys)} overridden + {len(contested)} provisional")
+print("still-contested keys:", ', '.join(sorted(contested)))

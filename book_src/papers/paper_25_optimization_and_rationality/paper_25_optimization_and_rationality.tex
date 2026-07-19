@@ -25,7 +25,8 @@
 \XeTeXlinebreakskip = 0pt plus 0.1pt
 
 % natbib (numbered) before serendip-paper (hyperref loads inside it)
-\usepackage[numbers,sort&compress]{natbib}
+\usepackage[backend=biber, style=authoryear, sorting=nyt, maxcitenames=2, uniquelist=false]{biblatex}
+\addbibresource{../../bib/master.bib}
 \usepackage{serendip-paper}
 
 % colour used on the title page (headings/links come from serendip-paper)
@@ -110,8 +111,8 @@ has never been.\\[0.6em]
 \centering\itshape\color{rose}
 {\cjk 致她——}\\[0.3em]
 For her---\\[0.7em]
-\upshape {\cjk 那个属于森林的女孩，}\\[0.2em]
-the girl who belongs to the forest,\\[0.5em]
+\upshape {\cjk 那个属于森林与山之女孩，}\\[0.2em]
+the girl who belongs to the forest and the mountains,\\[0.5em]
 {\cjk 我从未计算过值不值得，}\\[0.2em]
 whom I have never once weighed for whether she was worth it,\\[0.2em]
 {\cjk 因为那从来不是一个可以计算的问题。}\\[0.2em]
@@ -190,7 +191,6 @@ because that was never a question one could compute.\\[1.0em]
 \input{sections/s16_acknowledgements.tex}
 
 % ============================================================
-\bibliographystyle{plainnat}
-\bibliography{refs}
+\printbibliography[heading=bibintoc]
 
 \end{document}
