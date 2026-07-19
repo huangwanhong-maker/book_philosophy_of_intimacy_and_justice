@@ -44,7 +44,9 @@ for v, (roman, title) in VOLS.items():
     out = f"cover_front_vol{v}.svg"
     open(out, "w", encoding="utf-8").write(svg)
     subprocess.run(["rsvg-convert", "-f", "pdf", "-o", f"cover_front_vol{v}.pdf", out], check=True)
-    print("wrote", out, "-> pdf")
+    subprocess.run(["rsvg-convert", "-f", "png", "--dpi-x", "300", "--dpi-y", "300",
+                    "-o", f"cover_front_vol{v}.png", out], check=True)
+    print("wrote", out, "-> pdf + png (300dpi)")
 
 # ---------- BACK (shared; SCS removed) ----------
 back = open("cover_back.svg", encoding="utf-8").read()
@@ -54,6 +56,9 @@ back2 = back[:scs.start()] + back[scs.end():]
 back2 = to_b5(back2)
 open("cover_back_book.svg", "w", encoding="utf-8").write(back2)
 subprocess.run(["rsvg-convert", "-f", "pdf", "-o", "cover_back_book.pdf", "cover_back_book.svg"], check=True)
-print("wrote cover_back_book.svg -> pdf (SCS removed)")
+subprocess.run(["rsvg-convert", "-f", "png", "--dpi-x", "300", "--dpi-y", "300",
+                "-o", "cover_back_book.png", "cover_back_book.svg"], check=True)
+print("wrote cover_back_book.svg -> pdf + png (SCS removed)")
 
-print("\ngenerated:", [f for f in sorted(os.listdir('.')) if f.startswith('cover_front_vol') or f == 'cover_back_book.pdf'])
+print("\ngenerated:", [f for f in sorted(os.listdir('.'))
+                       if f.startswith('cover_front_vol') or f.startswith('cover_back_book')])
