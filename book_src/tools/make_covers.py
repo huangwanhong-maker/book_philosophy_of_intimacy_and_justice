@@ -36,7 +36,11 @@ for v, (roman, title) in VOLS.items():
         f'<text x="77.0" y="102.4" text-anchor="middle" font-family="TeX Gyre Pagella" '
         f'font-size="3.9" font-style="italic" fill="{INK}" fill-opacity="0.9">{title}</text>\n'
     )
-    svg = to_b5(front.replace(author_line, vol_block + author_line))
+    edition_line = (
+        f'\n<text x="77.0" y="131.5" text-anchor="middle" font-family="TeX Gyre Pagella" '
+        f'font-size="3.9" fill="{ROSE}" letter-spacing="1.6">First Edition</text>'
+    )
+    svg = to_b5(front.replace(author_line, vol_block + author_line + edition_line))
     out = f"cover_front_vol{v}.svg"
     open(out, "w", encoding="utf-8").write(svg)
     subprocess.run(["rsvg-convert", "-f", "pdf", "-o", f"cover_front_vol{v}.pdf", out], check=True)
