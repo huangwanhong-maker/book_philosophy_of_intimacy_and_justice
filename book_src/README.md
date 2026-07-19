@@ -126,13 +126,9 @@ line and title colours live in each paper's title block.
 
 ## License
 
-The book (text, figures, LaTeX sources) is licensed
-**[CC BY-NC-SA 4.0](../LICENSE)** — free to share and extend
-**non-commercially**, with **ShareAlike**. Any extension must credit
-**Serendip Commons Society** and carry forward
-[`CONTRIBUTORS.md`](../CONTRIBUTORS.md) (the contributor list as of the version
-you build on). Commercial use is forbidden by default and available **only by
-separate license from Serendip Commons Society**, on terms set by the Society's
-bylaws. The copyright holders keep full rights to their own material (so the
-founder may publish a commercial edition and open-source the work, in either
-order). Contributions are accepted under the inbound grant in `CONTRIBUTORS.md`.
+**This repository carries no single license.** Each paper has its own copyright
+holder (著作权人) and its own license, which are those stated at that paper's
+official place of publication; consult that paper's publication page to learn
+what you may do with it. The compilation into the three-volume book edition, with
+its own front matter, cover art, and build tooling, is © 2026 Wanhong Huang.
+Full terms are in [`../LICENSE`](../LICENSE).

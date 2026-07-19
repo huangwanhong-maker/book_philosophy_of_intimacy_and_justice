@@ -46,15 +46,21 @@ Compiled PDFs are build artifacts and are not tracked; rebuild them from source.
 
 ## License (summary)
 
-Licensed **CC BY-NC-SA 4.0** — free to read, share, and **extend
-non-commercially**, with **ShareAlike** (derivatives keep the same license).
-The binding terms and the required attribution are in [`LICENSE`](LICENSE).
+**This repository as a whole carries no single license.** It makes no general
+grant of rights; except where an individual work states otherwise, all rights
+are reserved by the respective copyright holders.
 
-- **Attribution (BY)** — credit **Serendip Commons Society** and carry forward
-  [`CONTRIBUTORS.md`](CONTRIBUTORS.md).
-- **NonCommercial (NC)** — commercial use is forbidden by default and available
-  **only by separate license from the Society**.
-- **ShareAlike (SA)** — extensions stay under CC BY-NC-SA 4.0.
+**Each paper has its own copyright holder (著作权人) and its own license.** The
+terms that apply to any individual paper are those stated at that paper's
+official place of publication (for example, its SSRN, OSF, or SocArXiv page). To
+learn what you may do with a given paper, consult the license shown on that
+paper's publication page; that published license is the authoritative text for
+that paper. Where a paper states no license there, all rights in it are reserved
+by its copyright holder.
+
+The compilation into the three-volume book edition, together with the book's own
+front matter, cover art, and build tooling, remains © 2026 Wanhong Huang. Full
+terms are in [`LICENSE`](LICENSE).
 
 ## Contributing
 
